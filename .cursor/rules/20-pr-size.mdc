@@ -1,0 +1,15 @@
+---
+description: Keep changes small and reviewable — one bead, one PR
+alwaysApply: true
+---
+
+# Change Size
+
+- One bead = one branch = one reviewable PR
+- Prefer diffs under ~300 lines; split if larger
+- Do not refactor unrelated code while implementing a bead
+- Do not add features beyond the bead's acceptance criteria
+
+If the bead scope grows during implementation, stop and either:
+1. Create a new bead for the extra work, or
+2. Ask the human to approve scope expansion

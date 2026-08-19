@@ -1,0 +1,18 @@
+---
+description: Testing requirements for harness and product code
+globs: harness/**/*
+alwaysApply: false
+---
+
+# Testing
+
+- Every behavior change must include or update a test
+- Run the full test suite before marking a bead done
+- Prefer unit tests for logic, integration tests for CLI/scripts
+- Test files live alongside or in a `tests/` directory within `harness/`
+
+## Before Marking Done
+
+1. All tests pass
+2. Bead validator passes (once FACTORY-001 is complete)
+3. No linter errors in changed files

@@ -1,0 +1,28 @@
+---
+description: Core software factory workflow — plan, implement, verify, review, update bead
+alwaysApply: true
+---
+
+# Core Workflow
+
+This is a software factory. Follow the loop for every bead:
+
+1. Read `AGENTS.md`, the bead file, and relevant `docs/brain/` docs
+2. **Plan** before editing (use Plan Mode for multi-file work)
+3. **Implement** the smallest change that meets acceptance criteria
+4. **Verify** — run tests/checks; fix failures
+5. **Review** — check diff against bead acceptance criteria
+6. **Update** the bead status and `docs/work-graph/backlog.md`
+
+## Bead Discipline
+
+- Work on one bead at a time
+- Do not expand scope beyond the current bead
+- If you discover new work, create a new bead file — do not fold it into the current one
+- Branch name: `bead/FACTORY-NNN-short-title`
+
+## Escalate to Human When
+
+- Architecture decision not covered in `docs/brain/decisions.md`
+- Acceptance criteria are ambiguous
+- Repeated test failures after 2 fix attempts
