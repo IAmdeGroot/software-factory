@@ -18,8 +18,8 @@ The factory is the product. Games, apps, and tools are outputs.
 
 ## Success Criteria (v0)
 
-- [ ] Planner agent can create beads from a vision doc
-- [ ] Worker agent can claim a ready bead and implement it without step-by-step human guidance
+- [x] Planner agent can create beads from a vision doc
+- [x] Worker agent can claim a ready bead and implement it without step-by-step human guidance
 - [ ] Bead status is updated automatically after work completes
 - [ ] At least one example product increment is built through the factory loop
 

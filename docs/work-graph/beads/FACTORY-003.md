@@ -1,10 +1,10 @@
 ---
 id: FACTORY-003
 title: Add bead status listing script
-status: blocked
+status: done
 dependencies:
   - FACTORY-002
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-003: Add bead status listing script
@@ -16,12 +16,12 @@ queries the work graph and prints a status summary.
 
 ## Acceptance Criteria
 
-- [ ] CLI command (e.g. `python -m harness.beads list` or `npm run beads:list`)
-- [ ] Lists all beads with their status
-- [ ] Highlights **ready** beads (all dependencies satisfied and status is `ready`)
-- [ ] Shows blocked beads and what they are waiting on
-- [ ] Exit code 0 on success
-- [ ] Tests cover: all-ready, blocked-by-dep, mixed statuses
+- [x] CLI command (e.g. `python -m harness.beads list` or `npm run beads:list`)
+- [x] Lists all beads with their status
+- [x] Highlights **ready** beads (all dependencies satisfied and status is `ready`)
+- [x] Shows blocked beads and what they are waiting on
+- [x] Exit code 0 on success
+- [x] Tests cover: all-ready, blocked-by-dep, mixed statuses
 
 ## Notes
 

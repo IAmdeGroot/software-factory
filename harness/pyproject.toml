@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "software-factory-harness"
+version = "0.1.0"
+description = "Automation harness for the software factory."
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["harness*"]

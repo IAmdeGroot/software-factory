@@ -1,9 +1,9 @@
 ---
 id: FACTORY-001
 title: Validate bead file schema
-status: ready
+status: done
 dependencies: []
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-001: Validate bead file schema
@@ -15,13 +15,13 @@ we need a validator that ensures bead files are well-formed.
 
 ## Acceptance Criteria
 
-- [ ] A script or test exists that reads all files in `docs/work-graph/beads/`
-- [ ] Validates required frontmatter fields: `id`, `title`, `status`, `dependencies`
-- [ ] Validates `status` is one of: `ready`, `in_progress`, `review`, `done`, `blocked`
-- [ ] Validates `id` matches the filename (e.g. `FACTORY-001.md` → id `FACTORY-001`)
-- [ ] Validates dependency IDs reference existing bead files
-- [ ] Reports clear errors for invalid beads
-- [ ] All existing beads pass validation
+- [x] A script or test exists that reads all files in `docs/work-graph/beads/`
+- [x] Validates required frontmatter fields: `id`, `title`, `status`, `dependencies`
+- [x] Validates `status` is one of: `ready`, `in_progress`, `review`, `done`, `blocked`
+- [x] Validates `id` matches the filename (e.g. `FACTORY-001.md` → id `FACTORY-001`)
+- [x] Validates dependency IDs reference existing bead files
+- [x] Reports clear errors for invalid beads
+- [x] All existing beads pass validation
 
 ## Notes
 

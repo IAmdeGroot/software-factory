@@ -10,15 +10,59 @@ Factory orchestration code — scripts, validators, and automation that agents a
 | Project scaffold | FACTORY-002 | Runtime, tests, entry point |
 | Bead list CLI | FACTORY-003 | Show ready/blocked beads |
 
-## Running (after FACTORY-002)
+## Running (FACTORY-002)
+
+From the repository root:
 
 ```bash
-# Run tests
-npm test          # or: python -m pytest
+# Validate all beads
+python -m harness.beads
 
-# List bead status
-npm run beads:list   # or: python -m harness.beads list
+# List bead status (pull-work view)
+python -m harness.beads list
+
+# Agent-readable JSON output
+python -m harness.beads list --json
+
+# Show only currently claimable beads
+python -m harness.beads ready
+
+# Agent-readable ready queue
+python -m harness.beads ready --json
+
+# Claim a ready bead
+python -m harness.beads claim FACTORY-005
+python -m harness.beads claim FACTORY-005 --assignee agent
+
+# Run all harness tests (equivalent to npm test)
+python -m harness.tests
 ```
+
+From `harness/`:
+
+```bash
+# Run tests directly from harness project
+python -m unittest discover -s tests -v
+```
+
+## Project Files
+
+- `harness/pyproject.toml` — Python runtime project metadata
+- `harness/tests/__main__.py` — test runner entrypoint
+- `harness/beads/` — bead-related CLI and validation
+
+## Cursor Hook: Auto-validate bead edits
+
+Project-level hook config:
+
+- `.cursor/hooks.json` wires `afterFileEdit`
+- `.cursor/hooks/validate-beads-on-edit.py` runs `python -m harness.beads validate`
+
+Behavior:
+
+- Runs validation when edited paths include `docs/work-graph/beads/*.md`
+- Uses both hook matcher (`Write|TabWrite`) and script-side path checks
+- Fails open (it reports errors but does not block edits)
 
 ## Design Principles
 
