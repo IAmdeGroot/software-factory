@@ -7,7 +7,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [DUNGEON-003](beads/DUNGEON-003.md) | Add a bounded room the player cannot walk out of | ready |
 
 ## In Progress
 
@@ -19,13 +19,14 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [FACTORY-019](beads/FACTORY-019.md) | Leave Gas Town for the Wish Factory | review |
 
 ## Blocked (waiting on dependencies)
 
 | ID | Title | Blocked by |
 |----|-------|------------|
-| _(none)_ | | |
+| [FACTORY-020](beads/FACTORY-020.md) | Add markdown wish drop and list command | FACTORY-019 |
+| [FACTORY-021](beads/FACTORY-021.md) | Convert open wishes into beads | FACTORY-020 |
 
 ## Done
 

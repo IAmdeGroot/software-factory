@@ -1,7 +1,7 @@
 ---
 id: FACTORY-019
 title: Leave Gas Town for the Wish Factory
-status: in_progress
+status: review
 dependencies: []
 assignee: agent
 ---
