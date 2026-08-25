@@ -32,7 +32,7 @@ Factory loop first — no product work until these are checked:
 Review and CI triage so work does not stall at `review` waiting for a chat message:
 
 - [x] Reviewer can list beads in `review` (`review-queue`)
-- [ ] Reviewer skill can accept (`done`) or reject with failing criteria
+- [x] Reviewer skill can accept (`done`) or reject with failing criteria
 - [ ] Documented PR-review automation recipe
 - [x] Documented CI-triage automation recipe
 

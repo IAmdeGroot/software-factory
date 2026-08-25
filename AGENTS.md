@@ -70,4 +70,11 @@ Prompt: **Triage the latest CI failure on this repository**
 
 Recipe: `.cursor/automations/ci-triage.md`. Green CI means stop. Fix in-scope failures; otherwise create a new bead and stop. Enabling the automation is a human dashboard action.
 
+## Unattended reviewer
+
+Prompt: **Review the next bead**
+
+When that prompt (or no bead id) is given, follow `.cursor/skills/bead-reviewer/SKILL.md`. Run `python -m harness.beads review-queue`. Empty queue means stop. On pass, `python -m harness.beads done <id>`. On fail, leave `review` and list failing criteria. Do not merge PRs.
+
+
 
