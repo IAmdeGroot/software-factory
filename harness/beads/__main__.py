@@ -22,6 +22,12 @@ from harness.beads.listing import (
 )
 from harness.beads.status import TransitionError, complete_bead, done_bead
 from harness.beads.validate import validate_beads_dir
+from harness.beads.wishes import (
+    build_open_wishes,
+    format_wishes_text,
+    validate_wishes_dir,
+    wishes_to_json,
+)
 
 
 def _default_beads_dir() -> Path:
@@ -29,10 +35,24 @@ def _default_beads_dir() -> Path:
     return repo_root / "docs" / "work-graph" / "beads"
 
 
+def _default_wishes_dir() -> Path:
+    repo_root = Path(__file__).resolve().parents[2]
+    return repo_root / "docs" / "work-graph" / "wishes"
+
+
 def _validate_command(beads_dir: Path) -> int:
     result = validate_beads_dir(beads_dir)
+    wishes_dir = _default_wishes_dir()
+    wish_result = validate_wishes_dir(wishes_dir)
+    result.errors.extend(wish_result.errors)
     if result.ok:
-        print(f"OK: {len(list(beads_dir.glob('*.md')))} bead(s) validated in {beads_dir}")
+        bead_count = len(list(beads_dir.glob("*.md"))) if beads_dir.is_dir() else 0
+        print(f"OK: {bead_count} bead(s) validated in {beads_dir}")
+        if wishes_dir.is_dir():
+            wish_count = len(
+                [path for path in wishes_dir.glob("*.md") if path.stem.startswith("WISH-")]
+            )
+            print(f"OK: {wish_count} wish(es) validated in {wishes_dir}")
         return 0
 
     print(f"Bead validation failed ({len(result.errors)} error(s)):", file=sys.stderr)
@@ -130,6 +150,15 @@ def _done_command(beads_dir: Path, bead_id: str) -> int:
     return 0
 
 
+def _wishes_command(wishes_dir: Path, json_output: bool) -> int:
+    wishes = build_open_wishes(wishes_dir)
+    if json_output:
+        print(wishes_to_json(wishes))
+    else:
+        print(format_wishes_text(wishes))
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     args = argv if argv is not None else sys.argv[1:]
     default_beads = str(_default_beads_dir())
@@ -174,11 +203,17 @@ def main(argv: list[str] | None = None) -> int:
     sync_parser.add_argument("--beads-dir", default=default_beads, dest="beads_dir")
     sync_parser.add_argument("--backlog", default=None, dest="backlog_path")
 
+    wishes_parser = subparsers.add_parser("wishes", help="list open wishes")
+    wishes_parser.add_argument(
+        "wishes_dir", nargs="?", default=str(_default_wishes_dir())
+    )
+    wishes_parser.add_argument("--json", action="store_true", dest="json_output")
+
     if not args:
         args = ["validate"]
 
     parsed = parser.parse_args(args)
-    beads_dir = Path(parsed.beads_dir)
+    beads_dir = Path(parsed.beads_dir) if hasattr(parsed, "beads_dir") else _default_beads_dir()
 
     if parsed.command == "validate":
         return _validate_command(beads_dir)
@@ -203,6 +238,8 @@ def main(argv: list[str] | None = None) -> int:
             else default_backlog_path(beads_dir)
         )
         return _sync_backlog_command(beads_dir, backlog_path)
+    if parsed.command == "wishes":
+        return _wishes_command(Path(parsed.wishes_dir), parsed.json_output)
 
     parser.print_help()
     return 1

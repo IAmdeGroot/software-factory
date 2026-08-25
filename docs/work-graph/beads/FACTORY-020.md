@@ -1,10 +1,10 @@
 ---
 id: FACTORY-020
 title: Add markdown wish drop and list command
-status: ready
+status: in_progress
 dependencies:
   - FACTORY-019
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-020: Add markdown wish drop and list command
@@ -17,13 +17,13 @@ as beads: markdown + YAML, git-tracked, no paid tracker.
 
 ## Acceptance Criteria
 
-- [ ] Wish files live under `docs/work-graph/wishes/` with YAML frontmatter
-- [ ] Required fields: `id`, `title`, `status` (`open` | `planned` | `done`), `source`
-- [ ] CLI: `python -m harness.beads wishes` lists open wishes (stable sort by id)
-- [ ] `wishes --json` works
-- [ ] Validator rejects invalid wish files (or a dedicated validate path)
-- [ ] Tests cover list, empty drop, and invalid status
-- [ ] Tests pass
+- [x] Wish files live under `docs/work-graph/wishes/` with YAML frontmatter
+- [x] Required fields: `id`, `title`, `status` (`open` | `planned` | `done`), `source`
+- [x] CLI: `python -m harness.beads wishes` lists open wishes (stable sort by id)
+- [x] `wishes --json` works
+- [x] Validator rejects invalid wish files (or a dedicated validate path)
+- [x] Tests cover list, empty drop, and invalid status
+- [x] Tests pass
 
 ## Notes
 

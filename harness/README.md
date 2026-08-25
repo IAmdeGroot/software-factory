@@ -15,6 +15,7 @@ Factory orchestration code — scripts, validators, and automation that agents a
 | Backlog sync | FACTORY-008 | Regenerate `backlog.md` from beads |
 | Next CLI | FACTORY-009 | Claim the first ready bead |
 | Review queue CLI | FACTORY-012 | Beads waiting for review |
+| Wish drop CLI | FACTORY-020 | List and validate markdown wishes |
 | Unattended loop | FACTORY-011 | Skill + Cursor automation recipe |
 
 ## Running (FACTORY-002)
@@ -40,6 +41,10 @@ python -m harness.beads ready --json
 # Show beads waiting for review
 python -m harness.beads review-queue
 python -m harness.beads review-queue --json
+
+# List open wishes (markdown drop)
+python -m harness.beads wishes
+python -m harness.beads wishes --json
 
 # Claim a ready bead
 python -m harness.beads claim FACTORY-007
@@ -94,7 +99,7 @@ Behavior:
 GitHub Actions (`.github/workflows/harness.yml`) runs on every push and pull request:
 
 - `python3 -m harness.tests`
-- `python3 -m harness.beads validate`
+- `python3 -m harness.beads validate` (beads + `WISH-*.md` in `docs/work-graph/wishes/`)
 
 Python 3.12, stdlib only — no package install step.
 

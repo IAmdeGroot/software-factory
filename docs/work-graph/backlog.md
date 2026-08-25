@@ -7,13 +7,13 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [FACTORY-020](beads/FACTORY-020.md) | Add markdown wish drop and list command | ready |
+| _(none)_ | | |
 
 ## In Progress
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [FACTORY-020](beads/FACTORY-020.md) | Add markdown wish drop and list command | in_progress |
 
 ## In Review
 
