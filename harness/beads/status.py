@@ -50,6 +50,9 @@ def _transition(
 
     data["status"] = next_status
     write_bead(bead_path, data, body)
+    from harness.beads.backlog import sync_backlog_if_present
+
+    sync_backlog_if_present(beads_dir)
     return TransitionResult(
         bead_id=bead_id,
         from_status=expected_status,

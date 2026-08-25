@@ -12,6 +12,7 @@ Factory orchestration code — scripts, validators, and automation that agents a
 | Ready queue CLI | FACTORY-004 | Claimable beads only |
 | Claim CLI | FACTORY-005 | Mark a ready bead `in_progress` |
 | Complete / done CLI | FACTORY-007 | `in_progress` → `review` → `done` |
+| Backlog sync | FACTORY-008 | Regenerate `backlog.md` from beads |
 
 ## Running (FACTORY-002)
 
@@ -42,6 +43,9 @@ python -m harness.beads complete FACTORY-007
 
 # Mark a review bead as done
 python -m harness.beads done FACTORY-007
+
+# Regenerate docs/work-graph/backlog.md from bead files
+python -m harness.beads sync-backlog
 
 # Run all harness tests (equivalent to npm test)
 python -m harness.tests
@@ -78,3 +82,4 @@ Behavior:
 - **Deterministic where possible** — scripts validate, agents reason
 - **Agent-readable output** — plain text or `--json` flag
 - **Minimal dependencies** — keep the harness lightweight
+- **Backlog is generated** — `claim` / `complete` / `done` refresh `docs/work-graph/backlog.md` between `<!-- beads:tables:start -->` and `<!-- beads:tables:end -->`. Milestone notes outside those markers are preserved.

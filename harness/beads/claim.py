@@ -50,5 +50,8 @@ def claim_bead(beads_dir: Path, bead_id: str, assignee: str = "agent") -> ClaimR
     data["status"] = "in_progress"
     data["assignee"] = assignee
     write_bead(bead_path, data, body)
+    from harness.beads.backlog import sync_backlog_if_present
+
+    sync_backlog_if_present(beads_dir)
 
     return ClaimResult(bead_id=bead_id, assignee=assignee, path=bead_path)

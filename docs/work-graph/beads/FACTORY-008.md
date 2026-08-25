@@ -1,10 +1,10 @@
 ---
 id: FACTORY-008
 title: Sync backlog.md from bead statuses
-status: ready
+status: done
 dependencies:
   - FACTORY-007
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-008: Sync backlog.md from bead statuses
@@ -17,13 +17,13 @@ whenever a command changes bead status.
 
 ## Acceptance Criteria
 
-- [ ] CLI command: `python -m harness.beads sync-backlog`
-- [ ] Regenerates the Ready / In Review / Blocked / Done tables from bead files
-- [ ] Preserves non-table sections (milestone notes, how-to) via markers or a stable template
-- [ ] `claim`, `complete`, and `done` call the sync after a successful status change
-- [ ] Exit code 0 on success
-- [ ] Tests cover: empty graph, mixed statuses, and that a status-changing command updates the backlog file
-- [ ] `harness/README.md` documents the command
+- [x] CLI command: `python -m harness.beads sync-backlog`
+- [x] Regenerates the Ready / In Review / Blocked / Done tables from bead files
+- [x] Preserves non-table sections (milestone notes, how-to) via markers or a stable template
+- [x] `claim`, `complete`, and `done` call the sync after a successful status change
+- [x] Exit code 0 on success
+- [x] Tests cover: empty graph, mixed statuses, and that a status-changing command updates the backlog file
+- [x] `harness/README.md` documents the command
 
 ## Notes
 
