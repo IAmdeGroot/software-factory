@@ -22,7 +22,7 @@ Factory loop first — no product work until these are checked:
 
 - [x] Planner agent can create beads from a vision doc
 - [x] Worker agent can claim a ready bead and implement it without step-by-step human guidance
-- [ ] Bead status is updated by harness commands after work completes (`complete` / `done`)
+- [x] Bead status is updated by harness commands after work completes (`complete` / `done`)
 - [ ] A worker can pull the next ready bead without being told which one (`next`)
 - [ ] Deterministic CI watches harness tests and bead validity
 - [ ] Documented unattended loop: skill + Cursor automation recipe, empty queue means stop
