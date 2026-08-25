@@ -10,8 +10,10 @@
 
 ## Branches
 
-- Branch name: `bead/FACTORY-001-short-title`
-- Merge to `main` only after review passes
+- Branch name: `bead/FACTORY-001-short-title` (if the environment requires another prefix, keep one bead per branch)
+- Integration branch: `main`
+- Merge to `main` only after the bead is `done` and CI is green
+- Changing GitHub's default branch to `main` is a human repo setting, not an agent action
 
 ## Commits
 

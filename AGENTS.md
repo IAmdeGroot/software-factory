@@ -80,6 +80,13 @@ When that prompt (or no bead id) is given, follow `.cursor/skills/bead-reviewer/
 
 To run this without a chat message, create a Cursor Automation from `.cursor/automations/pr-review.md` (prompt `Review the next bead`). Trigger on PR opened or CI green when the dashboard allows it. Enabling it is a human dashboard action.
 
+## Land / merge
+
+Humans merge. Recipe: `.cursor/automations/land.md`.
+
+Merge only when the bead is `done`, CI is green, and the PR is one bead. Integration branch is `main` (renaming GitHub's default branch is a human setting). Agents do not merge.
+
+
 
 
 

@@ -108,6 +108,8 @@ CI failures: `.cursor/automations/ci-triage.md` (prompt `Triage the latest CI fa
 
 Review: prompt `Review the next bead` — `.cursor/skills/bead-reviewer/SKILL.md` (empty `review-queue` means stop; do not merge PRs). Recipe: `.cursor/automations/pr-review.md`.
 
+Land: humans merge using `.cursor/automations/land.md` (bead `done`, CI green, one bead). Integration branch is `main`.
+
 ## Design Principles
 
 - **Deterministic where possible** — scripts validate, agents reason

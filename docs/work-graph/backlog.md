@@ -7,7 +7,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [FACTORY-018](beads/FACTORY-018.md) | Add human land/merge recipe | ready |
+| _(none)_ | | |
 
 ## In Progress
 
@@ -48,6 +48,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 | [FACTORY-015](beads/FACTORY-015.md) | Add CI triage automation recipe | done |
 | [FACTORY-016](beads/FACTORY-016.md) | Worker loop opens a pull request | done |
 | [FACTORY-017](beads/FACTORY-017.md) | Reviewer marks the PR ready after done | done |
+| [FACTORY-018](beads/FACTORY-018.md) | Add human land/merge recipe | done |
 <!-- beads:tables:end -->
 
 ---
@@ -99,7 +100,7 @@ Goal: each bead becomes a PR that a human can merge. Agents still do not merge. 
 |------|---------|--------|
 | FACTORY-016 | worker commits, pushes, opens one PR | done |
 | FACTORY-017 | reviewer marks PR ready after `done` | done |
-| FACTORY-018 | human land/merge recipe + `main` | ready |
+| FACTORY-018 | human land/merge recipe + `main` | done |
 
 ---
 
@@ -108,5 +109,6 @@ Goal: each bead becomes a PR that a human can merge. Agents still do not merge. 
 1. Run `python -m harness.beads ready` to see claimable work
 2. Run `python -m harness.beads claim FACTORY-00X` to claim a bead
 3. Tell Cursor Agent: `Implement the claimed bead`
-4. Agent implements, tests, then runs `python -m harness.beads complete <id>`
+4. Agent implements, tests, commits, pushes, opens one PR, then `python -m harness.beads complete <id>`
 5. Unattended: `Implement the next ready bead` (empty queue means stop)
+6. Review: `Review the next bead`; humans merge via `.cursor/automations/land.md`
