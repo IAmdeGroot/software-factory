@@ -7,6 +7,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
+| [DUNGEON-004](beads/DUNGEON-004.md) | Add nail-like melee in the facing direction | ready |
 | [FACTORY-021](beads/FACTORY-021.md) | Convert open wishes into beads | ready |
 
 ## In Progress
@@ -25,7 +26,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Blocked by |
 |----|-------|------------|
-| _(none)_ | | |
+| [DUNGEON-005](beads/DUNGEON-005.md) | Add one strikeable enemy in the room | DUNGEON-004 |
 
 ## Done
 
@@ -115,10 +116,10 @@ Goal: leave Gas Town. Bond the harness to Dark Dungeon. Wishes feed the work gra
 
 | Bead | Purpose | Status |
 |------|---------|--------|
-| FACTORY-019 | record Wish Factory direction in the brain | in_progress |
-| FACTORY-020 | markdown wish drop + list command | ready |
+| FACTORY-019 | record Wish Factory direction in the brain | done |
+| FACTORY-020 | markdown wish drop + list command | done |
 | FACTORY-021 | planner converts wishes into beads | ready |
-| DUNGEON-003 | bounded room (product surface for wishes) | ready |
+| DUNGEON-003 | bounded room (product surface for wishes) | done |
 
 ---
 
@@ -130,7 +131,18 @@ Example product under `examples/dark-dungeon/`. Factory PRs may still be unmerge
 |------|---------|--------|
 | DUNGEON-001 | Godot 4 2D project scaffold | done |
 | DUNGEON-002 | Four-way player movement | done |
-| DUNGEON-003 | Bounded room | ready |
+| DUNGEON-003 | Bounded room | done |
+
+---
+
+## Dark Dungeon — Hollow Knight feel (WISH-001)
+
+Inspiration, not a clone. Stay top-down. First verbs:
+
+| Bead | Purpose | Status |
+|------|---------|--------|
+| DUNGEON-004 | Nail-like melee in facing direction | ready |
+| DUNGEON-005 | One strikeable enemy in the room | after 004 |
 
 ---
 
