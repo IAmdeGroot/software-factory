@@ -7,7 +7,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [FACTORY-016](beads/FACTORY-016.md) | Worker loop opens a pull request | ready |
 
 ## In Progress
 
@@ -25,7 +25,8 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Blocked by |
 |----|-------|------------|
-| _(none)_ | | |
+| [FACTORY-017](beads/FACTORY-017.md) | Reviewer marks the PR ready after done | FACTORY-016 |
+| [FACTORY-018](beads/FACTORY-018.md) | Add human land/merge recipe | FACTORY-016 |
 
 ## Done
 
@@ -86,6 +87,18 @@ Goal: beads in `review` and failed CI can wake an agent without a human naming t
 | FACTORY-013 | bead-reviewer skill — accept or reject | done |
 | FACTORY-014 | PR review automation recipe | done |
 | FACTORY-015 | CI triage automation recipe | done |
+
+---
+
+## Milestone 5 — Land Loop
+
+Goal: each bead becomes a PR that a human can merge. Agents still do not merge. Dark Dungeon stays deferred until work can land.
+
+| Bead | Purpose | Status |
+|------|---------|--------|
+| FACTORY-016 | worker commits, pushes, opens one PR | ready |
+| FACTORY-017 | reviewer marks PR ready after `done` | blocked by 016 |
+| FACTORY-018 | human land/merge recipe + `main` | blocked by 016 |
 
 ---
 
