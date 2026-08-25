@@ -1,0 +1,21 @@
+; Engine configuration file.
+; https://docs.godotengine.org/en/stable/classes/class_configfile.html
+config_version=5
+
+[application]
+
+config/name="Dark Dungeon"
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+textures/canvas_textures/default_texture_filter=0

@@ -7,7 +7,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [DUNGEON-001](beads/DUNGEON-001.md) | Add Godot 4 project scaffold | ready |
+| [DUNGEON-002](beads/DUNGEON-002.md) | Add four-way player movement | ready |
 
 ## In Progress
 
@@ -25,12 +25,13 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Blocked by |
 |----|-------|------------|
-| [DUNGEON-002](beads/DUNGEON-002.md) | Add four-way player movement | DUNGEON-001 |
+| _(none)_ | | |
 
 ## Done
 
 | ID | Title | Status |
 |----|-------|--------|
+| [DUNGEON-001](beads/DUNGEON-001.md) | Add Godot 4 project scaffold | done |
 | [FACTORY-001](beads/FACTORY-001.md) | Validate bead file schema | done |
 | [FACTORY-002](beads/FACTORY-002.md) | Create harness project scaffold | done |
 | [FACTORY-003](beads/FACTORY-003.md) | Add bead status listing script | done |
@@ -110,8 +111,8 @@ Example product under `examples/dark-dungeon/`. Factory PRs may still be unmerge
 
 | Bead | Purpose | Status |
 |------|---------|--------|
-| DUNGEON-001 | Godot 4 2D project scaffold | ready |
-| DUNGEON-002 | Four-way player movement | blocked by 001 |
+| DUNGEON-001 | Godot 4 2D project scaffold | done |
+| DUNGEON-002 | Four-way player movement | ready |
 
 ---
 

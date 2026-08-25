@@ -61,3 +61,10 @@ Record non-obvious decisions here. Format:
 **Decision:** Keep working on the current branch tip (`cursor/factory-018-land-recipe-06d8` / PR #15). Start the example product with `DUNGEON-` beads: Godot 4 scaffold, then four-way player movement. Do not wait for merges.
 **Rationale:** The land loop exists. An empty ready queue with no product work stalls the factory. The remaining v0 checkbox is an example increment. Stacking on #15 means a later merge still gets factory + game work in order.
 **Alternatives considered:** Idle until merges land — rejected; the human asked to continue. More factory (Cursor SDK) — still v1. Auto-merge the stack — agents still cannot merge.
+
+## 2026-08-25 — Godot 4 2D for Dark Dungeon
+
+**Context:** First product beads need an engine.
+**Decision:** Godot 4 (config_version 5), 2D, project under `examples/dark-dungeon/`.
+**Rationale:** Matches the example README, is free, and project files are text so agents can edit them without the editor.
+**Alternatives considered:** Unity — heavier and less text-friendly. Browser canvas — would skip the intended Godot example. Godot 3 — older; 4 is current.
