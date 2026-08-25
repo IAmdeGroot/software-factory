@@ -50,7 +50,7 @@ Dark Dungeon stays deferred until this land loop exists.
 
 ## Example product (after factory loop)
 
-- [ ] First playable Dark Dungeon increment: Godot 4 scaffold + four-way player movement
+- [x] First playable Dark Dungeon increment: Godot 4 scaffold + four-way player movement
 
 Humans may merge factory PRs later. New product work continues from the current branch tip so it stacks on those PRs.
 
