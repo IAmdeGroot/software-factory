@@ -7,14 +7,13 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [DUNGEON-004](beads/DUNGEON-004.md) | Add nail-like melee in the facing direction | ready |
 | [FACTORY-021](beads/FACTORY-021.md) | Convert open wishes into beads | ready |
 
 ## In Progress
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [DUNGEON-004](beads/DUNGEON-004.md) | Add nail-like melee in the facing direction | in_progress |
 
 ## In Review
 

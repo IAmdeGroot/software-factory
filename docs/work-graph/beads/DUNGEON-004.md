@@ -1,10 +1,10 @@
 ---
 id: DUNGEON-004
 title: Add nail-like melee in the facing direction
-status: ready
+status: in_progress
 dependencies:
   - DUNGEON-003
-assignee: null
+assignee: agent
 ---
 
 # DUNGEON-004: Add nail-like melee in the facing direction
@@ -17,14 +17,14 @@ stays top-down; this is not a side-view slash.
 
 ## Acceptance Criteria
 
-- [ ] The player remembers a facing direction from movement (including idle)
-- [ ] An attack input (keyboard; document the key in the README) swings a
+- [x] The player remembers a facing direction from movement (including idle)
+- [x] An attack input (keyboard; document the key in the README) swings a
       short-range hitbox in that facing direction
-- [ ] The swing has a brief recover so it cannot be a hold-to-spam beam
-- [ ] WASD / arrows still move the player in the bounded room
-- [ ] A test checks attack/facing wiring in the player script and scene
-- [ ] README notes the attack key and Hollow Knight–inspired melee
-- [ ] Tests pass
+- [x] The swing has a brief recover so it cannot be a hold-to-spam beam
+- [x] WASD / arrows still move the player in the bounded room
+- [x] A test checks attack/facing wiring in the player script and scene
+- [x] README notes the attack key and Hollow Knight–inspired melee
+- [x] Tests pass
 
 ## Notes
 
