@@ -68,3 +68,10 @@ Record non-obvious decisions here. Format:
 **Decision:** Godot 4 (config_version 5), 2D, project under `examples/dark-dungeon/`.
 **Rationale:** Matches the example README, is free, and project files are text so agents can edit them without the editor.
 **Alternatives considered:** Unity — heavier and less text-friendly. Browser canvas — would skip the intended Godot example. Godot 3 — older; 4 is current.
+
+## 2026-08-25 — Leave Gas Town; grow a Wish Factory around Dark Dungeon
+
+**Context:** Factory v0 through land loop is done. Dark Dungeon has a scaffold and movement. The human asked what was missing versus Yegge, then pointed at [The Shape of Things to Come](https://yegge.ai/essays/the-shape-of-things-to-come/) and said to leave Gas Town.
+**Decision:** Stop treating a reusable Gas Town (Mayor, polecats, refinery, 24/7 fleet, Cursor SDK) as the next milestone. Grow the harness because Dark Dungeon needs it. Next increment is a Wish Factory: markdown wishes feed the work graph; a planner turns wishes into beads; workers still stop on an empty ready queue. Product beads (rooms, combat) proceed in parallel so the game can generate wishes.
+**Rationale:** Yegge's later essay says reusable harnesses fail; Gas Town burned down building itself. The convergent shape (brain + work graph + watchers) still holds, but it has to be chemically bonded to a live product. A wish drop is the smallest intake that matches "give a requirement and let it spin" without standing up a town.
+**Alternatives considered:** Keep building toward Gas Town (SDK, parallel workers, merge thunderdome) — rejected by the human. Adopt Yegge's Beads CLI / Dolt — still deferred; markdown wishes match the v0 bead format. Auto-grant wishes with no planner — rejected; a wish is not a bead until it has acceptance criteria.

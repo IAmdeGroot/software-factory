@@ -5,11 +5,15 @@
 ```text
                          HUMAN
                            │
-                 vision / decisions
+              vision / decisions / wishes
                            │
                            ▼
                     PROJECT BRAIN
                      docs/brain/
+                           │
+                           ▼
+                    WISH DROP (optional)
+               docs/work-graph/wishes/
                            │
                            ▼
                         PLANNER
@@ -19,12 +23,10 @@
                      WORK GRAPH
                   docs/work-graph/beads/
                            │
-                 ┌─────────┴─────────┐
-                 ▼                   ▼
-             WORKER A             WORKER B
-           (Cursor Agent)       (future)
-                 │                   │
-                 └─────────┬─────────┘
+                           ▼
+                        WORKER
+                     (Cursor Agent)
+                           │
                            ▼
                        REVIEW
                            │
@@ -35,12 +37,9 @@
                       MERGE / BUILD
                            │
                            ▼
-                      MONITORING
+                 PRODUCT (Dark Dungeon)
                            │
-                           ▼
-                    NEW WORK / BUGS
-                           │
-                           └──────────→ WORK GRAPH
+                           └──────────→ new wishes / beads
 ```
 
 ## Repository Layout
@@ -49,6 +48,7 @@
 |------|---------|
 | `docs/brain/` | Persistent knowledge (vision, architecture, decisions) |
 | `docs/work-graph/beads/` | Structured work items with deps and acceptance criteria |
+| `docs/work-graph/wishes/` | Wish drop (FACTORY-020): intent before it is a bead |
 | `harness/` | Factory orchestration scripts and automation |
 | `examples/` | Sample products built to test the factory |
 | `products/` | Future: real products the factory builds |
@@ -86,8 +86,9 @@ Followed by: context, acceptance criteria, and notes.
 3. Cursor hooks for post-edit checks (FACTORY-006) — done
 4. Status transitions, next-bead pull, CI watch, unattended worker recipe (Milestone 3) — done
 5. Review queue, reviewer skill, PR-review and CI-triage recipes (Milestone 4) — done
-6. Worker PR + reviewer ready-for-review + human land recipe (Milestone 5)
-7. Optional: Cursor SDK for programmatic agent runs
-8. Example product increments under `examples/` (Dark Dungeon first playable)
+6. Worker PR + reviewer ready-for-review + human land recipe (Milestone 5) — done
+7. Dark Dungeon first playable (scaffold + movement) — done
+8. Wish Factory bonded to Dark Dungeon (FACTORY-019–021, DUNGEON-003)
+9. Later, only if the product needs it: more watchers, agent review rounds, continuous land. Not Gas Town.
 
-New work continues from the current branch tip when PRs are unmerged. Humans merge the stack later.
+The harness grows from Dark Dungeon bottlenecks. Do not add a fleet, Mayor, or Cursor SDK because an essay had them.

@@ -106,6 +106,19 @@ Goal: each bead becomes a PR that a human can merge. Agents still do not merge. 
 
 ---
 
+## Milestone 6 — Wish Factory
+
+Goal: leave Gas Town. Bond the harness to Dark Dungeon. Wishes feed the work graph. Workers still stop on an empty ready queue.
+
+| Bead | Purpose | Status |
+|------|---------|--------|
+| FACTORY-019 | record Wish Factory direction in the brain | in_progress |
+| FACTORY-020 | markdown wish drop + list command | ready |
+| FACTORY-021 | planner converts wishes into beads | ready |
+| DUNGEON-003 | bounded room (product surface for wishes) | ready |
+
+---
+
 ## Dark Dungeon — First Playable
 
 Example product under `examples/dark-dungeon/`. Factory PRs may still be unmerged; this work stacks on the current tip.
@@ -114,6 +127,7 @@ Example product under `examples/dark-dungeon/`. Factory PRs may still be unmerge
 |------|---------|--------|
 | DUNGEON-001 | Godot 4 2D project scaffold | done |
 | DUNGEON-002 | Four-way player movement | done |
+| DUNGEON-003 | Bounded room | ready |
 
 ---
 
@@ -125,3 +139,4 @@ Example product under `examples/dark-dungeon/`. Factory PRs may still be unmerge
 4. Agent implements, tests, commits, pushes, opens one PR, then `python -m harness.beads complete <id>`
 5. Unattended: `Implement the next ready bead` (empty queue means stop)
 6. Review: `Review the next bead`; humans merge via `.cursor/automations/land.md`
+7. Wishes (FACTORY-020+): drop intent under `docs/work-graph/wishes/`; a planner turns them into beads. Do not invent work when the ready queue is empty.

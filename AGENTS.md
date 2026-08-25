@@ -1,7 +1,7 @@
 # Software Factory — Agent Operating Contract
 
 This repository is a **software factory**: a harness for harnessed agentic engineering.
-The factory builds products; products live under `examples/` or future `products/`.
+The harness is bonded to the products it builds (today: `examples/dark-dungeon/`). Do not build a reusable Gas Town. Next increment is the Wish Factory: wishes become beads; workers still stop on an empty ready queue.
 
 ## Core Loop
 
