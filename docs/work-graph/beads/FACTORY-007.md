@@ -1,10 +1,10 @@
 ---
 id: FACTORY-007
 title: Add complete and done CLI commands
-status: ready
+status: in_progress
 dependencies:
   - FACTORY-005
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-007: Add complete and done CLI commands

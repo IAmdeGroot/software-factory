@@ -9,6 +9,9 @@ Factory orchestration code — scripts, validators, and automation that agents a
 | Bead validator | FACTORY-001 | Validate bead file schema |
 | Project scaffold | FACTORY-002 | Runtime, tests, entry point |
 | Bead list CLI | FACTORY-003 | Show ready/blocked beads |
+| Ready queue CLI | FACTORY-004 | Claimable beads only |
+| Claim CLI | FACTORY-005 | Mark a ready bead `in_progress` |
+| Complete / done CLI | FACTORY-007 | `in_progress` → `review` → `done` |
 
 ## Running (FACTORY-002)
 
@@ -31,8 +34,14 @@ python -m harness.beads ready
 python -m harness.beads ready --json
 
 # Claim a ready bead
-python -m harness.beads claim FACTORY-005
-python -m harness.beads claim FACTORY-005 --assignee agent
+python -m harness.beads claim FACTORY-007
+python -m harness.beads claim FACTORY-007 --assignee agent
+
+# Mark an in_progress bead as review
+python -m harness.beads complete FACTORY-007
+
+# Mark a review bead as done
+python -m harness.beads done FACTORY-007
 
 # Run all harness tests (equivalent to npm test)
 python -m harness.tests

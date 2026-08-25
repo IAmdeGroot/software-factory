@@ -6,9 +6,14 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [FACTORY-007](beads/FACTORY-007.md) | Add complete and done CLI commands | ready |
 | [FACTORY-009](beads/FACTORY-009.md) | Add next CLI command to claim first ready bead | ready |
 | [FACTORY-010](beads/FACTORY-010.md) | Add CI workflow for tests and bead validation | ready |
+
+## In Progress
+
+| ID | Title | Status |
+|----|-------|--------|
+| [FACTORY-007](beads/FACTORY-007.md) | Add complete and done CLI commands | in_progress |
 
 ## In Review
 
@@ -54,7 +59,7 @@ Goal: workers can finish beads and pull the next one without a human editing mar
 
 | Bead | Purpose | Status |
 |------|---------|--------|
-| FACTORY-007 | `complete` / `done` — status transitions | ready |
+| FACTORY-007 | `complete` / `done` — status transitions | in_progress |
 | FACTORY-008 | regenerate `backlog.md` from beads | blocked by 007 |
 | FACTORY-009 | `next` — claim first ready bead | ready |
 | FACTORY-010 | CI watches tests and bead validation | ready |
