@@ -1,7 +1,7 @@
 ---
 id: FACTORY-007
 title: Add complete and done CLI commands
-status: review
+status: done
 dependencies:
   - FACTORY-005
 assignee: agent
