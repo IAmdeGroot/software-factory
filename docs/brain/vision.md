@@ -38,6 +38,16 @@ Review and CI triage so work does not stall at `review` waiting for a chat messa
 
 Humans still merge pull requests. Dark Dungeon stays deferred.
 
+## Milestone 5 (land loop)
+
+Work must be able to reach the integration branch without a pile of forgotten drafts:
+
+- [ ] Worker commits, pushes, and opens one PR per bead
+- [ ] Reviewer marks that PR ready after `done` (still does not merge)
+- [ ] Documented human land/merge recipe; integration branch is `main`
+
+Dark Dungeon stays deferred until this land loop exists.
+
 ## Later (after v0 factory loop)
 
 - At least one example product increment built through the factory loop (`examples/dark-dungeon/`)

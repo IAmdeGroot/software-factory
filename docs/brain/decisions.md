@@ -47,3 +47,10 @@ Record non-obvious decisions here. Format:
 **Decision:** Plan Milestone 4 (FACTORY-012–015): review-queue CLI, reviewer skill, PR-review recipe, CI-triage recipe. Keep Dark Dungeon deferred. Humans still merge PRs.
 **Rationale:** Autonomy now means a reviewer can act without a chat nudge, and CI failures can wake an agent. Building a game would skip the review side of the factory.
 **Alternatives considered:** Start Dark Dungeon now that v0 worker criteria are checked — rejected; review still requires a human message. Cursor SDK fleet — still deferred as v1.
+
+## 2026-08-25 — Milestone 5 is land loop, not the game
+
+**Context:** Milestone 4 closed review and CI triage. The ready queue is empty. Eleven draft PRs are stacked and nothing has merged. Conventions already say merge to `main`, but the GitHub default branch is still a leftover bead branch, and the worker skill never opens a PR.
+**Decision:** Plan Milestone 5 (FACTORY-016–018): worker opens a PR, reviewer marks it ready after `done`, human land recipe. Keep Dark Dungeon deferred until work can land.
+**Rationale:** Building a game on stacked unmerged branches would not stress-test the factory. The next bottleneck is MERGE, not a product increment.
+**Alternatives considered:** Start Dark Dungeon now that the review loop exists — rejected until PRs can land. Auto-merge — rejected; humans still merge. Cursor SDK — still v1.
