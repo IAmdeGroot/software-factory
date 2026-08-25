@@ -42,7 +42,7 @@ Humans still merge pull requests. Dark Dungeon stays deferred.
 
 Work must be able to reach the integration branch without a pile of forgotten drafts:
 
-- [ ] Worker commits, pushes, and opens one PR per bead
+- [x] Worker commits, pushes, and opens one PR per bead
 - [ ] Reviewer marks that PR ready after `done` (still does not merge)
 - [ ] Documented human land/merge recipe; integration branch is `main`
 

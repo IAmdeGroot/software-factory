@@ -62,6 +62,8 @@ Prompt: **Implement the next ready bead**
 
 When that prompt (or no bead id) is given, run `python -m harness.beads next`. If the ready queue is empty, stop — do not invent work.
 
+After verify, commit with a `FACTORY-NNN:` prefix, push one branch, and open one PR against the repository default branch when the environment can. Do not merge. If PR creation is unavailable, report that a human must open the PR.
+
 To run this on a schedule, create a Cursor Automation from `.cursor/automations/worker-loop.md`. Enabling it in the Cursor dashboard is a human action; the recipe is committed here.
 
 ## CI triage

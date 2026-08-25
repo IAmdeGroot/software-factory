@@ -1,10 +1,10 @@
 ---
 id: FACTORY-016
 title: Worker loop opens a pull request
-status: ready
+status: done
 dependencies:
   - FACTORY-011
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-016: Worker loop opens a pull request
@@ -17,12 +17,12 @@ never reaches the integration branch.
 
 ## Acceptance Criteria
 
-- [ ] `plan-exec-loop` skill commits with a `FACTORY-NNN:` (or product-id) prefix
-- [ ] Skill pushes the bead branch and opens one PR for that bead when the environment can
-- [ ] Skill uses the repository default branch as PR base
-- [ ] Skill does **not** merge the PR
-- [ ] AGENTS.md or README documents that one bead = one branch = one PR
-- [ ] Empty ready queue still means stop; do not invent work
+- [x] `plan-exec-loop` skill commits with a `FACTORY-NNN:` (or product-id) prefix
+- [x] Skill pushes the bead branch and opens one PR for that bead when the environment can
+- [x] Skill uses the repository default branch as PR base
+- [x] Skill does **not** merge the PR
+- [x] AGENTS.md or README documents that one bead = one branch = one PR
+- [x] Empty ready queue still means stop; do not invent work
 
 ## Notes
 

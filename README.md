@@ -10,7 +10,9 @@ A harness for **harnessed agentic engineering** — AI agents that plan, impleme
 4. Agent follows the plan → implement → verify → review loop
 5. Update the bead status when done
 
-Unattended: say **"Implement the next ready bead"**. Review: **"Review the next bead"** (`.cursor/skills/bead-reviewer/SKILL.md`, recipe `.cursor/automations/pr-review.md`). CI failures: `.cursor/automations/ci-triage.md`.
+Unattended: say **"Implement the next ready bead"** (commit, push, one PR, do not merge). Review: **"Review the next bead"**. CI failures: `.cursor/automations/ci-triage.md`.
+
+One bead = one branch = one PR. Base is the repository default branch.
 
 ## Structure
 
