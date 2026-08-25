@@ -1,7 +1,7 @@
 ---
 id: FACTORY-007
 title: Add complete and done CLI commands
-status: in_progress
+status: review
 dependencies:
   - FACTORY-005
 assignee: agent
@@ -17,13 +17,13 @@ deterministic instead of conversational.
 
 ## Acceptance Criteria
 
-- [ ] CLI command: `python -m harness.beads complete FACTORY-NNN`
-- [ ] `complete` sets status from `in_progress` to `review` and preserves body content
-- [ ] CLI command: `python -m harness.beads done FACTORY-NNN`
-- [ ] `done` sets status from `review` to `done` and preserves body content
-- [ ] Both commands fail with a clear error if the bead is missing or in the wrong status
-- [ ] Tests cover: successful complete, successful done, wrong-status failure, missing bead
-- [ ] `harness/README.md` documents both commands
+- [x] CLI command: `python -m harness.beads complete FACTORY-NNN`
+- [x] `complete` sets status from `in_progress` to `review` and preserves body content
+- [x] CLI command: `python -m harness.beads done FACTORY-NNN`
+- [x] `done` sets status from `review` to `done` and preserves body content
+- [x] Both commands fail with a clear error if the bead is missing or in the wrong status
+- [x] Tests cover: successful complete, successful done, wrong-status failure, missing bead
+- [x] `harness/README.md` documents both commands
 
 ## Notes
 
