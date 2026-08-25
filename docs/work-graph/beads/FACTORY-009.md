@@ -1,10 +1,10 @@
 ---
 id: FACTORY-009
 title: Add next CLI command to claim first ready bead
-status: ready
+status: in_progress
 dependencies:
   - FACTORY-005
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-009: Add next CLI command to claim first ready bead
