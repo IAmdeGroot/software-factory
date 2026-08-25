@@ -1,7 +1,7 @@
 ---
 id: FACTORY-005
 title: Add bead claim CLI command
-status: review
+status: done
 dependencies:
   - FACTORY-004
 assignee: agent
