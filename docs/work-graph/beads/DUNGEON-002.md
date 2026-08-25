@@ -1,10 +1,10 @@
 ---
 id: DUNGEON-002
 title: Add four-way player movement
-status: ready
+status: done
 dependencies:
   - DUNGEON-001
-assignee: null
+assignee: agent
 ---
 
 # DUNGEON-002: Add four-way player movement
@@ -17,12 +17,12 @@ behavior, not just config files.
 
 ## Acceptance Criteria
 
-- [ ] A player node exists in the main scene (CharacterBody2D or equivalent)
-- [ ] WASD and arrow keys move the player in four directions
-- [ ] Movement is visible in the Godot 4 2D main scene
-- [ ] A test checks the player script and scene wiring exist
-- [ ] README notes the movement keys
-- [ ] Tests pass
+- [x] A player node exists in the main scene (CharacterBody2D or equivalent)
+- [x] WASD and arrow keys move the player in four directions
+- [x] Movement is visible in the Godot 4 2D main scene
+- [x] A test checks the player script and scene wiring exist
+- [x] README notes the movement keys
+- [x] Tests pass
 
 ## Notes
 
