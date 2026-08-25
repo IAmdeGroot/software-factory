@@ -7,7 +7,6 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [FACTORY-017](beads/FACTORY-017.md) | Reviewer marks the PR ready after done | ready |
 | [FACTORY-018](beads/FACTORY-018.md) | Add human land/merge recipe | ready |
 
 ## In Progress
@@ -48,6 +47,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 | [FACTORY-014](beads/FACTORY-014.md) | Add PR review automation recipe | done |
 | [FACTORY-015](beads/FACTORY-015.md) | Add CI triage automation recipe | done |
 | [FACTORY-016](beads/FACTORY-016.md) | Worker loop opens a pull request | done |
+| [FACTORY-017](beads/FACTORY-017.md) | Reviewer marks the PR ready after done | done |
 <!-- beads:tables:end -->
 
 ---
@@ -98,7 +98,7 @@ Goal: each bead becomes a PR that a human can merge. Agents still do not merge. 
 | Bead | Purpose | Status |
 |------|---------|--------|
 | FACTORY-016 | worker commits, pushes, opens one PR | done |
-| FACTORY-017 | reviewer marks PR ready after `done` | ready |
+| FACTORY-017 | reviewer marks PR ready after `done` | done |
 | FACTORY-018 | human land/merge recipe + `main` | ready |
 
 ---

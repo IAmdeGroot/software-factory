@@ -1,11 +1,11 @@
 ---
 id: FACTORY-017
 title: Reviewer marks the PR ready after done
-status: ready
+status: done
 dependencies:
   - FACTORY-013
   - FACTORY-016
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-017: Reviewer marks the PR ready after done
@@ -18,11 +18,11 @@ tools allow — still without merging.
 
 ## Acceptance Criteria
 
-- [ ] `bead-reviewer` skill, after `done`, marks the matching PR ready for review when tools allow
-- [ ] Skill still does **not** merge
-- [ ] If no PR exists, the skill says so and stops (do not invent a merge)
-- [ ] AGENTS.md or the reviewer skill documents this step
-- [ ] Empty review queue still means stop
+- [x] `bead-reviewer` skill, after `done`, marks the matching PR ready for review when tools allow
+- [x] Skill still does **not** merge
+- [x] If no PR exists, the skill says so and stops (do not invent a merge)
+- [x] AGENTS.md or the reviewer skill documents this step
+- [x] Empty review queue still means stop
 
 ## Notes
 

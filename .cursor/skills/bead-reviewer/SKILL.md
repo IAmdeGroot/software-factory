@@ -36,6 +36,9 @@ When no bead id is given:
 4. **Decide**
    - All criteria pass: `python -m harness.beads done <id>`
    - Any criterion fails: leave status `review` and list the failing criteria
+   - After a pass, mark the matching pull request **ready for review** (not draft) when tools allow
+   - Matching PR is the branch for that bead id
+   - If no PR exists, say so and stop — do not invent a merge
    - Do not merge PRs
    - Do not start Dark Dungeon or other product work
 
@@ -45,6 +48,7 @@ When no bead id is given:
 ## Review FACTORY-NNN — [title]
 
 **Verdict:** done | still review
+**PR:** [ready for review | none — human must open PR]
 **Failed criteria:** [none | list]
 **Notes:** [brief]
 ```

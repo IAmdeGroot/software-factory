@@ -76,7 +76,7 @@ Recipe: `.cursor/automations/ci-triage.md`. Green CI means stop. Fix in-scope fa
 
 Prompt: **Review the next bead**
 
-When that prompt (or no bead id) is given, follow `.cursor/skills/bead-reviewer/SKILL.md`. Run `python -m harness.beads review-queue`. Empty queue means stop. On pass, `python -m harness.beads done <id>`. On fail, leave `review` and list failing criteria. Do not merge PRs.
+When that prompt (or no bead id) is given, follow `.cursor/skills/bead-reviewer/SKILL.md`. Run `python -m harness.beads review-queue`. Empty queue means stop. On pass, `python -m harness.beads done <id>`, then mark the matching PR ready for review when tools allow. On fail, leave `review` and list failing criteria. If no PR exists, say so and stop. Do not merge PRs.
 
 To run this without a chat message, create a Cursor Automation from `.cursor/automations/pr-review.md` (prompt `Review the next bead`). Trigger on PR opened or CI green when the dashboard allows it. Enabling it is a human dashboard action.
 
