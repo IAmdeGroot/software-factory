@@ -24,7 +24,7 @@ Factory loop first — no product work until these are checked:
 - [x] Worker agent can claim a ready bead and implement it without step-by-step human guidance
 - [x] Bead status is updated by harness commands after work completes (`complete` / `done`)
 - [x] A worker can pull the next ready bead without being told which one (`next`)
-- [ ] Deterministic CI watches harness tests and bead validity
+- [x] Deterministic CI watches harness tests and bead validity
 - [ ] Documented unattended loop: skill + Cursor automation recipe, empty queue means stop
 
 ## Later (after v0 factory loop)

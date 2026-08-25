@@ -1,10 +1,10 @@
 ---
 id: FACTORY-010
 title: Add CI workflow for tests and bead validation
-status: ready
+status: done
 dependencies:
   - FACTORY-002
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-010: Add CI workflow for tests and bead validation
@@ -17,12 +17,12 @@ models act.
 
 ## Acceptance Criteria
 
-- [ ] GitHub Actions workflow runs on `push` and `pull_request`
-- [ ] Job runs `python3 -m harness.tests` from the repo root
-- [ ] Job runs `python3 -m harness.beads validate`
-- [ ] Uses Python 3.12 and the stdlib-only harness (no extra install step beyond checkout)
-- [ ] Workflow file lives under `.github/workflows/`
-- [ ] `harness/README.md` or project README documents that CI watches tests and beads
+- [x] GitHub Actions workflow runs on `push` and `pull_request`
+- [x] Job runs `python3 -m harness.tests` from the repo root
+- [x] Job runs `python3 -m harness.beads validate`
+- [x] Uses Python 3.12 and the stdlib-only harness (no extra install step beyond checkout)
+- [x] Workflow file lives under `.github/workflows/`
+- [x] `harness/README.md` or project README documents that CI watches tests and beads
 
 ## Notes
 

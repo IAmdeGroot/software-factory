@@ -14,6 +14,7 @@ Factory orchestration code — scripts, validators, and automation that agents a
 | Complete / done CLI | FACTORY-007 | `in_progress` → `review` → `done` |
 | Backlog sync | FACTORY-008 | Regenerate `backlog.md` from beads |
 | Next CLI | FACTORY-009 | Claim the first ready bead |
+| CI | FACTORY-010 | GitHub Actions watches tests and beads |
 
 ## Running (FACTORY-002)
 
@@ -82,6 +83,15 @@ Behavior:
 - Runs validation when edited paths include `docs/work-graph/beads/*.md`
 - Uses both hook matcher (`Write|TabWrite`) and script-side path checks
 - Fails open (it reports errors but does not block edits)
+
+## CI: Tests and bead validation
+
+GitHub Actions (`.github/workflows/harness.yml`) runs on every push and pull request:
+
+- `python3 -m harness.tests`
+- `python3 -m harness.beads validate`
+
+Python 3.12, stdlib only — no package install step.
 
 ## Design Principles
 
