@@ -53,6 +53,7 @@ Optional implementation hints or constraints.
 4. Include test-related criteria in every bead
 5. Use `FACTORY-` prefix for factory work, product-specific prefix for product work
 6. Update `docs/work-graph/backlog.md` after creating beads
+7. Do not plan Gas Town (Mayor, polecats, reusable orchestrator, Cursor SDK fleet). Factory work after v0 is the Wish Factory and Dark Dungeon.
 
 ## After Planning
 

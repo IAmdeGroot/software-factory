@@ -4,6 +4,7 @@
 
 - ID format: `FACTORY-NNN` for factory work, `DUNGEON-NNN` (or other product prefix) for product work
 - File name matches ID: `FACTORY-001.md`
+- Wishes (after FACTORY-020): `WISH-NNN` files under `docs/work-graph/wishes/`. A wish is not claimable work until a planner turns it into beads.
 - Status transitions: `ready` → `in_progress` → `review` → `done`
 - Use `blocked` when waiting on human decision or external dependency
 - One bead = one PR-sized change

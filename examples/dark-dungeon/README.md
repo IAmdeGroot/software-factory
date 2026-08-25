@@ -1,6 +1,6 @@
 # Dark Dungeon (Example Product)
 
-> This is a **sample product** built by the software factory — not the factory itself.
+> This is the **live product** the software factory is bonded to. The harness grows because this game needs it.
 
 ## Concept
 
@@ -47,4 +47,4 @@ Scaffold and four-way movement are in (`DUNGEON-001`, `DUNGEON-002`).
 
 ## Why This Example
 
-Small enough to iterate quickly, fun enough to care about, complex enough to stress-test the factory's agent loop.
+Small enough to iterate quickly, fun enough to care about, complex enough to grow a Wish Factory around playtest and design wishes.

@@ -2,12 +2,11 @@
 
 ## Purpose
 
-This project **is** the software factory.
+This project **is** the software factory: a harness for harnessed agentic engineering.
 
-It is an experiment in **harnessed agentic engineering**: a system where AI agents autonomously plan, implement, test, review, and maintain software, while the human provides high-level intent, architectural decisions, and creative direction.
+AI agents plan, implement, test, review, and maintain software. The human provides high-level intent, architectural decisions, and taste. The harness is chemically bonded to the products it builds — today that product is Dark Dungeon under `examples/dark-dungeon/`. We are not building a reusable Gas Town.
 
-Individual products (games, apps, tools) are **outcomes** built by the factory — not the factory itself.
-See `examples/dark-dungeon/` for one sample product concept.
+See `docs/brain/vision.md` for the current north star (Wish Factory).
 
 ---
 
@@ -144,4 +143,8 @@ Optimize for **useful work per dollar**. Start with a sequential or small-fleet 
 
 > A planner creates a few beads, a worker autonomously picks one up, implements it, tests it, and updates the bead.
 
-Once that works, expand the system.
+That loop exists. Next: wishes feed the graph, and Dark Dungeon generates more of them.
+
+## Wish Factory
+
+A **wish** is intent (human, playtest, later intake). A **bead** is executable work with acceptance criteria. Unattended workers pull beads; they do not invent work when the ready queue is empty. A planner turns open wishes into beads.

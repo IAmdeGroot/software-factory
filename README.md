@@ -22,7 +22,10 @@ software-factory/
 ├── context.md             # Factory vision and mental model
 ├── docs/
 │   ├── brain/             # Persistent project knowledge
-│   └── work-graph/beads/  # Work items (beads)
+│   └── work-graph/
+│       ├── beads/         # Work items (beads)
+│       └── wishes/        # Wish drop (FACTORY-020)
+
 ├── harness/               # Factory orchestration code
 ├── examples/              # Sample products built by the factory
 └── .cursor/
@@ -32,10 +35,10 @@ software-factory/
 
 ## First Milestone
 
-Planner creates beads → worker claims one → implements → tests → updates bead.
+That loop exists. Next: **Wish Factory** — drop a wish, planner makes beads, workers implement. Dark Dungeon grows in parallel. Do not build Gas Town.
 
 GitHub Actions runs harness tests and bead validation on every push and pull request.
 
 ## Sample Product
 
-`examples/dark-dungeon/` — a 2D roguelite used to stress-test the factory. Not the factory itself.
+`examples/dark-dungeon/` — the live product the factory is bonded to. A 2D roguelite used to grow the harness.

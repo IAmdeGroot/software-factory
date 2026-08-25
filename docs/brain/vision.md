@@ -2,9 +2,9 @@
 
 ## What We Are Building
 
-A **software factory** — a reusable harness that lets AI agents autonomously build software products from high-level human intent.
+A **software factory** — a harness that lets AI agents plan, implement, review, and land software from high-level human intent.
 
-The factory is the product. Games, apps, and tools are outputs.
+The harness is chemically bonded to the products it builds. Dark Dungeon is the live product that grows the factory. Games, apps, and tools are not afterthoughts; a reusable Gas Town is not the goal.
 
 ## Principles
 
@@ -54,6 +54,16 @@ Dark Dungeon stays deferred until this land loop exists.
 
 Humans may merge factory PRs later. New product work continues from the current branch tip so it stacks on those PRs.
 
+## Milestone 6 (Wish Factory)
+
+Leave Gas Town. Bond the harness to Dark Dungeon. Wishes feed the graph:
+
+- [ ] Markdown wish drop + list command (FACTORY-020)
+- [ ] Planner converts open wishes into beads (FACTORY-021)
+- [ ] Dark Dungeon has a bounded room that can generate more wishes (DUNGEON-003)
+
+Unattended workers still stop when the ready queue is empty. A wish is not work until a planner turns it into beads.
+
 ## Non-Goals (v0)
 
 - Fully autonomous 24/7 operation
@@ -61,3 +71,4 @@ Humans may merge factory PRs later. New product work continues from the current 
 - External paid orchestration services
 - Perfect upfront planning
 - Building Dark Dungeon or other products before the factory loop is closed
+- Gas Town: Mayor/polecat fleet, reusable orchestrator, Cursor SDK as the next step
