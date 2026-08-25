@@ -7,7 +7,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [FACTORY-020](beads/FACTORY-020.md) | Add markdown wish drop and list command | ready |
+| [FACTORY-021](beads/FACTORY-021.md) | Convert open wishes into beads | ready |
 
 ## In Progress
 
@@ -25,7 +25,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Blocked by |
 |----|-------|------------|
-| [FACTORY-021](beads/FACTORY-021.md) | Convert open wishes into beads | FACTORY-020 |
+| _(none)_ | | |
 
 ## Done
 
@@ -53,6 +53,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 | [FACTORY-017](beads/FACTORY-017.md) | Reviewer marks the PR ready after done | done |
 | [FACTORY-018](beads/FACTORY-018.md) | Add human land/merge recipe | done |
 | [FACTORY-019](beads/FACTORY-019.md) | Leave Gas Town for the Wish Factory | done |
+| [FACTORY-020](beads/FACTORY-020.md) | Add markdown wish drop and list command | done |
 <!-- beads:tables:end -->
 
 ---
