@@ -102,7 +102,7 @@ Python 3.12, stdlib only — no package install step.
 
 Prompt: `Implement the next ready bead`
 
-Recipe: `.cursor/automations/worker-loop.md` (enable in the Cursor dashboard; do not invent work if `next` finds an empty queue).
+Recipe: `.cursor/automations/worker-loop.md` (enable in the Cursor dashboard; do not invent work if `next` finds an empty queue). Worker commits, pushes, and opens one PR per bead; does not merge.
 
 CI failures: `.cursor/automations/ci-triage.md` (prompt `Triage the latest CI failure on this repository`; green CI means stop).
 

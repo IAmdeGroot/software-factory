@@ -13,8 +13,8 @@ Implement the next ready bead
 1. Follow `.cursor/skills/plan-exec-loop/SKILL.md`.
 2. Run `python -m harness.beads next` to claim work.
 3. If `next` fails because the ready queue is empty: **stop**. Do not create beads, do not start Dark Dungeon or other product work, do not look for extra tasks.
-4. If a bead is claimed: implement it, run tests, then `python -m harness.beads complete <id>`.
-5. One bead per run.
+4. If a bead is claimed: implement it, run tests, commit with a `FACTORY-NNN:` prefix, push one branch, open one PR against the default branch when possible, then `python -m harness.beads complete <id>`.
+5. Do **not** merge. One bead per run.
 
 ## How to enable in Cursor
 

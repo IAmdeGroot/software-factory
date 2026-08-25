@@ -32,7 +32,7 @@ When no bead id is given:
 3. **Claim the bead**
    - If a bead id was given: `python -m harness.beads claim FACTORY-NNN`
    - If none was given: `python -m harness.beads next`
-   - Create branch: `bead/FACTORY-NNN-short-title`
+   - Create one branch for this bead: prefer `bead/FACTORY-NNN-short-title`. If the environment requires another prefix, use that and still keep one bead per branch.
 
 4. **Implement**
    - Make the smallest change that satisfies criteria
@@ -47,7 +47,14 @@ When no bead id is given:
    - Check diff against each acceptance criterion
    - Note anything the human should know
 
-7. **Complete**
+7. **Publish (do not merge)**
+   - Commit with prefix `FACTORY-NNN:` (or the product bead id)
+   - Push the bead branch
+   - Open **one** pull request for this bead, base = the repository default branch
+   - If PR creation is unavailable, still commit and push and say a human must open the PR
+   - Do **not** merge the PR
+
+8. **Complete**
    - Run `python -m harness.beads complete <id>` (sets `review`; backlog syncs automatically)
    - Do not hand-edit bead status tables in `docs/work-graph/backlog.md`
    - Summarize what was done and what's now ready
@@ -59,6 +66,7 @@ When no bead id is given:
 
 **Status:** review | done
 **Branch:** bead/FACTORY-NNN-short-title
+**PR:** [url or "push only — human must open PR"]
 **Changes:** [brief list]
 **Tests:** [pass/fail]
 **Next ready beads:** [list]
