@@ -1,7 +1,7 @@
 ---
 id: FACTORY-011
 title: Close the unattended worker loop
-status: in_progress
+status: done
 dependencies:
   - FACTORY-007
   - FACTORY-008
@@ -23,12 +23,12 @@ Agent or a later Cursor Automation can run unattended.
 
 ## Acceptance Criteria
 
-- [ ] `plan-exec-loop` skill pulls work with `python -m harness.beads next` when no bead id is given
-- [ ] After verify/review, the skill runs `python -m harness.beads complete <id>` (backlog sync happens via FACTORY-008)
-- [ ] Skill documents the unattended prompt: `Implement the next ready bead`
-- [ ] A committed automation recipe exists (e.g. `.cursor/automations/worker-loop.md`) with the exact prompt and empty-queue behavior
-- [ ] README or AGENTS.md explains how a human enables the scheduled worker in Cursor
-- [ ] Recipe says: if `next` fails because the queue is empty, stop; do not invent work
+- [x] `plan-exec-loop` skill pulls work with `python -m harness.beads next` when no bead id is given
+- [x] After verify/review, the skill runs `python -m harness.beads complete <id>` (backlog sync happens via FACTORY-008)
+- [x] Skill documents the unattended prompt: `Implement the next ready bead`
+- [x] A committed automation recipe exists (e.g. `.cursor/automations/worker-loop.md`) with the exact prompt and empty-queue behavior
+- [x] README or AGENTS.md explains how a human enables the scheduled worker in Cursor
+- [x] Recipe says: if `next` fails because the queue is empty, stop; do not invent work
 
 ## Notes
 

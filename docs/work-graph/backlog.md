@@ -13,7 +13,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [FACTORY-011](beads/FACTORY-011.md) | Close the unattended worker loop | in_progress |
+| _(none)_ | | |
 
 ## In Review
 
@@ -41,6 +41,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 | [FACTORY-008](beads/FACTORY-008.md) | Sync backlog.md from bead statuses | done |
 | [FACTORY-009](beads/FACTORY-009.md) | Add next CLI command to claim first ready bead | done |
 | [FACTORY-010](beads/FACTORY-010.md) | Add CI workflow for tests and bead validation | done |
+| [FACTORY-011](beads/FACTORY-011.md) | Close the unattended worker loop | done |
 <!-- beads:tables:end -->
 
 ---
@@ -67,7 +68,7 @@ Goal: workers can finish beads and pull the next one without a human editing mar
 | FACTORY-008 | regenerate `backlog.md` from beads | done |
 | FACTORY-009 | `next` — claim first ready bead | done |
 | FACTORY-010 | CI watches tests and bead validation | done |
-| FACTORY-011 | unattended worker skill + automation recipe | in_progress |
+| FACTORY-011 | unattended worker skill + automation recipe | done |
 
 ---
 
