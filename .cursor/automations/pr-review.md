@@ -14,7 +14,7 @@ Review the next bead
 2. Run `python -m harness.beads review-queue`.
 3. If the review queue is empty: **stop**. Do not invent work. Do not start Dark Dungeon or other product work. Do not merge PRs.
 4. If a bead is listed: check the diff against every acceptance criterion.
-5. All pass: `python -m harness.beads done <id>`. Any fail: leave `review` and list failing criteria.
+5. All pass: `python -m harness.beads done <id>`, then mark the matching PR ready for review when tools allow. Any fail: leave `review` and list failing criteria. If no PR exists, say so and stop. Do not merge.
 6. One bead per run.
 
 ## Trigger guidance
