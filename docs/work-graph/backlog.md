@@ -7,7 +7,8 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [FACTORY-012](beads/FACTORY-012.md) | Add review-queue CLI command | ready |
+| [FACTORY-015](beads/FACTORY-015.md) | Add CI triage automation recipe | ready |
 
 ## In Progress
 
@@ -25,7 +26,8 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Blocked by |
 |----|-------|------------|
-| _(none)_ | | |
+| [FACTORY-013](beads/FACTORY-013.md) | Add bead-reviewer skill | FACTORY-012 |
+| [FACTORY-014](beads/FACTORY-014.md) | Add PR review automation recipe | FACTORY-013 |
 
 ## Done
 
@@ -69,6 +71,19 @@ Goal: workers can finish beads and pull the next one without a human editing mar
 | FACTORY-009 | `next` — claim first ready bead | done |
 | FACTORY-010 | CI watches tests and bead validation | done |
 | FACTORY-011 | unattended worker skill + automation recipe | done |
+
+---
+
+## Milestone 4 — Review Loop + CI Triage
+
+Goal: beads in `review` and failed CI can wake an agent without a human naming the work. Humans still merge. Dark Dungeon stays deferred.
+
+| Bead | Purpose | Status |
+|------|---------|--------|
+| FACTORY-012 | `review-queue` — beads waiting for review | ready |
+| FACTORY-013 | bead-reviewer skill — accept or reject | blocked by 012 |
+| FACTORY-014 | PR review automation recipe | blocked by 013 |
+| FACTORY-015 | CI triage automation recipe | ready |
 
 ---
 
