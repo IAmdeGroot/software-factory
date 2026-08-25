@@ -7,7 +7,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [DUNGEON-004](beads/DUNGEON-004.md) | Add nail-like melee in the facing direction | ready |
+| [DUNGEON-005](beads/DUNGEON-005.md) | Add one strikeable enemy in the room | ready |
 | [FACTORY-021](beads/FACTORY-021.md) | Convert open wishes into beads | ready |
 
 ## In Progress
@@ -26,7 +26,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Blocked by |
 |----|-------|------------|
-| [DUNGEON-005](beads/DUNGEON-005.md) | Add one strikeable enemy in the room | DUNGEON-004 |
+| _(none)_ | | |
 
 ## Done
 
@@ -35,6 +35,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 | [DUNGEON-001](beads/DUNGEON-001.md) | Add Godot 4 project scaffold | done |
 | [DUNGEON-002](beads/DUNGEON-002.md) | Add four-way player movement | done |
 | [DUNGEON-003](beads/DUNGEON-003.md) | Add a bounded room the player cannot walk out of | done |
+| [DUNGEON-004](beads/DUNGEON-004.md) | Add nail-like melee in the facing direction | done |
 | [FACTORY-001](beads/FACTORY-001.md) | Validate bead file schema | done |
 | [FACTORY-002](beads/FACTORY-002.md) | Create harness project scaffold | done |
 | [FACTORY-003](beads/FACTORY-003.md) | Add bead status listing script | done |
