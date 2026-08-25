@@ -7,13 +7,13 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [FACTORY-011](beads/FACTORY-011.md) | Close the unattended worker loop | ready |
+| _(none)_ | | |
 
 ## In Progress
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [FACTORY-011](beads/FACTORY-011.md) | Close the unattended worker loop | in_progress |
 
 ## In Review
 
@@ -67,7 +67,7 @@ Goal: workers can finish beads and pull the next one without a human editing mar
 | FACTORY-008 | regenerate `backlog.md` from beads | done |
 | FACTORY-009 | `next` — claim first ready bead | done |
 | FACTORY-010 | CI watches tests and bead validation | done |
-| FACTORY-011 | unattended worker skill + automation recipe | ready |
+| FACTORY-011 | unattended worker skill + automation recipe | in_progress |
 
 ---
 
@@ -76,4 +76,5 @@ Goal: workers can finish beads and pull the next one without a human editing mar
 1. Run `python -m harness.beads ready` to see claimable work
 2. Run `python -m harness.beads claim FACTORY-00X` to claim a bead
 3. Tell Cursor Agent: `Implement the claimed bead`
-4. Agent implements, tests, updates status
+4. Agent implements, tests, then runs `python -m harness.beads complete <id>`
+5. Unattended: `Implement the next ready bead` (empty queue means stop)

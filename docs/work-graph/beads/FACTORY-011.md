@@ -1,12 +1,12 @@
 ---
 id: FACTORY-011
 title: Close the unattended worker loop
-status: ready
+status: in_progress
 dependencies:
   - FACTORY-007
   - FACTORY-008
   - FACTORY-009
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-011: Close the unattended worker loop

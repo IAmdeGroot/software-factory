@@ -55,3 +55,12 @@ Every non-trivial task follows:
 - Security-sensitive changes
 - Scope changes that affect project vision
 - Repeated test/review failures on the same bead
+
+## Unattended worker
+
+Prompt: **Implement the next ready bead**
+
+When that prompt (or no bead id) is given, run `python -m harness.beads next`. If the ready queue is empty, stop — do not invent work.
+
+To run this on a schedule, create a Cursor Automation from `.cursor/automations/worker-loop.md`. Enabling it in the Cursor dashboard is a human action; the recipe is committed here.
+

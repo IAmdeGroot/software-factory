@@ -1,11 +1,21 @@
 ---
 name: plan-exec-loop
-description: Run the software factory plan-implement-verify-review loop for a bead. Use when claiming a bead, starting factory work, or when the user says "implement FACTORY-NNN".
+description: Run the software factory plan-implement-verify-review loop for a bead. Use when claiming a bead, starting factory work, when the user says "implement FACTORY-NNN", or "Implement the next ready bead".
 ---
 
 # Plan-Exec Loop
 
 Use this skill when implementing any factory bead.
+
+## Unattended prompt
+
+`Implement the next ready bead`
+
+When no bead id is given:
+
+1. Run `python -m harness.beads next`
+2. If that command fails because the ready queue is empty, **stop**. Do not invent work, do not create beads, do not start product work.
+3. Otherwise implement the claimed bead below.
 
 ## Steps
 
@@ -20,7 +30,8 @@ Use this skill when implementing any factory bead.
    - Confirm acceptance criteria are clear; ask human if ambiguous
 
 3. **Claim the bead**
-   - Update bead frontmatter: `status: in_progress`, `assignee: agent`
+   - If a bead id was given: `python -m harness.beads claim FACTORY-NNN`
+   - If none was given: `python -m harness.beads next`
    - Create branch: `bead/FACTORY-NNN-short-title`
 
 4. **Implement**
@@ -37,8 +48,8 @@ Use this skill when implementing any factory bead.
    - Note anything the human should know
 
 7. **Complete**
-   - Update bead: `status: review` (or `done` if no human review needed)
-   - Update `docs/work-graph/backlog.md`
+   - Run `python -m harness.beads complete <id>` (sets `review`; backlog syncs automatically)
+   - Do not hand-edit bead status tables in `docs/work-graph/backlog.md`
    - Summarize what was done and what's now ready
 
 ## Output Format

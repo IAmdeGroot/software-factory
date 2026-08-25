@@ -14,7 +14,7 @@ Factory orchestration code — scripts, validators, and automation that agents a
 | Complete / done CLI | FACTORY-007 | `in_progress` → `review` → `done` |
 | Backlog sync | FACTORY-008 | Regenerate `backlog.md` from beads |
 | Next CLI | FACTORY-009 | Claim the first ready bead |
-| CI | FACTORY-010 | GitHub Actions watches tests and beads |
+| Unattended loop | FACTORY-011 | Skill + Cursor automation recipe |
 
 ## Running (FACTORY-002)
 
@@ -92,6 +92,12 @@ GitHub Actions (`.github/workflows/harness.yml`) runs on every push and pull req
 - `python3 -m harness.beads validate`
 
 Python 3.12, stdlib only — no package install step.
+
+## Unattended worker loop
+
+Prompt: `Implement the next ready bead`
+
+Recipe: `.cursor/automations/worker-loop.md` (enable in the Cursor dashboard; do not invent work if `next` finds an empty queue).
 
 ## Design Principles
 
