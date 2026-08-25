@@ -54,3 +54,10 @@ Record non-obvious decisions here. Format:
 **Decision:** Plan Milestone 5 (FACTORY-016–018): worker opens a PR, reviewer marks it ready after `done`, human land recipe. Keep Dark Dungeon deferred until work can land.
 **Rationale:** Building a game on stacked unmerged branches would not stress-test the factory. The next bottleneck is MERGE, not a product increment.
 **Alternatives considered:** Start Dark Dungeon now that the review loop exists — rejected until PRs can land. Auto-merge — rejected; humans still merge. Cursor SDK — still v1.
+
+## 2026-08-25 — Continue from stacked tip; start Dark Dungeon
+
+**Context:** Factory milestones 3–5 are implemented. The human will merge the stacked PRs later and asked how to continue without waiting.
+**Decision:** Keep working on the current branch tip (`cursor/factory-018-land-recipe-06d8` / PR #15). Start the example product with `DUNGEON-` beads: Godot 4 scaffold, then four-way player movement. Do not wait for merges.
+**Rationale:** The land loop exists. An empty ready queue with no product work stalls the factory. The remaining v0 checkbox is an example increment. Stacking on #15 means a later merge still gets factory + game work in order.
+**Alternatives considered:** Idle until merges land — rejected; the human asked to continue. More factory (Cursor SDK) — still v1. Auto-merge the stack — agents still cannot merge.

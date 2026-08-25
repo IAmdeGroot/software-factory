@@ -2,7 +2,7 @@
 
 ## Beads
 
-- ID format: `FACTORY-NNN` for factory work, `PRODUCT-NNN` for product work
+- ID format: `FACTORY-NNN` for factory work, `DUNGEON-NNN` (or other product prefix) for product work
 - File name matches ID: `FACTORY-001.md`
 - Status transitions: `ready` → `in_progress` → `review` → `done`
 - Use `blocked` when waiting on human decision or external dependency

@@ -48,9 +48,11 @@ Work must be able to reach the integration branch without a pile of forgotten dr
 
 Dark Dungeon stays deferred until this land loop exists.
 
-## Later (after v0 factory loop)
+## Example product (after factory loop)
 
-- At least one example product increment built through the factory loop (`examples/dark-dungeon/`)
+- [ ] First playable Dark Dungeon increment: Godot 4 scaffold + four-way player movement
+
+Humans may merge factory PRs later. New product work continues from the current branch tip so it stacks on those PRs.
 
 ## Non-Goals (v0)
 
