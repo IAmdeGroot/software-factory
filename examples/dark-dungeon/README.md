@@ -12,6 +12,18 @@ A 2D top-down action RPG / roguelite.
 - Gain power
 - Fight bosses
 
+## Run
+
+Requires [Godot 4.3+](https://godotengine.org/download/) (4.x). The Godot binary is not required for the scaffold file tests.
+
+1. Open Godot 4 → Import → select `examples/dark-dungeon/project.godot`
+2. Press Play (F5). The main scene is an empty 2D view until player movement lands (DUNGEON-002).
+
+```bash
+# Scaffold checks (no Godot binary needed)
+python3 -m unittest discover -s examples/dark-dungeon/tests -v
+```
+
 ## First Playable Scope
 
 - Player movement
@@ -23,15 +35,15 @@ A 2D top-down action RPG / roguelite.
 - One boss
 - Basic UI
 
-## Technology (tentative)
+## Technology
 
-- **Godot** — 2D game engine
-- Data-driven enemy/item definitions
+- **Godot 4** — 2D
+- Data-driven enemy/item definitions (later beads)
 - Fast iteration over content volume
 
 ## Status
 
-Not started. Beads for this product will use a `DUNGEON-` prefix when planning begins.
+Scaffold complete (`DUNGEON-001`). Next: four-way player movement (`DUNGEON-002`).
 
 ## Why This Example
 
