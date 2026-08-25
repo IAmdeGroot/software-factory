@@ -1,10 +1,10 @@
 ---
 id: DUNGEON-003
 title: Add a bounded room the player cannot walk out of
-status: ready
+status: done
 dependencies:
   - DUNGEON-002
-assignee: null
+assignee: agent
 ---
 
 # DUNGEON-003: Add a bounded room the player cannot walk out of
@@ -18,12 +18,12 @@ markdown.
 
 ## Acceptance Criteria
 
-- [ ] The main 2D scene has a visible room (walls or tile bounds)
-- [ ] The player cannot walk out of the room
-- [ ] The player still moves with WASD and arrow keys inside the room
-- [ ] A test checks room/collision wiring exists
-- [ ] README notes that play starts in a bounded room
-- [ ] Tests pass
+- [x] The main 2D scene has a visible room (walls or tile bounds)
+- [x] The player cannot walk out of the room
+- [x] The player still moves with WASD and arrow keys inside the room
+- [x] A test checks room/collision wiring exists
+- [x] README notes that play starts in a bounded room
+- [x] Tests pass
 
 ## Notes
 

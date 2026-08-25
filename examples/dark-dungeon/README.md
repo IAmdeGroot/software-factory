@@ -17,7 +17,7 @@ A 2D top-down action RPG / roguelite.
 Requires [Godot 4.3+](https://godotengine.org/download/) (4.x). The Godot binary is not required for the scaffold file tests.
 
 1. Open Godot 4 → Import → select `examples/dark-dungeon/project.godot`
-2. Press Play (F5). Move with **WASD** or the **arrow keys**.
+2. Press Play (F5). Play starts in a **bounded room**. Move with **WASD** or the **arrow keys**; walls stop the player.
 
 ```bash
 # Scaffold checks (no Godot binary needed)
@@ -43,7 +43,7 @@ python3 -m unittest discover -s examples/dark-dungeon/tests -v
 
 ## Status
 
-Scaffold and four-way movement are in (`DUNGEON-001`, `DUNGEON-002`).
+Scaffold, four-way movement, and a bounded room are in (`DUNGEON-001`–`DUNGEON-003`).
 
 ## Why This Example
 
