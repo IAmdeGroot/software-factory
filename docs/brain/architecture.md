@@ -88,5 +88,6 @@ Followed by: context, acceptance criteria, and notes.
 5. Review queue, reviewer skill, PR-review and CI-triage recipes (Milestone 4) — done
 6. Worker PR + reviewer ready-for-review + human land recipe (Milestone 5)
 7. Optional: Cursor SDK for programmatic agent runs
+8. Example product increments under `examples/` (Dark Dungeon first playable)
 
-Product examples stay in `examples/` and start only after the land loop exists so work can actually merge. Dark Dungeon remains deferred through Milestone 5.
+New work continues from the current branch tip when PRs are unmerged. Humans merge the stack later.

@@ -7,7 +7,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [DUNGEON-001](beads/DUNGEON-001.md) | Add Godot 4 project scaffold | ready |
 
 ## In Progress
 
@@ -25,7 +25,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Blocked by |
 |----|-------|------------|
-| _(none)_ | | |
+| [DUNGEON-002](beads/DUNGEON-002.md) | Add four-way player movement | DUNGEON-001 |
 
 ## Done
 
@@ -101,6 +101,17 @@ Goal: each bead becomes a PR that a human can merge. Agents still do not merge. 
 | FACTORY-016 | worker commits, pushes, opens one PR | done |
 | FACTORY-017 | reviewer marks PR ready after `done` | done |
 | FACTORY-018 | human land/merge recipe + `main` | done |
+
+---
+
+## Dark Dungeon — First Playable
+
+Example product under `examples/dark-dungeon/`. Factory PRs may still be unmerged; this work stacks on the current tip.
+
+| Bead | Purpose | Status |
+|------|---------|--------|
+| DUNGEON-001 | Godot 4 2D project scaffold | ready |
+| DUNGEON-002 | Four-way player movement | blocked by 001 |
 
 ---
 
