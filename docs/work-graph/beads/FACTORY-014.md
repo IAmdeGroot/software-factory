@@ -1,10 +1,10 @@
 ---
 id: FACTORY-014
 title: Add PR review automation recipe
-status: ready
+status: done
 dependencies:
   - FACTORY-013
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-014: Add PR review automation recipe
@@ -17,12 +17,12 @@ a PR event can wake a reviewer without a chat message.
 
 ## Acceptance Criteria
 
-- [ ] `.cursor/automations/pr-review.md` exists with the exact prompt to paste
-- [ ] Prompt is `Review the next bead` (or equivalent that uses the reviewer skill)
-- [ ] Recipe says: empty review queue means stop; do not invent work
-- [ ] Recipe describes trigger guidance (PR opened / CI green) without requiring a specific paid service
-- [ ] README or AGENTS.md explains that enabling the automation is a human dashboard action
-- [ ] Does not create the Cursor dashboard automation from this bead
+- [x] `.cursor/automations/pr-review.md` exists with the exact prompt to paste
+- [x] Prompt is `Review the next bead` (or equivalent that uses the reviewer skill)
+- [x] Recipe says: empty review queue means stop; do not invent work
+- [x] Recipe describes trigger guidance (PR opened / CI green) without requiring a specific paid service
+- [x] README or AGENTS.md explains that enabling the automation is a human dashboard action
+- [x] Does not create the Cursor dashboard automation from this bead
 
 ## Notes
 

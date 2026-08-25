@@ -106,7 +106,7 @@ Recipe: `.cursor/automations/worker-loop.md` (enable in the Cursor dashboard; do
 
 CI failures: `.cursor/automations/ci-triage.md` (prompt `Triage the latest CI failure on this repository`; green CI means stop).
 
-Review: prompt `Review the next bead` — `.cursor/skills/bead-reviewer/SKILL.md` (empty `review-queue` means stop; do not merge PRs).
+Review: prompt `Review the next bead` — `.cursor/skills/bead-reviewer/SKILL.md` (empty `review-queue` means stop; do not merge PRs). Recipe: `.cursor/automations/pr-review.md`.
 
 ## Design Principles
 

@@ -10,7 +10,7 @@ A harness for **harnessed agentic engineering** — AI agents that plan, impleme
 4. Agent follows the plan → implement → verify → review loop
 5. Update the bead status when done
 
-Unattended: say **"Implement the next ready bead"**. The agent runs `python -m harness.beads next` and stops if the queue is empty. To schedule that prompt, see `.cursor/automations/worker-loop.md`. Review: **"Review the next bead"** (`.cursor/skills/bead-reviewer/SKILL.md`). CI failures: `.cursor/automations/ci-triage.md`.
+Unattended: say **"Implement the next ready bead"**. Review: **"Review the next bead"** (`.cursor/skills/bead-reviewer/SKILL.md`, recipe `.cursor/automations/pr-review.md`). CI failures: `.cursor/automations/ci-triage.md`.
 
 ## Structure
 

@@ -76,5 +76,8 @@ Prompt: **Review the next bead**
 
 When that prompt (or no bead id) is given, follow `.cursor/skills/bead-reviewer/SKILL.md`. Run `python -m harness.beads review-queue`. Empty queue means stop. On pass, `python -m harness.beads done <id>`. On fail, leave `review` and list failing criteria. Do not merge PRs.
 
+To run this without a chat message, create a Cursor Automation from `.cursor/automations/pr-review.md` (prompt `Review the next bead`). Trigger on PR opened or CI green when the dashboard allows it. Enabling it is a human dashboard action.
+
+
 
 
