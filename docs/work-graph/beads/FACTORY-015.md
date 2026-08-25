@@ -1,10 +1,10 @@
 ---
 id: FACTORY-015
 title: Add CI triage automation recipe
-status: ready
+status: done
 dependencies:
   - FACTORY-010
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-015: Add CI triage automation recipe
@@ -17,12 +17,12 @@ failure and either fixes it in scope or files a bead.
 
 ## Acceptance Criteria
 
-- [ ] `.cursor/automations/ci-triage.md` exists with the exact prompt to paste
-- [ ] Recipe: read failed CI, fix if it is clearly in scope of the failing change
-- [ ] If the fix is out of scope, create a new bead and stop — do not fold extra work into an unrelated bead
-- [ ] Recipe says: green CI or no failure means stop; do not invent work
-- [ ] README or AGENTS.md explains how a human enables it
-- [ ] Does not create the Cursor dashboard automation from this bead
+- [x] `.cursor/automations/ci-triage.md` exists with the exact prompt to paste
+- [x] Recipe: read failed CI, fix if it is clearly in scope of the failing change
+- [x] If the fix is out of scope, create a new bead and stop — do not fold extra work into an unrelated bead
+- [x] Recipe says: green CI or no failure means stop; do not invent work
+- [x] README or AGENTS.md explains how a human enables it
+- [x] Does not create the Cursor dashboard automation from this bead
 
 ## Notes
 

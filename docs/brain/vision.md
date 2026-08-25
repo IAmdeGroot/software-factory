@@ -34,7 +34,7 @@ Review and CI triage so work does not stall at `review` waiting for a chat messa
 - [x] Reviewer can list beads in `review` (`review-queue`)
 - [ ] Reviewer skill can accept (`done`) or reject with failing criteria
 - [ ] Documented PR-review automation recipe
-- [ ] Documented CI-triage automation recipe
+- [x] Documented CI-triage automation recipe
 
 Humans still merge pull requests. Dark Dungeon stays deferred.
 
