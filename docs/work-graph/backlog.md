@@ -7,14 +7,13 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [DUNGEON-003](beads/DUNGEON-003.md) | Add a bounded room the player cannot walk out of | ready |
 | [FACTORY-020](beads/FACTORY-020.md) | Add markdown wish drop and list command | ready |
 
 ## In Progress
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [DUNGEON-003](beads/DUNGEON-003.md) | Add a bounded room the player cannot walk out of | in_progress |
 
 ## In Review
 
