@@ -12,7 +12,7 @@ A harness for **harnessed agentic engineering** — AI agents that plan, impleme
 
 Unattended: say **"Implement the next ready bead"** (commit, push, one PR, do not merge). Review: **"Review the next bead"**. CI failures: `.cursor/automations/ci-triage.md`.
 
-One bead = one branch = one PR. Base is the repository default branch.
+One bead = one branch = one PR. Base is the repository default branch. Humans merge using `.cursor/automations/land.md` (bead `done`, CI green). Integration branch is `main`.
 
 ## Structure
 

@@ -44,7 +44,7 @@ Work must be able to reach the integration branch without a pile of forgotten dr
 
 - [x] Worker commits, pushes, and opens one PR per bead
 - [x] Reviewer marks that PR ready after `done` (still does not merge)
-- [ ] Documented human land/merge recipe; integration branch is `main`
+- [x] Documented human land/merge recipe; integration branch is `main`
 
 Dark Dungeon stays deferred until this land loop exists.
 

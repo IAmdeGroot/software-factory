@@ -1,10 +1,10 @@
 ---
 id: FACTORY-018
 title: Add human land/merge recipe
-status: ready
+status: done
 dependencies:
   - FACTORY-016
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-018: Add human land/merge recipe
@@ -18,12 +18,12 @@ default is a leftover bead branch).
 
 ## Acceptance Criteria
 
-- [ ] `.cursor/automations/land.md` exists with what to merge and what not to merge
-- [ ] Recipe: merge only when the bead is `done`, CI is green, and the PR is one bead
-- [ ] Recipe says agents do not merge; empty or unready PRs mean skip
-- [ ] `docs/brain/conventions.md` states integration branch is `main` and changing GitHub's default branch is a human action
-- [ ] README or AGENTS.md points at the land recipe
-- [ ] Does not change GitHub default branch settings from this bead
+- [x] `.cursor/automations/land.md` exists with what to merge and what not to merge
+- [x] Recipe: merge only when the bead is `done`, CI is green, and the PR is one bead
+- [x] Recipe says agents do not merge; empty or unready PRs mean skip
+- [x] `docs/brain/conventions.md` states integration branch is `main` and changing GitHub's default branch is a human action
+- [x] README or AGENTS.md points at the land recipe
+- [x] Does not change GitHub default branch settings from this bead
 
 ## Notes
 
