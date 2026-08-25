@@ -1,10 +1,10 @@
 ---
 id: FACTORY-012
 title: Add review-queue CLI command
-status: ready
+status: done
 dependencies:
   - FACTORY-007
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-012: Add review-queue CLI command
@@ -17,12 +17,12 @@ bead still waits on a human to name the id.
 
 ## Acceptance Criteria
 
-- [ ] CLI command: `python -m harness.beads review-queue`
-- [ ] Prints only beads whose status is `review` (stable sort by bead id)
-- [ ] Supports `--json` with id, title, and count
-- [ ] Exit code 0 when the command succeeds (even if the queue is empty)
-- [ ] Tests cover: empty queue, one bead in review, mixed statuses
-- [ ] `harness/README.md` documents the command
+- [x] CLI command: `python -m harness.beads review-queue`
+- [x] Prints only beads whose status is `review` (stable sort by bead id)
+- [x] Supports `--json` with id, title, and count
+- [x] Exit code 0 when the command succeeds (even if the queue is empty)
+- [x] Tests cover: empty queue, one bead in review, mixed statuses
+- [x] `harness/README.md` documents the command
 
 ## Notes
 

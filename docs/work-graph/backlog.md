@@ -7,7 +7,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [FACTORY-012](beads/FACTORY-012.md) | Add review-queue CLI command | ready |
+| [FACTORY-013](beads/FACTORY-013.md) | Add bead-reviewer skill | ready |
 | [FACTORY-015](beads/FACTORY-015.md) | Add CI triage automation recipe | ready |
 
 ## In Progress
@@ -26,7 +26,6 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Blocked by |
 |----|-------|------------|
-| [FACTORY-013](beads/FACTORY-013.md) | Add bead-reviewer skill | FACTORY-012 |
 | [FACTORY-014](beads/FACTORY-014.md) | Add PR review automation recipe | FACTORY-013 |
 
 ## Done
@@ -44,6 +43,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 | [FACTORY-009](beads/FACTORY-009.md) | Add next CLI command to claim first ready bead | done |
 | [FACTORY-010](beads/FACTORY-010.md) | Add CI workflow for tests and bead validation | done |
 | [FACTORY-011](beads/FACTORY-011.md) | Close the unattended worker loop | done |
+| [FACTORY-012](beads/FACTORY-012.md) | Add review-queue CLI command | done |
 <!-- beads:tables:end -->
 
 ---
@@ -80,8 +80,8 @@ Goal: beads in `review` and failed CI can wake an agent without a human naming t
 
 | Bead | Purpose | Status |
 |------|---------|--------|
-| FACTORY-012 | `review-queue` — beads waiting for review | ready |
-| FACTORY-013 | bead-reviewer skill — accept or reject | blocked by 012 |
+| FACTORY-012 | `review-queue` — beads waiting for review | done |
+| FACTORY-013 | bead-reviewer skill — accept or reject | ready |
 | FACTORY-014 | PR review automation recipe | blocked by 013 |
 | FACTORY-015 | CI triage automation recipe | ready |
 

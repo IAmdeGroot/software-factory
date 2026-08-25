@@ -78,6 +78,28 @@ def ready_to_json(ready: list[dict]) -> str:
     return json.dumps(payload, indent=2)
 
 
+def build_review_queue(beads_dir: Path) -> list[dict]:
+    """Return beads waiting for review, sorted by id."""
+    summary = build_status_summary(beads_dir)
+    review = [item for item in summary["beads"] if item["status"] == "review"]
+    return sorted(review, key=lambda item: str(item["id"]))
+
+
+def format_review_text(review: list[dict]) -> str:
+    lines = ["Review queue:"]
+    if not review:
+        lines.append("- (none)")
+        return "\n".join(lines)
+    for item in review:
+        lines.append(f"- {item['id']}: {item['title']}")
+    return "\n".join(lines)
+
+
+def review_to_json(review: list[dict]) -> str:
+    payload = {"review": review, "count": len(review)}
+    return json.dumps(payload, indent=2)
+
+
 def format_summary_text(summary: dict) -> str:
     lines: list[str] = []
     lines.append("Bead status summary")
