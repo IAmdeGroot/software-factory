@@ -8,6 +8,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 | ID | Title | Status |
 |----|-------|--------|
 | [DUNGEON-003](beads/DUNGEON-003.md) | Add a bounded room the player cannot walk out of | ready |
+| [FACTORY-020](beads/FACTORY-020.md) | Add markdown wish drop and list command | ready |
 
 ## In Progress
 
@@ -19,13 +20,12 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [FACTORY-019](beads/FACTORY-019.md) | Leave Gas Town for the Wish Factory | review |
+| _(none)_ | | |
 
 ## Blocked (waiting on dependencies)
 
 | ID | Title | Blocked by |
 |----|-------|------------|
-| [FACTORY-020](beads/FACTORY-020.md) | Add markdown wish drop and list command | FACTORY-019 |
 | [FACTORY-021](beads/FACTORY-021.md) | Convert open wishes into beads | FACTORY-020 |
 
 ## Done
@@ -52,6 +52,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 | [FACTORY-016](beads/FACTORY-016.md) | Worker loop opens a pull request | done |
 | [FACTORY-017](beads/FACTORY-017.md) | Reviewer marks the PR ready after done | done |
 | [FACTORY-018](beads/FACTORY-018.md) | Add human land/merge recipe | done |
+| [FACTORY-019](beads/FACTORY-019.md) | Leave Gas Town for the Wish Factory | done |
 <!-- beads:tables:end -->
 
 ---
