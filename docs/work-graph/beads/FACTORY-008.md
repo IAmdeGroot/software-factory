@@ -1,10 +1,10 @@
 ---
 id: FACTORY-008
 title: Sync backlog.md from bead statuses
-status: ready
+status: in_progress
 dependencies:
   - FACTORY-007
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-008: Sync backlog.md from bead statuses

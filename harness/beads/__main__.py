@@ -6,6 +6,7 @@ import argparse
 import sys
 from pathlib import Path
 
+from harness.beads.backlog import default_backlog_path, sync_backlog
 from harness.beads.claim import ClaimError, claim_bead
 from harness.beads.listing import (
     build_ready_queue,
@@ -76,6 +77,12 @@ def _complete_command(beads_dir: Path, bead_id: str) -> int:
     return 0
 
 
+def _sync_backlog_command(beads_dir: Path, backlog_path: Path) -> int:
+    path = sync_backlog(beads_dir, backlog_path)
+    print(f"Synced backlog: {path}")
+    return 0
+
+
 def _done_command(beads_dir: Path, bead_id: str) -> int:
     try:
         result = done_bead(beads_dir, bead_id)
@@ -118,6 +125,10 @@ def main(argv: list[str] | None = None) -> int:
     done_parser.add_argument("bead_id", help="bead id to mark done, e.g. FACTORY-007")
     done_parser.add_argument("--beads-dir", default=default_beads, dest="beads_dir")
 
+    sync_parser = subparsers.add_parser("sync-backlog", help="regenerate backlog.md from bead files")
+    sync_parser.add_argument("--beads-dir", default=default_beads, dest="beads_dir")
+    sync_parser.add_argument("--backlog", default=None, dest="backlog_path")
+
     if not args:
         args = ["validate"]
 
@@ -136,6 +147,13 @@ def main(argv: list[str] | None = None) -> int:
         return _complete_command(beads_dir, parsed.bead_id)
     if parsed.command == "done":
         return _done_command(beads_dir, parsed.bead_id)
+    if parsed.command == "sync-backlog":
+        backlog_path = (
+            Path(parsed.backlog_path)
+            if parsed.backlog_path
+            else default_backlog_path(beads_dir)
+        )
+        return _sync_backlog_command(beads_dir, backlog_path)
 
     parser.print_help()
     return 1
