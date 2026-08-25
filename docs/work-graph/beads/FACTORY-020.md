@@ -1,7 +1,7 @@
 ---
 id: FACTORY-020
 title: Add markdown wish drop and list command
-status: in_progress
+status: done
 dependencies:
   - FACTORY-019
 assignee: agent
