@@ -76,13 +76,16 @@ Followed by: context, acceptance criteria, and notes.
 - **Cursor Pro** — AI agents (planner, worker, reviewer)
 - **Git** — source control, one bead per branch
 - **Markdown** — project brain and work graph
-- **Python or Node** — harness scripts (TBD in FACTORY-002)
+- **Python** — harness scripts (stdlib, `python -m harness.beads`)
 - **GitHub** — remote repository (optional, add when ready)
 
 ## Evolution Path
 
-1. Manual bead loop in Cursor chat (now)
-2. Harness scripts for bead status and ready-queue (FACTORY-003)
-3. Cursor hooks for post-edit checks
-4. Cursor automations for PR review / CI triage
-5. Optional: Cursor SDK for programmatic agent runs
+1. Manual bead loop in Cursor chat
+2. Harness scripts for bead status and ready-queue (FACTORY-003) — done
+3. Cursor hooks for post-edit checks (FACTORY-006) — done
+4. Status transitions, next-bead pull, CI watch, unattended worker recipe (Milestone 3)
+5. Cursor automations for PR review / CI triage
+6. Optional: Cursor SDK for programmatic agent runs
+
+Product examples stay in `examples/` and start only after Milestone 3 closes the factory loop.

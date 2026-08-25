@@ -33,3 +33,10 @@ Record non-obvious decisions here. Format:
 **Decision:** Start with Cursor Agent + rules + skills + manual/semi-auto bead loop.
 **Rationale:** Fits $20/mo budget; learn the loop before automating it.
 **Alternatives considered:** Cursor SDK headless agents — planned for v1 after manual loop is stable.
+
+## 2026-08-25 — Factory loop before Dark Dungeon
+
+**Context:** Milestone 2 is complete. The remaining v0 checkbox was an example product increment, and FACTORY-005 was waiting in review. The human asked to make the factory autonomous before starting the game.
+**Decision:** Accept FACTORY-005 as done. Defer `examples/dark-dungeon/` until Milestone 3 closes the factory loop. v0 success is the unattended worker loop (status commands, next-bead pull, CI, skill + automation recipe), not a playable game.
+**Rationale:** The factory is the product. Building a game now would train the loop on the wrong layer and skip the still-manual status and pull steps.
+**Alternatives considered:** Start Dark Dungeon beads in parallel — rejected; it splits attention before the loop can run without a human naming work and editing markdown.
