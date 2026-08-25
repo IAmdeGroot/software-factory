@@ -4,7 +4,7 @@
 
 ## Concept
 
-A 2D top-down action RPG / roguelite.
+A 2D top-down action RPG / roguelite, **inspired by Hollow Knight** (nail-like melee, lonely insect-ruin mood) without becoming a side-scrolling clone. See `docs/feel.md`.
 
 - Explore dungeons
 - Fight monsters
@@ -43,7 +43,7 @@ python3 -m unittest discover -s examples/dark-dungeon/tests -v
 
 ## Status
 
-Scaffold, four-way movement, and a bounded room are in (`DUNGEON-001`–`DUNGEON-003`).
+Scaffold, four-way movement, and a bounded room are in (`DUNGEON-001`–`DUNGEON-003`). Next: nail-like melee (`DUNGEON-004`), then one enemy (`DUNGEON-005`) from **WISH-001**.
 
 ## Why This Example
 

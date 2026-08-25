@@ -75,3 +75,10 @@ Record non-obvious decisions here. Format:
 **Decision:** Stop treating a reusable Gas Town (Mayor, polecats, refinery, 24/7 fleet, Cursor SDK) as the next milestone. Grow the harness because Dark Dungeon needs it. Next increment is a Wish Factory: markdown wishes feed the work graph; a planner turns wishes into beads; workers still stop on an empty ready queue. Product beads (rooms, combat) proceed in parallel so the game can generate wishes.
 **Rationale:** Yegge's later essay says reusable harnesses fail; Gas Town burned down building itself. The convergent shape (brain + work graph + watchers) still holds, but it has to be chemically bonded to a live product. A wish drop is the smallest intake that matches "give a requirement and let it spin" without standing up a town.
 **Alternatives considered:** Keep building toward Gas Town (SDK, parallel workers, merge thunderdome) — rejected by the human. Adopt Yegge's Beads CLI / Dolt — still deferred; markdown wishes match the v0 bead format. Auto-grant wishes with no planner — rejected; a wish is not a bead until it has acceptance criteria.
+
+## 2026-08-25 — Dark Dungeon is Hollow Knight–inspired, still top-down
+
+**Context:** The human filed a wish: the game should feel or be inspired by Hollow Knight. Dark Dungeon is already a Godot 4 top-down room with WASD movement. Hollow Knight is a side-view Metroidvania.
+**Decision:** Treat Hollow Knight as **feel**, not genre. Keep top-down 2D. First borrows: nail-like directional melee (`DUNGEON-004`), then one strikeable enemy (`DUNGEON-005`). Do not clone Hallownest or respec the camera in this increment.
+**Rationale:** "Inspired by" is taste and verbs, not a second engine. Switching to side-view would throw away DUNGEON-001–003. A nail plus something to hit is the smallest playable HK echo.
+**Alternatives considered:** Full side-view Metroidvania pivot — rejected unless the human asks to abandon top-down. Implement the whole HK kit (pogo, soul, map) in one bead — rejected; too large.
