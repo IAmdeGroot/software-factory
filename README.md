@@ -30,6 +30,8 @@ software-factory/
 
 Planner creates beads → worker claims one → implements → tests → updates bead.
 
+GitHub Actions runs harness tests and bead validation on every push and pull request.
+
 ## Sample Product
 
 `examples/dark-dungeon/` — a 2D roguelite used to stress-test the factory. Not the factory itself.

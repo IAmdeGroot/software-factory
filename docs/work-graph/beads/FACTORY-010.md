@@ -1,10 +1,10 @@
 ---
 id: FACTORY-010
 title: Add CI workflow for tests and bead validation
-status: ready
+status: in_progress
 dependencies:
   - FACTORY-002
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-010: Add CI workflow for tests and bead validation

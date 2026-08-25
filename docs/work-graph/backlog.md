@@ -7,14 +7,13 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [FACTORY-010](beads/FACTORY-010.md) | Add CI workflow for tests and bead validation | ready |
 | [FACTORY-011](beads/FACTORY-011.md) | Close the unattended worker loop | ready |
 
 ## In Progress
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [FACTORY-010](beads/FACTORY-010.md) | Add CI workflow for tests and bead validation | in_progress |
 
 ## In Review
 
