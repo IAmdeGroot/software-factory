@@ -14,7 +14,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [FACTORY-008](beads/FACTORY-008.md) | Sync backlog.md from bead statuses | in_progress |
+| _(none)_ | | |
 
 ## In Review
 
@@ -26,7 +26,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Blocked by |
 |----|-------|------------|
-| [FACTORY-011](beads/FACTORY-011.md) | Close the unattended worker loop | FACTORY-008, FACTORY-009 |
+| [FACTORY-011](beads/FACTORY-011.md) | Close the unattended worker loop | FACTORY-009 |
 
 ## Done
 
@@ -39,6 +39,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 | [FACTORY-005](beads/FACTORY-005.md) | Add bead claim CLI command | done |
 | [FACTORY-006](beads/FACTORY-006.md) | Add Cursor hook to validate beads on edit | done |
 | [FACTORY-007](beads/FACTORY-007.md) | Add complete and done CLI commands | done |
+| [FACTORY-008](beads/FACTORY-008.md) | Sync backlog.md from bead statuses | done |
 <!-- beads:tables:end -->
 
 ---
