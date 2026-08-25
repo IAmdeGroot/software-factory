@@ -3,11 +3,12 @@
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
 from harness.beads.backlog import default_backlog_path, sync_backlog
-from harness.beads.claim import ClaimError, claim_bead
+from harness.beads.claim import ClaimError, claim_bead, claim_next
 from harness.beads.listing import (
     build_ready_queue,
     build_status_summary,
@@ -66,6 +67,29 @@ def _claim_command(beads_dir: Path, bead_id: str, assignee: str) -> int:
     return 0
 
 
+def _next_command(beads_dir: Path, assignee: str, json_output: bool) -> int:
+    try:
+        result = claim_next(beads_dir, assignee=assignee)
+    except ClaimError as exc:
+        print(f"Next failed: {exc}", file=sys.stderr)
+        return 1
+
+    if json_output:
+        print(
+            json.dumps(
+                {
+                    "id": result.bead_id,
+                    "title": result.title,
+                    "assignee": result.assignee,
+                },
+                indent=2,
+            )
+        )
+    else:
+        print(f"Claimed {result.bead_id}: {result.title} for {result.assignee}")
+    return 0
+
+
 def _complete_command(beads_dir: Path, bead_id: str) -> int:
     try:
         result = complete_bead(beads_dir, bead_id)
@@ -117,6 +141,11 @@ def main(argv: list[str] | None = None) -> int:
     claim_parser.add_argument("--assignee", default="agent")
     claim_parser.add_argument("--beads-dir", default=default_beads, dest="beads_dir")
 
+    next_parser = subparsers.add_parser("next", help="claim the first ready bead")
+    next_parser.add_argument("--assignee", default="agent")
+    next_parser.add_argument("--json", action="store_true", dest="json_output")
+    next_parser.add_argument("--beads-dir", default=default_beads, dest="beads_dir")
+
     complete_parser = subparsers.add_parser("complete", help="mark an in_progress bead as review")
     complete_parser.add_argument("bead_id", help="bead id to complete, e.g. FACTORY-007")
     complete_parser.add_argument("--beads-dir", default=default_beads, dest="beads_dir")
@@ -143,6 +172,8 @@ def main(argv: list[str] | None = None) -> int:
         return _ready_command(beads_dir, parsed.json_output)
     if parsed.command == "claim":
         return _claim_command(beads_dir, parsed.bead_id, parsed.assignee)
+    if parsed.command == "next":
+        return _next_command(beads_dir, parsed.assignee, parsed.json_output)
     if parsed.command == "complete":
         return _complete_command(beads_dir, parsed.bead_id)
     if parsed.command == "done":

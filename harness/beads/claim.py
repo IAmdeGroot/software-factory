@@ -20,6 +20,14 @@ class ClaimResult:
     path: Path
 
 
+@dataclass
+class NextResult:
+    bead_id: str
+    title: str
+    assignee: str
+    path: Path
+
+
 def _is_already_claimed(data: dict) -> bool:
     status = data.get("status")
     assignee = data.get("assignee")
@@ -55,3 +63,18 @@ def claim_bead(beads_dir: Path, bead_id: str, assignee: str = "agent") -> ClaimR
     sync_backlog_if_present(beads_dir)
 
     return ClaimResult(bead_id=bead_id, assignee=assignee, path=bead_path)
+
+
+def claim_next(beads_dir: Path, assignee: str = "agent") -> NextResult:
+    ready = sorted(build_ready_queue(beads_dir), key=lambda item: str(item["id"]))
+    if not ready:
+        raise ClaimError("ready queue is empty")
+
+    first = ready[0]
+    result = claim_bead(beads_dir, first["id"], assignee=assignee)
+    return NextResult(
+        bead_id=result.bead_id,
+        title=str(first["title"]),
+        assignee=result.assignee,
+        path=result.path,
+    )
