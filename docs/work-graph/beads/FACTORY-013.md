@@ -1,10 +1,10 @@
 ---
 id: FACTORY-013
 title: Add bead-reviewer skill
-status: ready
+status: done
 dependencies:
   - FACTORY-012
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-013: Add bead-reviewer skill
@@ -19,14 +19,14 @@ This is not automatic merge. Humans still merge PRs.
 
 ## Acceptance Criteria
 
-- [ ] `.cursor/skills/bead-reviewer/SKILL.md` exists
-- [ ] When no bead id is given, the skill uses `python -m harness.beads review-queue`
-- [ ] Empty review queue means stop; do not invent work
-- [ ] Skill checks the change against each acceptance criterion on the bead
-- [ ] On pass: `python -m harness.beads done <id>`
-- [ ] On fail: leave status `review` and list the failing criteria
-- [ ] Documents the unattended prompt: `Review the next bead`
-- [ ] AGENTS.md or README mentions the reviewer prompt
+- [x] `.cursor/skills/bead-reviewer/SKILL.md` exists
+- [x] When no bead id is given, the skill uses `python -m harness.beads review-queue`
+- [x] Empty review queue means stop; do not invent work
+- [x] Skill checks the change against each acceptance criterion on the bead
+- [x] On pass: `python -m harness.beads done <id>`
+- [x] On fail: leave status `review` and list the failing criteria
+- [x] Documents the unattended prompt: `Review the next bead`
+- [x] AGENTS.md or README mentions the reviewer prompt
 
 ## Notes
 
