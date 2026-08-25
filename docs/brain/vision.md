@@ -27,6 +27,17 @@ Factory loop first — no product work until these are checked:
 - [x] Deterministic CI watches harness tests and bead validity
 - [x] Documented unattended loop: skill + Cursor automation recipe, empty queue means stop
 
+## Milestone 4 (after v0 worker loop)
+
+Review and CI triage so work does not stall at `review` waiting for a chat message:
+
+- [ ] Reviewer can list beads in `review` (`review-queue`)
+- [ ] Reviewer skill can accept (`done`) or reject with failing criteria
+- [ ] Documented PR-review automation recipe
+- [ ] Documented CI-triage automation recipe
+
+Humans still merge pull requests. Dark Dungeon stays deferred.
+
 ## Later (after v0 factory loop)
 
 - At least one example product increment built through the factory loop (`examples/dark-dungeon/`)

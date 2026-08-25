@@ -40,3 +40,10 @@ Record non-obvious decisions here. Format:
 **Decision:** Accept FACTORY-005 as done. Defer `examples/dark-dungeon/` until Milestone 3 closes the factory loop. v0 success is the unattended worker loop (status commands, next-bead pull, CI, skill + automation recipe), not a playable game.
 **Rationale:** The factory is the product. Building a game now would train the loop on the wrong layer and skip the still-manual status and pull steps.
 **Alternatives considered:** Start Dark Dungeon beads in parallel — rejected; it splits attention before the loop can run without a human naming work and editing markdown.
+
+## 2026-08-25 — Milestone 4 is review and CI triage, not the game
+
+**Context:** Milestone 3 closed the worker loop. The ready queue is empty. The human asked to continue factory autonomy. Architecture already listed PR review / CI triage as the next evolution step. The remaining stall is beads sitting in `review` until someone types "continue".
+**Decision:** Plan Milestone 4 (FACTORY-012–015): review-queue CLI, reviewer skill, PR-review recipe, CI-triage recipe. Keep Dark Dungeon deferred. Humans still merge PRs.
+**Rationale:** Autonomy now means a reviewer can act without a chat nudge, and CI failures can wake an agent. Building a game would skip the review side of the factory.
+**Alternatives considered:** Start Dark Dungeon now that v0 worker criteria are checked — rejected; review still requires a human message. Cursor SDK fleet — still deferred as v1.

@@ -84,8 +84,8 @@ Followed by: context, acceptance criteria, and notes.
 1. Manual bead loop in Cursor chat
 2. Harness scripts for bead status and ready-queue (FACTORY-003) — done
 3. Cursor hooks for post-edit checks (FACTORY-006) — done
-4. Status transitions, next-bead pull, CI watch, unattended worker recipe (Milestone 3)
-5. Cursor automations for PR review / CI triage
+4. Status transitions, next-bead pull, CI watch, unattended worker recipe (Milestone 3) — done
+5. Review queue, reviewer skill, PR-review and CI-triage recipes (Milestone 4)
 6. Optional: Cursor SDK for programmatic agent runs
 
-Product examples stay in `examples/` and start only after Milestone 3 closes the factory loop.
+Product examples stay in `examples/` and start only after the factory review loop is closed. Dark Dungeon remains deferred through Milestone 4.
