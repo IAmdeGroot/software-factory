@@ -1,7 +1,7 @@
 ---
 id: DUNGEON-003
 title: Add a bounded room the player cannot walk out of
-status: in_progress
+status: done
 dependencies:
   - DUNGEON-002
 assignee: agent

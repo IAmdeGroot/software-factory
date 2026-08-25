@@ -13,7 +13,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [DUNGEON-003](beads/DUNGEON-003.md) | Add a bounded room the player cannot walk out of | in_progress |
+| _(none)_ | | |
 
 ## In Review
 
@@ -33,6 +33,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 |----|-------|--------|
 | [DUNGEON-001](beads/DUNGEON-001.md) | Add Godot 4 project scaffold | done |
 | [DUNGEON-002](beads/DUNGEON-002.md) | Add four-way player movement | done |
+| [DUNGEON-003](beads/DUNGEON-003.md) | Add a bounded room the player cannot walk out of | done |
 | [FACTORY-001](beads/FACTORY-001.md) | Validate bead file schema | done |
 | [FACTORY-002](beads/FACTORY-002.md) | Create harness project scaffold | done |
 | [FACTORY-003](beads/FACTORY-003.md) | Add bead status listing script | done |
