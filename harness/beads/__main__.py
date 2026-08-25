@@ -11,10 +11,13 @@ from harness.beads.backlog import default_backlog_path, sync_backlog
 from harness.beads.claim import ClaimError, claim_bead, claim_next
 from harness.beads.listing import (
     build_ready_queue,
+    build_review_queue,
     build_status_summary,
     format_ready_text,
+    format_review_text,
     format_summary_text,
     ready_to_json,
+    review_to_json,
     summary_to_json,
 )
 from harness.beads.status import TransitionError, complete_bead, done_bead
@@ -53,6 +56,15 @@ def _ready_command(beads_dir: Path, json_output: bool) -> int:
         print(ready_to_json(ready))
     else:
         print(format_ready_text(ready))
+    return 0
+
+
+def _review_queue_command(beads_dir: Path, json_output: bool) -> int:
+    review = build_review_queue(beads_dir)
+    if json_output:
+        print(review_to_json(review))
+    else:
+        print(format_review_text(review))
     return 0
 
 
@@ -136,6 +148,10 @@ def main(argv: list[str] | None = None) -> int:
     ready_parser.add_argument("beads_dir", nargs="?", default=default_beads)
     ready_parser.add_argument("--json", action="store_true", dest="json_output")
 
+    review_parser = subparsers.add_parser("review-queue", help="show beads waiting for review")
+    review_parser.add_argument("beads_dir", nargs="?", default=default_beads)
+    review_parser.add_argument("--json", action="store_true", dest="json_output")
+
     claim_parser = subparsers.add_parser("claim", help="claim a ready bead")
     claim_parser.add_argument("bead_id", help="bead id to claim, e.g. FACTORY-005")
     claim_parser.add_argument("--assignee", default="agent")
@@ -170,6 +186,8 @@ def main(argv: list[str] | None = None) -> int:
         return _list_command(beads_dir, parsed.json_output)
     if parsed.command == "ready":
         return _ready_command(beads_dir, parsed.json_output)
+    if parsed.command == "review-queue":
+        return _review_queue_command(beads_dir, parsed.json_output)
     if parsed.command == "claim":
         return _claim_command(beads_dir, parsed.bead_id, parsed.assignee)
     if parsed.command == "next":

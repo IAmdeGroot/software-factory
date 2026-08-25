@@ -1,10 +1,10 @@
 ---
 id: FACTORY-012
 title: Add review-queue CLI command
-status: ready
+status: in_progress
 dependencies:
   - FACTORY-007
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-012: Add review-queue CLI command

@@ -7,14 +7,13 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [FACTORY-012](beads/FACTORY-012.md) | Add review-queue CLI command | ready |
 | [FACTORY-015](beads/FACTORY-015.md) | Add CI triage automation recipe | ready |
 
 ## In Progress
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [FACTORY-012](beads/FACTORY-012.md) | Add review-queue CLI command | in_progress |
 
 ## In Review
 

@@ -14,6 +14,7 @@ Factory orchestration code — scripts, validators, and automation that agents a
 | Complete / done CLI | FACTORY-007 | `in_progress` → `review` → `done` |
 | Backlog sync | FACTORY-008 | Regenerate `backlog.md` from beads |
 | Next CLI | FACTORY-009 | Claim the first ready bead |
+| Review queue CLI | FACTORY-012 | Beads waiting for review |
 | Unattended loop | FACTORY-011 | Skill + Cursor automation recipe |
 
 ## Running (FACTORY-002)
@@ -35,6 +36,10 @@ python -m harness.beads ready
 
 # Agent-readable ready queue
 python -m harness.beads ready --json
+
+# Show beads waiting for review
+python -m harness.beads review-queue
+python -m harness.beads review-queue --json
 
 # Claim a ready bead
 python -m harness.beads claim FACTORY-007
