@@ -104,6 +104,8 @@ Prompt: `Implement the next ready bead`
 
 Recipe: `.cursor/automations/worker-loop.md` (enable in the Cursor dashboard; do not invent work if `next` finds an empty queue).
 
+CI failures: `.cursor/automations/ci-triage.md` (prompt `Triage the latest CI failure on this repository`; green CI means stop).
+
 ## Design Principles
 
 - **Deterministic where possible** — scripts validate, agents reason
