@@ -1,7 +1,7 @@
 ---
 id: DUNGEON-004
 title: Add nail-like melee in the facing direction
-status: in_progress
+status: done
 dependencies:
   - DUNGEON-003
 assignee: agent
