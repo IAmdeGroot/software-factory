@@ -13,7 +13,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [DUNGEON-007](beads/DUNGEON-007.md) | Add a doorway to a second room | in_progress |
+| _(none)_ | | |
 
 ## In Review
 
@@ -37,6 +37,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 | [DUNGEON-004](beads/DUNGEON-004.md) | Add nail-like melee in the facing direction | done |
 | [DUNGEON-005](beads/DUNGEON-005.md) | Add one strikeable enemy in the room | done |
 | [DUNGEON-006](beads/DUNGEON-006.md) | Add enemy contact damage and player hit points | done |
+| [DUNGEON-007](beads/DUNGEON-007.md) | Add a doorway to a second room | done |
 | [FACTORY-001](beads/FACTORY-001.md) | Validate bead file schema | done |
 | [FACTORY-002](beads/FACTORY-002.md) | Create harness project scaffold | done |
 | [FACTORY-003](beads/FACTORY-003.md) | Add bead status listing script | done |

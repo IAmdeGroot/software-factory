@@ -1,7 +1,7 @@
 ---
 id: DUNGEON-007
 title: Add a doorway to a second room
-status: in_progress
+status: done
 dependencies:
   - DUNGEON-006
 assignee: agent
