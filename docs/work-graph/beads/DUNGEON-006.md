@@ -1,7 +1,7 @@
 ---
 id: DUNGEON-006
 title: Add enemy contact damage and player hit points
-status: in_progress
+status: done
 dependencies:
   - DUNGEON-005
 assignee: agent
