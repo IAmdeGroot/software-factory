@@ -3,21 +3,30 @@ extends CharacterBody2D
 const SPEED := 200.0
 const RECOVER := 0.28
 const NAIL_ACTIVE := 0.12
+const MAX_HP := 3
+const IFRAMES := 0.55
 
 var facing := Vector2.RIGHT
 var recover := 0.0
 var nail_active := 0.0
+var hp := MAX_HP
+var iframes := 0.0
+var spawn_position := Vector2.ZERO
 
 @onready var nail: Area2D = $Nail
 @onready var nail_visible: ColorRect = $Nail/Visible
+@onready var hp_label: Label = $HpLabel
 
 
 func _ready() -> void:
+	spawn_position = position
 	nail.area_entered.connect(_on_nail_area_entered)
+	_refresh_hp_label()
 
 
 func _physics_process(delta: float) -> void:
 	recover = maxf(0.0, recover - delta)
+	iframes = maxf(0.0, iframes - delta)
 	if nail_active > 0.0:
 		nail_active = maxf(0.0, nail_active - delta)
 		if nail_active == 0.0:
@@ -42,6 +51,27 @@ func _physics_process(delta: float) -> void:
 
 	velocity = direction * SPEED
 	move_and_slide()
+
+
+func take_contact_hit() -> void:
+	if iframes > 0.0:
+		return
+	hp -= 1
+	iframes = IFRAMES
+	_refresh_hp_label()
+	if hp <= 0:
+		_respawn()
+
+
+func _respawn() -> void:
+	hp = MAX_HP
+	iframes = 0.0
+	position = spawn_position
+	_refresh_hp_label()
+
+
+func _refresh_hp_label() -> void:
+	hp_label.text = str(hp)
 
 
 func _swing() -> void:
