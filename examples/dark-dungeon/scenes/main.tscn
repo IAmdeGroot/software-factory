@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://darkdungeonmain001"]
+[gd_scene load_steps=9 format=3 uid="uid://darkdungeonmain001"]
 
 [ext_resource type="PackedScene" uid="uid://darkdungeonplayer002" path="res://scenes/player.tscn" id="1_player"]
 [ext_resource type="PackedScene" uid="uid://darkdungeonenemy005" path="res://scenes/enemy.tscn" id="2_enemy"]
@@ -9,6 +9,15 @@ size = Vector2(864, 32)
 [sub_resource type="RectangleShape2D" id="WallVertical"]
 size = Vector2(32, 544)
 
+[sub_resource type="RectangleShape2D" id="EastStub"]
+size = Vector2(32, 232)
+
+[sub_resource type="RectangleShape2D" id="Room2Horizontal"]
+size = Vector2(504, 32)
+
+[sub_resource type="RectangleShape2D" id="Room2East"]
+size = Vector2(32, 544)
+
 [node name="Main" type="Node2D"]
 
 [node name="Room" type="Node2D" parent="."]
@@ -16,7 +25,7 @@ size = Vector2(32, 544)
 [node name="Floor" type="ColorRect" parent="Room"]
 offset_left = 240.0
 offset_top = 120.0
-offset_right = 1040.0
+offset_right = 1072.0
 offset_bottom = 600.0
 color = Color(0.14, 0.11, 0.16, 1)
 
@@ -59,18 +68,88 @@ color = Color(0.38, 0.28, 0.22, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room/WestWall"]
 shape = SubResource("WallVertical")
 
-[node name="EastWall" type="StaticBody2D" parent="Room"]
-position = Vector2(1056, 360)
+[node name="EastWall" type="Node2D" parent="Room"]
 
-[node name="Visible" type="ColorRect" parent="Room/EastWall"]
+[node name="EastWallNorth" type="StaticBody2D" parent="Room/EastWall"]
+position = Vector2(1056, 204)
+
+[node name="Visible" type="ColorRect" parent="Room/EastWall/EastWallNorth"]
+offset_left = -16.0
+offset_top = -116.0
+offset_right = 16.0
+offset_bottom = 116.0
+color = Color(0.38, 0.28, 0.22, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/EastWall/EastWallNorth"]
+shape = SubResource("EastStub")
+
+[node name="EastWallSouth" type="StaticBody2D" parent="Room/EastWall"]
+position = Vector2(1056, 516)
+
+[node name="Visible" type="ColorRect" parent="Room/EastWall/EastWallSouth"]
+offset_left = -16.0
+offset_top = -116.0
+offset_right = 16.0
+offset_bottom = 116.0
+color = Color(0.38, 0.28, 0.22, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/EastWall/EastWallSouth"]
+shape = SubResource("EastStub")
+
+[node name="Doorway" type="ColorRect" parent="Room"]
+offset_left = 1040.0
+offset_top = 320.0
+offset_right = 1072.0
+offset_bottom = 400.0
+color = Color(0.08, 0.06, 0.1, 1)
+
+[node name="Room2" type="Node2D" parent="."]
+
+[node name="Floor" type="ColorRect" parent="Room2"]
+offset_left = 1072.0
+offset_top = 120.0
+offset_right = 1512.0
+offset_bottom = 600.0
+color = Color(0.1, 0.08, 0.12, 1)
+
+[node name="NorthWall" type="StaticBody2D" parent="Room2"]
+position = Vector2(1292, 104)
+
+[node name="Visible" type="ColorRect" parent="Room2/NorthWall"]
+offset_left = -252.0
+offset_top = -16.0
+offset_right = 252.0
+offset_bottom = 16.0
+color = Color(0.32, 0.24, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room2/NorthWall"]
+shape = SubResource("Room2Horizontal")
+
+[node name="SouthWall" type="StaticBody2D" parent="Room2"]
+position = Vector2(1292, 616)
+
+[node name="Visible" type="ColorRect" parent="Room2/SouthWall"]
+offset_left = -252.0
+offset_top = -16.0
+offset_right = 252.0
+offset_bottom = 16.0
+color = Color(0.32, 0.24, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room2/SouthWall"]
+shape = SubResource("Room2Horizontal")
+
+[node name="EastWall" type="StaticBody2D" parent="Room2"]
+position = Vector2(1528, 360)
+
+[node name="Visible" type="ColorRect" parent="Room2/EastWall"]
 offset_left = -16.0
 offset_top = -272.0
 offset_right = 16.0
 offset_bottom = 272.0
-color = Color(0.38, 0.28, 0.22, 1)
+color = Color(0.32, 0.24, 0.2, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/EastWall"]
-shape = SubResource("WallVertical")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room2/EastWall"]
+shape = SubResource("Room2East")
 
 [node name="Player" parent="." instance=ExtResource("1_player")]
 position = Vector2(640, 360)
