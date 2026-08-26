@@ -1,7 +1,7 @@
 ---
 id: DUNGEON-005
 title: Add one strikeable enemy in the room
-status: in_progress
+status: done
 dependencies:
   - DUNGEON-004
 assignee: agent
