@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://darkdungeonmain001"]
+[gd_scene load_steps=6 format=3 uid="uid://darkdungeonmain001"]
 
 [ext_resource type="PackedScene" uid="uid://darkdungeonplayer002" path="res://scenes/player.tscn" id="1_player"]
+[ext_resource type="PackedScene" uid="uid://darkdungeonenemy005" path="res://scenes/enemy.tscn" id="2_enemy"]
 
 [sub_resource type="RectangleShape2D" id="WallHorizontal"]
 size = Vector2(864, 32)
@@ -73,3 +74,6 @@ shape = SubResource("WallVertical")
 
 [node name="Player" parent="." instance=ExtResource("1_player")]
 position = Vector2(640, 360)
+
+[node name="Enemy" parent="." instance=ExtResource("2_enemy")]
+position = Vector2(820, 400)
