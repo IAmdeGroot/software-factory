@@ -12,6 +12,10 @@ var nail_active := 0.0
 @onready var nail_visible: ColorRect = $Nail/Visible
 
 
+func _ready() -> void:
+	nail.area_entered.connect(_on_nail_area_entered)
+
+
 func _physics_process(delta: float) -> void:
 	recover = maxf(0.0, recover - delta)
 	if nail_active > 0.0:
@@ -50,3 +54,8 @@ func _swing() -> void:
 func _sheathe() -> void:
 	nail.monitoring = false
 	nail_visible.visible = false
+
+
+func _on_nail_area_entered(area: Area2D) -> void:
+	if area.has_method("take_nail_hit"):
+		area.take_nail_hit()

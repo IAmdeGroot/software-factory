@@ -7,14 +7,13 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [DUNGEON-005](beads/DUNGEON-005.md) | Add one strikeable enemy in the room | ready |
 | [FACTORY-021](beads/FACTORY-021.md) | Convert open wishes into beads | ready |
 
 ## In Progress
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [DUNGEON-005](beads/DUNGEON-005.md) | Add one strikeable enemy in the room | in_progress |
 
 ## In Review
 
