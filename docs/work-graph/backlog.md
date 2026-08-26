@@ -13,7 +13,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [DUNGEON-006](beads/DUNGEON-006.md) | Add enemy contact damage and player hit points | in_progress |
 
 ## In Review
 

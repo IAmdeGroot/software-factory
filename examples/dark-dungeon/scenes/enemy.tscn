@@ -6,7 +6,7 @@
 size = Vector2(22, 18)
 
 [node name="Enemy" type="Area2D"]
-monitoring = false
+monitoring = true
 monitorable = true
 script = ExtResource("1_enemy")
 

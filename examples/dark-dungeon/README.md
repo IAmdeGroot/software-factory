@@ -17,7 +17,7 @@ A 2D top-down action RPG / roguelite, **inspired by Hollow Knight** (nail-like m
 Requires [Godot 4.3+](https://godotengine.org/download/) (4.x). The Godot binary is not required for the scaffold file tests.
 
 1. Open Godot 4 → Import → select `examples/dark-dungeon/project.godot`
-2. Press Play (F5). Play starts in a **bounded room** with **one idle insect-like enemy**. Move with **WASD** or the **arrow keys**. Swing a short **nail** with **J** to strike and despawn the enemy.
+2. Press Play (F5). Play starts in a **bounded room** with **one idle insect-like enemy**. Move with **WASD** or the **arrow keys**. Swing a short **nail** with **J** to strike and despawn the enemy. **Touching the enemy costs a hit** (three hits, then you respawn in the room). Brief invulnerability after a hit. Not a Hollow Knight mask/soul clone.
 
 ```bash
 # Scaffold checks (no Godot binary needed)
@@ -43,7 +43,7 @@ python3 -m unittest discover -s examples/dark-dungeon/tests -v
 
 ## Status
 
-Scaffold, movement, a bounded room, nail-like melee, and one strikeable enemy are in (`DUNGEON-001`–`DUNGEON-005`).
+Scaffold through contact damage are in (`DUNGEON-001`–`DUNGEON-006`): room, nail, one enemy that hurts on touch, three hits then respawn.
 
 ## Why This Example
 
