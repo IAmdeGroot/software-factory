@@ -11,6 +11,7 @@ beads:
   - DUNGEON-010
   - DUNGEON-011
   - DUNGEON-012
+  - DUNGEON-013
 ---
 
 # WISH-001: Dark Dungeon should feel inspired by Hollow Knight
@@ -24,5 +25,6 @@ and later ability-gated rooms — not a side-scrolling Knight.
 Converted to beads: `DUNGEON-004` (nail-like melee), `DUNGEON-005` (one
 strikeable enemy), `DUNGEON-008` (second foe type in room 2), `DUNGEON-009`
 (patrolling third type), `DUNGEON-010` (shard loot on death), `DUNGEON-011`
-(nail shrine spend), `DUNGEON-012` (honed-nail seal). Further HK-like work
-(pogo, benches, soul, map) stays out of scope until the human wishes again.
+(nail shrine spend), `DUNGEON-012` (honed-nail seal), `DUNGEON-013` (room-3
+warden). Further HK-like work (pogo, benches, soul, map) stays out of scope
+until the human wishes again.

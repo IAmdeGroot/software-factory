@@ -42,7 +42,7 @@ class ShardLootTests(unittest.TestCase):
         self.assertIn('[node name="HpLabel" type="Label"', text)
 
     def test_foes_drop_a_shard_on_death(self) -> None:
-        for name in ("enemy.gd", "crawler.gd", "skitter.gd"):
+        for name in ("enemy.gd", "crawler.gd", "skitter.gd", "warden.gd"):
             text = (ROOT / "scripts" / name).read_text(encoding="utf-8")
             self.assertIn("res://scenes/shard.tscn", text, f"{name} should drop a shard")
             self.assertIn("_drop_shard", text)

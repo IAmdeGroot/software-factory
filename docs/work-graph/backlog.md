@@ -13,7 +13,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [DUNGEON-013](beads/DUNGEON-013.md) | Add a boss in the third room | in_progress |
 
 ## In Review
 

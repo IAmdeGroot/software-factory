@@ -117,3 +117,10 @@ Record non-obvious decisions here. Format:
 **Decision:** Split room 2's east wall (`DUNGEON-012`). A seal blocks the gap until nail damage is 2, then it despawns and a third bounded room is reachable. Unhoned swings fail quietly.
 **Rationale:** That is the smallest ability gate. Seeing the seal before the shrine makes the walk-back readable. A boss in room 3 is a later bead.
 **Alternatives considered:** Key item — extra pickup for the same door. Hide room 2 behind the hone — would skip the shrine loop. Boss in this bead — second feature.
+
+## 2026-08-27 — Room 3 boss is a slow six-hit warden
+
+**Context:** First playable scope includes one boss. Room 3 was empty after the seal. The human asked to keep going on the game.
+**Decision:** Add a larger purple warden (`DUNGEON-013`) that patrols east-west, has 6 HP (three honed-nail swings), and still uses contact damage. No chase, no HP bar, no phases.
+**Rationale:** The seal already gates the fight behind the hone. Tankiness plus size is enough to read as a boss without a second combat system.
+**Alternatives considered:** Chase AI — death loop in a small room. Multi-phase or a health bar — extra UI. A unique drop instead of a shard — later, if a spend sink needs it.
