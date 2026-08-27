@@ -13,7 +13,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [DUNGEON-009](beads/DUNGEON-009.md) | Add a patrolling third enemy type | in_progress |
 
 ## In Review
 
