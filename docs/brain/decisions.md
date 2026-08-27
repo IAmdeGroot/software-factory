@@ -124,3 +124,10 @@ Record non-obvious decisions here. Format:
 **Decision:** Add a larger purple warden (`DUNGEON-013`) that patrols east-west, has 6 HP (three honed-nail swings), and still uses contact damage. No chase, no HP bar, no phases.
 **Rationale:** The seal already gates the fight behind the hone. Tankiness plus size is enough to read as a boss without a second combat system.
 **Alternatives considered:** Chase AI — death loop in a small room. Multi-phase or a health bar — extra UI. A unique drop instead of a shard — later, if a spend sink needs it.
+
+## 2026-08-27 — Warden death shows Cleared
+
+**Context:** First playable had a boss with no ending beat. The human asked to keep going on the game.
+**Decision:** When the warden dies (`DUNGEON-014`), a hidden Label in room 3 becomes visible with the word "Cleared". The player can still walk. No title screen or credits.
+**Rationale:** One word in the boss room is the smallest win. A full ending would stall playtest.
+**Alternatives considered:** CanvasLayer HUD — extra node for the same sentence. Freeze input or return to a menu — rejected; keep the room playable.

@@ -21,7 +21,8 @@ class Room3BossTests(unittest.TestCase):
         self.assertIn("position.x", text)
         self.assertIn("hits -= amount", text)
         self.assertIn("take_contact_hit", text)
-        self.assertNotIn("get_node", text.lower())
+        self.assertNotIn('get_node("Player")', text)
+        self.assertNotIn("chase", text.lower())
 
     def test_warden_scene_is_larger_monitorable_area(self) -> None:
         path = ROOT / "scenes" / "warden.tscn"
