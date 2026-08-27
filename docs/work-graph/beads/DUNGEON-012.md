@@ -1,7 +1,7 @@
 ---
 id: DUNGEON-012
 title: Add a seal that only a honed nail can break
-status: in_progress
+status: done
 dependencies:
   - DUNGEON-011
 assignee: agent
@@ -17,15 +17,15 @@ and yields to a honed one opens a third room. Not a map, not a boss.
 
 ## Acceptance Criteria
 
-- [ ] Room 2's east wall has a visible seal blocking a gap
-- [ ] An unhoned nail does not break the seal
-- [ ] A honed nail (damage 2) breaks the seal
-- [ ] A third bounded room exists beyond the seal
-- [ ] The player can walk into that room after the seal is gone
-- [ ] WASD, shrine, shards, and existing foes still work
-- [ ] Tests check seal threshold, room 3 walls, and placement
-- [ ] README notes the honed-nail seal
-- [ ] Tests pass
+- [x] Room 2's east wall has a visible seal blocking a gap
+- [x] An unhoned nail does not break the seal
+- [x] A honed nail (damage 2) breaks the seal
+- [x] A third bounded room exists beyond the seal
+- [x] The player can walk into that room after the seal is gone
+- [x] WASD, shrine, shards, and existing foes still work
+- [x] Tests check seal threshold, room 3 walls, and placement
+- [x] README notes the honed-nail seal
+- [x] Tests pass
 
 ## Notes
 
