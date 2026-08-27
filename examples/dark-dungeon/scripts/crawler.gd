@@ -1,0 +1,26 @@
+extends Area2D
+
+## Tougher crawler. Two nail hits. Touching the player deals contact damage.
+
+const HITS := 2
+
+var hits := HITS
+
+@onready var body: ColorRect = $Body
+
+
+func _ready() -> void:
+	body_entered.connect(_on_body_entered)
+
+
+func take_nail_hit() -> void:
+	hits -= 1
+	if hits <= 0:
+		queue_free()
+		return
+	body.color = Color(0.28, 0.1, 0.12, 1)
+
+
+func _on_body_entered(other: Node2D) -> void:
+	if other.has_method("take_contact_hit"):
+		other.take_contact_hit()

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://darkdungeoncrawler008"]
+
+[ext_resource type="Script" path="res://scripts/crawler.gd" id="1_crawler"]
+
+[sub_resource type="RectangleShape2D" id="CrawlerHit"]
+size = Vector2(30, 20)
+
+[node name="Crawler" type="Area2D"]
+monitoring = true
+monitorable = true
+script = ExtResource("1_crawler")
+
+[node name="Body" type="ColorRect" parent="."]
+offset_left = -15.0
+offset_top = -10.0
+offset_right = 15.0
+offset_bottom = 10.0
+color = Color(0.45, 0.2, 0.22, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CrawlerHit")

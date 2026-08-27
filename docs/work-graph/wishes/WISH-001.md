@@ -6,6 +6,7 @@ source: human
 beads:
   - DUNGEON-004
   - DUNGEON-005
+  - DUNGEON-008
 ---
 
 # WISH-001: Dark Dungeon should feel inspired by Hollow Knight
@@ -17,5 +18,5 @@ This is inspiration, not a clone. Dark Dungeon stays Godot 4 **top-down 2D**
 and later ability-gated rooms — not a side-scrolling Knight.
 
 Converted to beads: `DUNGEON-004` (nail-like melee), `DUNGEON-005` (one
-strikeable enemy). Further HK-like work (pogo, benches, soul, map) is out of
-scope until those beads are done and the human wishes again.
+strikeable enemy), `DUNGEON-008` (second foe type in room 2). Further HK-like
+work (pogo, benches, soul, map) stays out of scope until the human wishes again.
