@@ -1,7 +1,7 @@
 ---
 id: DUNGEON-009
 title: Add a patrolling third enemy type
-status: in_progress
+status: done
 dependencies:
   - DUNGEON-008
 assignee: agent
@@ -18,14 +18,14 @@ chase — so combat is not three statues.
 
 ## Acceptance Criteria
 
-- [ ] A third enemy type exists (distinct scene/script from the insect and crawler)
-- [ ] It patrols a short line (does not chase the player)
-- [ ] One nail hit despawns it; contact still damages the player
-- [ ] It is placed in the second room
-- [ ] WASD, J-nail, HP, doorway, and the first two foes still work
-- [ ] Tests check patrol wiring, one-hit, and Room 2 placement
-- [ ] README notes three enemy types
-- [ ] Tests pass
+- [x] A third enemy type exists (distinct scene/script from the insect and crawler)
+- [x] It patrols a short line (does not chase the player)
+- [x] One nail hit despawns it; contact still damages the player
+- [x] It is placed in the second room
+- [x] WASD, J-nail, HP, doorway, and the first two foes still work
+- [x] Tests check patrol wiring, one-hit, and Room 2 placement
+- [x] README notes three enemy types
+- [x] Tests pass
 
 ## Notes
 
