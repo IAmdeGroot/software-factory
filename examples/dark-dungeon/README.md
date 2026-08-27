@@ -17,7 +17,7 @@ A 2D top-down action RPG / roguelite, **inspired by Hollow Knight** (nail-like m
 Requires [Godot 4.3+](https://godotengine.org/download/) (4.x). The Godot binary is not required for the scaffold file tests.
 
 1. Open Godot 4 → Import → select `examples/dark-dungeon/project.godot`
-2. Press Play (F5). Play starts in a **bounded room** with **one idle insect-like enemy**. An **east doorway** leads to a **second room** (camera follows; not a map) with a **tougher crawler** (two nail hits) and an **amber skitter** that patrols north-south. Move with **WASD** or the **arrow keys**. Swing a short **nail** with **J**. **Touching an enemy costs a hit** (three hits, then you respawn in the first room). Defeated foes drop a **shard**; walk over it to collect (count stays on respawn).
+2. Press Play (F5). Play starts in a **bounded room** with a **nail shrine** (west) and **one idle insect**. An **east doorway** leads to a **second room** with a **two-hit crawler** and a **patrolling skitter**. Move with **WASD** or the **arrow keys**. Swing a short **nail** with **J**. **Touching an enemy costs a hit** (three hits, then you respawn in the first room). Defeated foes drop a **shard**; walk over it to collect. Carry **two shards** back to the shrine to **hone the nail** (crawler then dies in one hit). Shards and the hone survive respawn.
 
 ```bash
 # Scaffold checks (no Godot binary needed)
@@ -43,7 +43,7 @@ python3 -m unittest discover -s examples/dark-dungeon/tests -v
 
 ## Status
 
-Two rooms connected by a doorway, nail, three enemy types, shard loot on death, three HP (`DUNGEON-001`–`DUNGEON-010`). Inspired by Hollow Knight exploration, not a Hallownest map.
+Two rooms, nail shrine (two shards hone the nail), three enemy types, shard loot, three HP (`DUNGEON-001`–`DUNGEON-011`). Inspired by Hollow Knight exploration, not a Hallownest map.
 
 ## Why This Example
 

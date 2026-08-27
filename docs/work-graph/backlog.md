@@ -41,6 +41,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 | [DUNGEON-008](beads/DUNGEON-008.md) | Add a second enemy type in the east room | done |
 | [DUNGEON-009](beads/DUNGEON-009.md) | Add a patrolling third enemy type | done |
 | [DUNGEON-010](beads/DUNGEON-010.md) | Add shard loot when a foe dies | done |
+| [DUNGEON-011](beads/DUNGEON-011.md) | Add a nail shrine that spends shards | done |
 | [FACTORY-001](beads/FACTORY-001.md) | Validate bead file schema | done |
 | [FACTORY-002](beads/FACTORY-002.md) | Create harness project scaffold | done |
 | [FACTORY-003](beads/FACTORY-003.md) | Add bead status listing script | done |

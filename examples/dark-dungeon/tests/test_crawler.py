@@ -16,7 +16,7 @@ class SecondEnemyTypeTests(unittest.TestCase):
         self.assertIn("extends Area2D", text)
         self.assertIn("HITS := 2", text)
         self.assertIn("take_nail_hit", text)
-        self.assertIn("hits -= 1", text)
+        self.assertIn("hits -= amount", text)
         self.assertIn("queue_free", text)
         self.assertIn("take_contact_hit", text)
 
@@ -40,9 +40,9 @@ class SecondEnemyTypeTests(unittest.TestCase):
     def test_first_enemy_still_dies_in_one_hit(self) -> None:
         path = ROOT / "scripts" / "enemy.gd"
         text = path.read_text(encoding="utf-8")
-        self.assertIn("func take_nail_hit() -> void:", text)
+        self.assertIn("func take_nail_hit", text)
         self.assertIn("queue_free()", text)
-        self.assertNotIn("hits -= 1", text)
+        self.assertNotIn("hits -=", text)
 
 
 if __name__ == "__main__":

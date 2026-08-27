@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://darkdungeonshrine011"]
+
+[ext_resource type="Script" path="res://scripts/shrine.gd" id="1_shrine"]
+
+[sub_resource type="RectangleShape2D" id="ShrineHit"]
+size = Vector2(28, 36)
+
+[node name="Shrine" type="Area2D"]
+monitoring = true
+monitorable = false
+script = ExtResource("1_shrine")
+
+[node name="Body" type="ColorRect" parent="."]
+offset_left = -14.0
+offset_top = -18.0
+offset_right = 14.0
+offset_bottom = 18.0
+color = Color(0.5, 0.44, 0.36, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("ShrineHit")

@@ -13,6 +13,7 @@ var hp := MAX_HP
 var iframes := 0.0
 var spawn_position := Vector2.ZERO
 var shards := 0
+var nail_damage := 1
 
 @onready var nail: Area2D = $Nail
 @onready var nail_visible: ColorRect = $Nail/Visible
@@ -71,6 +72,18 @@ func take_shard() -> void:
 	_refresh_shard_label()
 
 
+func hone_nail(cost: int) -> bool:
+	if nail_damage >= 2:
+		return false
+	if shards < cost:
+		return false
+	shards -= cost
+	nail_damage = 2
+	nail_visible.color = Color(0.95, 0.96, 1.0, 0.95)
+	_refresh_shard_label()
+	return true
+
+
 func _respawn() -> void:
 	hp = MAX_HP
 	iframes = 0.0
@@ -100,4 +113,4 @@ func _sheathe() -> void:
 
 func _on_nail_area_entered(area: Area2D) -> void:
 	if area.has_method("take_nail_hit"):
-		area.take_nail_hit()
+		area.take_nail_hit(nail_damage)
