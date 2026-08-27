@@ -110,3 +110,10 @@ Record non-obvious decisions here. Format:
 **Decision:** A shrine in room 1 (`DUNGEON-011`) spends two shards to raise nail damage from 1 to 2. That is a reason to walk back through the doorway. The hone survives respawn. No shop UI.
 **Rationale:** Spend + walk-back is one loop. Cost 2 means insect plus one room-2 kill, not a full clear. A honed nail one-shots the crawler so the upgrade is readable.
 **Alternatives considered:** Shop menu — too much UI. Bench/soul — clone verbs. Gate the east door behind the hone — would hide the shrine loop behind a lock.
+
+## 2026-08-27 — Honed nail breaks a seal into room 3
+
+**Context:** The hone had nothing to open. WISH-001 wanted rooms you come back to with a new move. The human asked to keep going on the game.
+**Decision:** Split room 2's east wall (`DUNGEON-012`). A seal blocks the gap until nail damage is 2, then it despawns and a third bounded room is reachable. Unhoned swings fail quietly.
+**Rationale:** That is the smallest ability gate. Seeing the seal before the shrine makes the walk-back readable. A boss in room 3 is a later bead.
+**Alternatives considered:** Key item — extra pickup for the same door. Hide room 2 behind the hone — would skip the shrine loop. Boss in this bead — second feature.

@@ -12,7 +12,7 @@ Human wish **WISH-001**: inspired by Hollow Knight, not a clone.
 
 - A **nail**: attack in the facing direction, not a 360° aura
 - Lonely insect-ruin mood (palette, silhouettes) as content grows
-- Later: rooms that ask you to come back with a new move (not this increment)
+- Later: rooms that ask you to come back with a new move
 
 ## Do not
 
@@ -20,4 +20,4 @@ Human wish **WISH-001**: inspired by Hollow Knight, not a clone.
 - Add pogo, soul spells, charms, or a full map in the next beads
 - Spend a session on “atmosphere only” with no new verb
 
-Next playable verbs: a boss, or a locked path that needs the honed nail.
+Next playable verbs: a boss in the third room, still not a map.

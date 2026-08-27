@@ -13,7 +13,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [DUNGEON-012](beads/DUNGEON-012.md) | Add a seal that only a honed nail can break | in_progress |
 
 ## In Review
 
