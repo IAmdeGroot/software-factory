@@ -1,7 +1,7 @@
 ---
 id: DUNGEON-014
 title: Show a clear beat when the warden falls
-status: in_progress
+status: done
 dependencies:
   - DUNGEON-013
 assignee: agent
@@ -17,12 +17,12 @@ falls is the win beat. No credits, no map, no title screen.
 
 ## Acceptance Criteria
 
-- [ ] Defeating the warden reveals a visible "Cleared" message in room 3
-- [ ] The message is hidden until the warden falls
-- [ ] WASD, nail, shrine, seal, shards, and other foes still work
-- [ ] Tests check the label and the warden revealing it
-- [ ] README notes the clear beat
-- [ ] Tests pass
+- [x] Defeating the warden reveals a visible "Cleared" message in room 3
+- [x] The message is hidden until the warden falls
+- [x] WASD, nail, shrine, seal, shards, and other foes still work
+- [x] Tests check the label and the warden revealing it
+- [x] README notes the clear beat
+- [x] Tests pass
 
 ## Notes
 
