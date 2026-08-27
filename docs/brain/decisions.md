@@ -89,3 +89,10 @@ Record non-obvious decisions here. Format:
 **Decision:** Add a distinct crawler (`DUNGEON-008`) in room 2 that takes two nail hits, still idle, still contact damage. Keep the room-1 insect as a one-hit foe. No chase AI.
 **Rationale:** A doorway with nothing behind it is not exploration. Two hits and a different silhouette is enough to read as a new type without inventing patrol or a boss.
 **Alternatives considered:** Patrol/chase AI — deferred; one bead should stay playable and small. A third type or loot in the same bead — rejected as scope creep. Ability-gated return — later; room 2 should first have a reason to walk in.
+
+## 2026-08-27 — Third foe is a short north-south patrol
+
+**Context:** First playable scope asks for three enemy types. After `DUNGEON-008` both foes were idle. The human asked to keep going on the game.
+**Decision:** Add a distinct amber skitter (`DUNGEON-009`) in room 2 that walks a fixed north-south line. One nail hit. No chase.
+**Rationale:** Movement is the smallest way to read a third type. A patrol is a new verb without inventing aggro, pathfinding, or a boss.
+**Alternatives considered:** Chase the player — deferred; too easy to turn contact into a death loop. Ability-gated return or loot in this bead — rejected as a second feature.
