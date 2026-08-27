@@ -16,9 +16,16 @@ func _ready() -> void:
 func take_nail_hit() -> void:
 	hits -= 1
 	if hits <= 0:
+		_drop_shard()
 		queue_free()
 		return
 	body.color = Color(0.28, 0.1, 0.12, 1)
+
+
+func _drop_shard() -> void:
+	var shard: Node2D = preload("res://scenes/shard.tscn").instantiate()
+	get_parent().add_child(shard)
+	shard.global_position = global_position
 
 
 func _on_body_entered(other: Node2D) -> void:

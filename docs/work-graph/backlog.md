@@ -13,7 +13,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [DUNGEON-010](beads/DUNGEON-010.md) | Add shard loot when a foe dies | in_progress |
 
 ## In Review
 
