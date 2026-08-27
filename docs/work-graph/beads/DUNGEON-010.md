@@ -1,7 +1,7 @@
 ---
 id: DUNGEON-010
 title: Add shard loot when a foe dies
-status: in_progress
+status: done
 dependencies:
   - DUNGEON-009
 assignee: agent
@@ -18,14 +18,14 @@ no geo wallet art, no spending.
 
 ## Acceptance Criteria
 
-- [ ] Defeating a foe drops a visible shard on the floor
-- [ ] Walking over a shard collects it (the shard despawns)
-- [ ] The player has a visible shard count
-- [ ] Shards persist through respawn (HP still resets)
-- [ ] WASD, J-nail, HP, rooms, and all three foe types still work
-- [ ] Tests check drop, pickup, and count wiring
-- [ ] README notes shards drop from foes
-- [ ] Tests pass
+- [x] Defeating a foe drops a visible shard on the floor
+- [x] Walking over a shard collects it (the shard despawns)
+- [x] The player has a visible shard count
+- [x] Shards persist through respawn (HP still resets)
+- [x] WASD, J-nail, HP, rooms, and all three foe types still work
+- [x] Tests check drop, pickup, and count wiring
+- [x] README notes shards drop from foes
+- [x] Tests pass
 
 ## Notes
 
