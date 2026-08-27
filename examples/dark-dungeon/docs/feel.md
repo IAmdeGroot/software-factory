@@ -20,4 +20,4 @@ Human wish **WISH-001**: inspired by Hollow Knight, not a clone.
 - Add pogo, soul spells, charms, or a full map in the next beads
 - Spend a session on “atmosphere only” with no new verb
 
-Next playable verbs: a boss in the third room, still not a map.
+Next playable verbs: a win beat after the warden, or more rooms — still not a map.

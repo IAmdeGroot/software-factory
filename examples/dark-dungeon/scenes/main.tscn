@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://darkdungeonmain001"]
+[gd_scene load_steps=14 format=3 uid="uid://darkdungeonmain001"]
 
 [ext_resource type="PackedScene" uid="uid://darkdungeonplayer002" path="res://scenes/player.tscn" id="1_player"]
 [ext_resource type="PackedScene" uid="uid://darkdungeonenemy005" path="res://scenes/enemy.tscn" id="2_enemy"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://darkdungeonskitter009" path="res://scenes/skitter.tscn" id="4_skitter"]
 [ext_resource type="PackedScene" uid="uid://darkdungeonshrine011" path="res://scenes/shrine.tscn" id="5_shrine"]
 [ext_resource type="PackedScene" uid="uid://darkdungeonseal012" path="res://scenes/seal.tscn" id="6_seal"]
+[ext_resource type="PackedScene" uid="uid://darkdungeonwarden013" path="res://scenes/warden.tscn" id="7_warden"]
 
 [sub_resource type="RectangleShape2D" id="WallHorizontal"]
 size = Vector2(864, 32)
@@ -242,3 +243,6 @@ position = Vector2(1420, 280)
 
 [node name="Seal" parent="Room2" instance=ExtResource("6_seal")]
 position = Vector2(1528, 360)
+
+[node name="Warden" parent="Room3" instance=ExtResource("7_warden")]
+position = Vector2(1764, 360)
