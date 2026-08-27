@@ -82,3 +82,10 @@ Record non-obvious decisions here. Format:
 **Decision:** Treat Hollow Knight as **feel**, not genre. Keep top-down 2D. First borrows: nail-like directional melee (`DUNGEON-004`), then one strikeable enemy (`DUNGEON-005`). Do not clone Hallownest or respec the camera in this increment.
 **Rationale:** "Inspired by" is taste and verbs, not a second engine. Switching to side-view would throw away DUNGEON-001–003. A nail plus something to hit is the smallest playable HK echo.
 **Alternatives considered:** Full side-view Metroidvania pivot — rejected unless the human asks to abandon top-down. Implement the whole HK kit (pogo, soul, map) in one bead — rejected; too large.
+
+## 2026-08-27 — Second foe is a two-hit idle crawler in room 2
+
+**Context:** After the east doorway (`DUNGEON-007`), room 2 was empty. First playable scope still wants more than one enemy type. The human asked to keep going on the game.
+**Decision:** Add a distinct crawler (`DUNGEON-008`) in room 2 that takes two nail hits, still idle, still contact damage. Keep the room-1 insect as a one-hit foe. No chase AI.
+**Rationale:** A doorway with nothing behind it is not exploration. Two hits and a different silhouette is enough to read as a new type without inventing patrol or a boss.
+**Alternatives considered:** Patrol/chase AI — deferred; one bead should stay playable and small. A third type or loot in the same bead — rejected as scope creep. Ability-gated return — later; room 2 should first have a reason to walk in.
