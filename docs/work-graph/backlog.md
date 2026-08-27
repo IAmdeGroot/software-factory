@@ -13,7 +13,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [DUNGEON-011](beads/DUNGEON-011.md) | Add a nail shrine that spends shards | in_progress |
 
 ## In Review
 

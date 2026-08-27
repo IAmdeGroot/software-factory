@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 		dir = 1.0
 
 
-func take_nail_hit() -> void:
+func take_nail_hit(_amount: int = 1) -> void:
 	_drop_shard()
 	queue_free()
 

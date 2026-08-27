@@ -103,3 +103,10 @@ Record non-obvious decisions here. Format:
 **Decision:** Foes drop a pale shard on death (`DUNGEON-010`). Walking over it increments a count on the player. Shards survive respawn. No shop and not named geo.
 **Rationale:** Pickup is the smallest loot verb. Spending and a nail upgrade are a later bead so this one stays collect-only.
 **Alternatives considered:** A placed chest with no combat drop — weaker loop. Copy Hollow Knight geo HUD/spend — rejected as clone dressing. Ability-gated return in this bead — still later.
+
+## 2026-08-27 — Shards buy a nail hone in room 1
+
+**Context:** Shards had no sink. First playable scope includes character progression. The human asked to keep going on the game.
+**Decision:** A shrine in room 1 (`DUNGEON-011`) spends two shards to raise nail damage from 1 to 2. That is a reason to walk back through the doorway. The hone survives respawn. No shop UI.
+**Rationale:** Spend + walk-back is one loop. Cost 2 means insect plus one room-2 kill, not a full clear. A honed nail one-shots the crawler so the upgrade is readable.
+**Alternatives considered:** Shop menu — too much UI. Bench/soul — clone verbs. Gate the east door behind the hone — would hide the shrine loop behind a lock.

@@ -13,8 +13,8 @@ func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 
 
-func take_nail_hit() -> void:
-	hits -= 1
+func take_nail_hit(amount: int = 1) -> void:
+	hits -= amount
 	if hits <= 0:
 		_drop_shard()
 		queue_free()
