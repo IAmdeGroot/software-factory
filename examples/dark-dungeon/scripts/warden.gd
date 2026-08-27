@@ -1,6 +1,6 @@
 extends Area2D
 
-## Room-3 warden. Six hit points, slow east-west patrol, no chase.
+## Room-3 warden. Six hit points, slow east-west patrol. Does not pursue.
 
 const HITS := 6
 const SPEED := 50.0

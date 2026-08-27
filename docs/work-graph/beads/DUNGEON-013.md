@@ -1,7 +1,7 @@
 ---
 id: DUNGEON-013
 title: Add a boss in the third room
-status: in_progress
+status: done
 dependencies:
   - DUNGEON-012
 assignee: agent
@@ -18,14 +18,14 @@ no chase.
 
 ## Acceptance Criteria
 
-- [ ] A distinct boss exists in the third room (larger than other foes)
-- [ ] It takes multiple honed-nail hits (three swings at damage 2)
-- [ ] It patrols slowly and does not chase
-- [ ] Contact still damages the player; death still drops a shard
-- [ ] Seal, shrine, rooms, and the first three foes still work
-- [ ] Tests check boss hits, patrol, and Room 3 placement
-- [ ] README notes the warden in room 3
-- [ ] Tests pass
+- [x] A distinct boss exists in the third room (larger than other foes)
+- [x] It takes multiple honed-nail hits (three swings at damage 2)
+- [x] It patrols slowly and does not chase
+- [x] Contact still damages the player; death still drops a shard
+- [x] Seal, shrine, rooms, and the first three foes still work
+- [x] Tests check boss hits, patrol, and Room 3 placement
+- [x] README notes the warden in room 3
+- [x] Tests pass
 
 ## Notes
 

@@ -13,7 +13,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [DUNGEON-013](beads/DUNGEON-013.md) | Add a boss in the third room | in_progress |
+| _(none)_ | | |
 
 ## In Review
 
@@ -43,6 +43,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 | [DUNGEON-010](beads/DUNGEON-010.md) | Add shard loot when a foe dies | done |
 | [DUNGEON-011](beads/DUNGEON-011.md) | Add a nail shrine that spends shards | done |
 | [DUNGEON-012](beads/DUNGEON-012.md) | Add a seal that only a honed nail can break | done |
+| [DUNGEON-013](beads/DUNGEON-013.md) | Add a boss in the third room | done |
 | [FACTORY-001](beads/FACTORY-001.md) | Validate bead file schema | done |
 | [FACTORY-002](beads/FACTORY-002.md) | Create harness project scaffold | done |
 | [FACTORY-003](beads/FACTORY-003.md) | Add bead status listing script | done |
