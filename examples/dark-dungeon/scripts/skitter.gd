@@ -24,7 +24,14 @@ func _process(delta: float) -> void:
 
 
 func take_nail_hit() -> void:
+	_drop_shard()
 	queue_free()
+
+
+func _drop_shard() -> void:
+	var shard: Node2D = preload("res://scenes/shard.tscn").instantiate()
+	get_parent().add_child(shard)
+	shard.global_position = global_position
 
 
 func _on_body_entered(other: Node2D) -> void:

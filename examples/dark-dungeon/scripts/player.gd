@@ -12,16 +12,19 @@ var nail_active := 0.0
 var hp := MAX_HP
 var iframes := 0.0
 var spawn_position := Vector2.ZERO
+var shards := 0
 
 @onready var nail: Area2D = $Nail
 @onready var nail_visible: ColorRect = $Nail/Visible
 @onready var hp_label: Label = $HpLabel
+@onready var shard_label: Label = $ShardLabel
 
 
 func _ready() -> void:
 	spawn_position = position
 	nail.area_entered.connect(_on_nail_area_entered)
 	_refresh_hp_label()
+	_refresh_shard_label()
 
 
 func _physics_process(delta: float) -> void:
@@ -63,6 +66,11 @@ func take_contact_hit() -> void:
 		_respawn()
 
 
+func take_shard() -> void:
+	shards += 1
+	_refresh_shard_label()
+
+
 func _respawn() -> void:
 	hp = MAX_HP
 	iframes = 0.0
@@ -72,6 +80,10 @@ func _respawn() -> void:
 
 func _refresh_hp_label() -> void:
 	hp_label.text = str(hp)
+
+
+func _refresh_shard_label() -> void:
+	shard_label.text = str(shards)
 
 
 func _swing() -> void:

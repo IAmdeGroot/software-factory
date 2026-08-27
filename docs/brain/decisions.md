@@ -96,3 +96,10 @@ Record non-obvious decisions here. Format:
 **Decision:** Add a distinct amber skitter (`DUNGEON-009`) in room 2 that walks a fixed north-south line. One nail hit. No chase.
 **Rationale:** Movement is the smallest way to read a third type. A patrol is a new verb without inventing aggro, pathfinding, or a boss.
 **Alternatives considered:** Chase the player — deferred; too easy to turn contact into a death loop. Ability-gated return or loot in this bead — rejected as a second feature.
+
+## 2026-08-27 — Loot is a shard drop, not geo
+
+**Context:** First playable scope includes basic loot. After three enemy types, combat left nothing on the floor. The human asked to keep going on the game.
+**Decision:** Foes drop a pale shard on death (`DUNGEON-010`). Walking over it increments a count on the player. Shards survive respawn. No shop and not named geo.
+**Rationale:** Pickup is the smallest loot verb. Spending and a nail upgrade are a later bead so this one stays collect-only.
+**Alternatives considered:** A placed chest with no combat drop — weaker loop. Copy Hollow Knight geo HUD/spend — rejected as clone dressing. Ability-gated return in this bead — still later.
