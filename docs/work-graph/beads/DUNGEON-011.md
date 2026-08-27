@@ -1,7 +1,7 @@
 ---
 id: DUNGEON-011
 title: Add a nail shrine that spends shards
-status: in_progress
+status: done
 dependencies:
   - DUNGEON-010
 assignee: agent
@@ -18,14 +18,14 @@ shop list, not a map.
 
 ## Acceptance Criteria
 
-- [ ] A shrine exists in the first room
-- [ ] Walking into it with enough shards spends them and strengthens the nail
-- [ ] Without enough shards, or after it has already honed, it does nothing
-- [ ] A honed nail defeats the two-hit crawler in one swing
-- [ ] Nail upgrade and remaining shards survive respawn
-- [ ] Tests check shrine wiring, cost, and nail damage
-- [ ] README notes the shrine and the walk-back
-- [ ] Tests pass
+- [x] A shrine exists in the first room
+- [x] Walking into it with enough shards spends them and strengthens the nail
+- [x] Without enough shards, or after it has already honed, it does nothing
+- [x] A honed nail defeats the two-hit crawler in one swing
+- [x] Nail upgrade and remaining shards survive respawn
+- [x] Tests check shrine wiring, cost, and nail damage
+- [x] README notes the shrine and the walk-back
+- [x] Tests pass
 
 ## Notes
 
