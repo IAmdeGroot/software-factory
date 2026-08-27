@@ -30,10 +30,17 @@ func _process(delta: float) -> void:
 func take_nail_hit(amount: int = 1) -> void:
 	hits -= amount
 	if hits <= 0:
+		_show_cleared()
 		_drop_shard()
 		queue_free()
 		return
 	body.color = body.color.darkened(0.2)
+
+
+func _show_cleared() -> void:
+	var label := get_parent().get_node_or_null("ClearLabel")
+	if label is CanvasItem:
+		label.visible = true
 
 
 func _drop_shard() -> void:

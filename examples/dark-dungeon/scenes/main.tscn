@@ -226,6 +226,15 @@ color = Color(0.28, 0.2, 0.18, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/EastWall"]
 shape = SubResource("Room2East")
 
+[node name="ClearLabel" type="Label" parent="Room3"]
+visible = false
+offset_left = 1684.0
+offset_top = 200.0
+offset_right = 1844.0
+offset_bottom = 240.0
+text = "Cleared"
+horizontal_alignment = 1
+
 [node name="Player" parent="." instance=ExtResource("1_player")]
 position = Vector2(640, 360)
 

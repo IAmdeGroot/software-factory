@@ -13,7 +13,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [DUNGEON-014](beads/DUNGEON-014.md) | Show a clear beat when the warden falls | in_progress |
 
 ## In Review
 
