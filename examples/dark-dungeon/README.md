@@ -47,7 +47,9 @@ python3 -m unittest discover -s examples/dark-dungeon/tests -v
 First playable loop is in: three rooms, hone, seal, warden, and a **Cleared**
 beat (`DUNGEON-001`–`DUNGEON-014`). The placeholder blocks are replaced by
 an original drowned-reliquary visual language (`DUNGEON-015`). Inspired by
-Hollow Knight exploration, not a Hallownest map.
+Hollow Knight exploration, not a Hallownest map. Interiors now use cool
+ambient darkness, warm/cool light pools, cast shadows, pulsing sacred light,
+and drifting motes (`DUNGEON-016`).
 
 ## Why This Example
 

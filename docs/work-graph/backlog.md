@@ -7,7 +7,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [DUNGEON-016](beads/DUNGEON-016.md) | Add dramatic interior lighting and shadows | ready |
+| [DUNGEON-017](beads/DUNGEON-017.md) | Add an outdoor approach with atmospheric depth | ready |
 
 ## In Progress
 
@@ -25,7 +25,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Blocked by |
 |----|-------|------------|
-| [DUNGEON-017](beads/DUNGEON-017.md) | Add an outdoor approach with atmospheric depth | DUNGEON-016 |
+| _(none)_ | | |
 
 ## Done
 
@@ -46,6 +46,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 | [DUNGEON-013](beads/DUNGEON-013.md) | Add a boss in the third room | done |
 | [DUNGEON-014](beads/DUNGEON-014.md) | Show a clear beat when the warden falls | done |
 | [DUNGEON-015](beads/DUNGEON-015.md) | Establish the original dark-fantasy visual language | done |
+| [DUNGEON-016](beads/DUNGEON-016.md) | Add dramatic interior lighting and shadows | done |
 | [FACTORY-001](beads/FACTORY-001.md) | Validate bead file schema | done |
 | [FACTORY-002](beads/FACTORY-002.md) | Create harness project scaffold | done |
 | [FACTORY-003](beads/FACTORY-003.md) | Add bead status listing script | done |
