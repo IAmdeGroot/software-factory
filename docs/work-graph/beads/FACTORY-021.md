@@ -1,7 +1,7 @@
 ---
 id: FACTORY-021
 title: Convert open wishes into beads
-status: review
+status: done
 dependencies:
   - FACTORY-020
 assignee: agent
