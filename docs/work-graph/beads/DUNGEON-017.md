@@ -1,7 +1,7 @@
 ---
 id: DUNGEON-017
 title: Add an outdoor approach with atmospheric depth
-status: in_progress
+status: review
 dependencies:
   - DUNGEON-016
 assignee: agent

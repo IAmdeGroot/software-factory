@@ -13,13 +13,13 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [DUNGEON-017](beads/DUNGEON-017.md) | Add an outdoor approach with atmospheric depth | in_progress |
+| _(none)_ | | |
 
 ## In Review
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [DUNGEON-017](beads/DUNGEON-017.md) | Add an outdoor approach with atmospheric depth | review |
 
 ## Blocked (waiting on dependencies)
 
