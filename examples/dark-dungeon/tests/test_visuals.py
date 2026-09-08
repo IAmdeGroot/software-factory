@@ -46,6 +46,19 @@ class VisualFoundationTests(unittest.TestCase):
         self.assertIn("_draw_room", detail)
         self.assertIn("_draw_walls", detail)
 
+    def test_interior_has_authored_light_shadow_and_motes(self) -> None:
+        main = (ROOT / "scenes" / "main.tscn").read_text(encoding="utf-8")
+        self.assertIn("res://scripts/interior_lighting.gd", main)
+        lighting = (ROOT / "scripts" / "interior_lighting.gd").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("CanvasModulate", lighting)
+        self.assertGreaterEqual(lighting.count("_add_light(Vector2"), 6)
+        self.assertIn("LightOccluder2D", lighting)
+        self.assertIn("CPUParticles2D", lighting)
+        self.assertIn("motes.texture = LIGHT_TEXTURE", lighting)
+        self.assertIn("shadow_enabled = true", lighting)
+
 
 if __name__ == "__main__":
     unittest.main()

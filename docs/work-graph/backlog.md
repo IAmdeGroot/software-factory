@@ -7,13 +7,13 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [DUNGEON-016](beads/DUNGEON-016.md) | Add dramatic interior lighting and shadows | ready |
+| _(none)_ | | |
 
 ## In Progress
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [DUNGEON-016](beads/DUNGEON-016.md) | Add dramatic interior lighting and shadows | in_progress |
 
 ## In Review
 

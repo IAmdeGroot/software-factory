@@ -1,10 +1,10 @@
 ---
 id: DUNGEON-016
 title: Add dramatic interior lighting and shadows
-status: ready
+status: in_progress
 dependencies:
   - DUNGEON-015
-assignee: null
+assignee: agent
 ---
 
 # DUNGEON-016: Add dramatic interior lighting and shadows
@@ -17,13 +17,13 @@ cool ambient darkness, cast shadows, glow, and subtle environmental motion.
 
 ## Acceptance Criteria
 
-- [ ] Interior rooms use a controlled ambient-darkness treatment
-- [ ] At least three authored light sources create distinct pools of warm/cool light
-- [ ] Walls or props cast visible 2D shadows without hiding collision boundaries
-- [ ] Shrine, seal, and warden spaces each have a distinct lighting beat
-- [ ] Subtle motes, haze, or glow add motion without obscuring combat
-- [ ] Lighting and effects do not change gameplay behavior
-- [ ] Dark Dungeon tests pass and the project opens without Godot errors
+- [x] Interior rooms use a controlled ambient-darkness treatment
+- [x] At least three authored light sources create distinct pools of warm/cool light
+- [x] Walls or props cast visible 2D shadows without hiding collision boundaries
+- [x] Shrine, seal, and warden spaces each have a distinct lighting beat
+- [x] Subtle motes, haze, or glow add motion without obscuring combat
+- [x] Lighting and effects do not change gameplay behavior
+- [x] Dark Dungeon tests pass and the project opens without Godot errors
 
 ## Notes
 
