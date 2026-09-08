@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://darkdungeonseal012"]
+[gd_scene load_steps=5 format=3 uid="uid://darkdungeonseal012"]
 
 [ext_resource type="Script" path="res://scripts/seal.gd" id="1_seal"]
+[ext_resource type="Texture2D" path="res://assets/visuals/seal.svg" id="2_visual"]
 
 [sub_resource type="RectangleShape2D" id="SealBody"]
 size = Vector2(32, 80)
@@ -10,12 +11,8 @@ size = Vector2(32, 80)
 
 [node name="Seal" type="StaticBody2D"]
 
-[node name="Visible" type="ColorRect" parent="."]
-offset_left = -16.0
-offset_top = -40.0
-offset_right = 16.0
-offset_bottom = 40.0
-color = Color(0.2, 0.16, 0.28, 1)
+[node name="Visible" type="Sprite2D" parent="."]
+texture = ExtResource("2_visual")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("SealBody")

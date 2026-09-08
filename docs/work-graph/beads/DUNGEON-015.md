@@ -1,9 +1,9 @@
 ---
 id: DUNGEON-015
 title: Establish the original dark-fantasy visual language
-status: ready
+status: done
 dependencies: []
-assignee: null
+assignee: agent
 ---
 
 # DUNGEON-015: Establish the original dark-fantasy visual language
@@ -20,12 +20,12 @@ Knight and Elden Ring are mood references only.
 
 ## Acceptance Criteria
 
-- [ ] `examples/dark-dungeon/docs/visual-direction.md` defines palette, shape language, hierarchy, and anti-copy constraints
-- [ ] Player, three regular foes, warden, shrine, seal, shard, and nail use authored visual assets rather than flat placeholder rectangles
-- [ ] Interior floors and walls gain readable material detail and room-to-room variation
-- [ ] Existing collision shapes, controls, combat, upgrades, and progression remain unchanged
-- [ ] Player, enemies, pickups, and exits remain legible against the environment
-- [ ] Dark Dungeon tests pass
+- [x] `examples/dark-dungeon/docs/visual-direction.md` defines palette, shape language, hierarchy, and anti-copy constraints
+- [x] Player, three regular foes, warden, shrine, seal, shard, and nail use authored visual assets rather than flat placeholder rectangles
+- [x] Interior floors and walls gain readable material detail and room-to-room variation
+- [x] Existing collision shapes, controls, combat, upgrades, and progression remain unchanged
+- [x] Player, enemies, pickups, and exits remain legible against the environment
+- [x] Dark Dungeon tests pass
 
 ## Notes
 

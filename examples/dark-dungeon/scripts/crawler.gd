@@ -6,7 +6,7 @@ const HITS := 2
 
 var hits := HITS
 
-@onready var body: ColorRect = $Body
+@onready var body: Sprite2D = $Body
 
 
 func _ready() -> void:
@@ -19,7 +19,7 @@ func take_nail_hit(amount: int = 1) -> void:
 		_drop_shard()
 		queue_free()
 		return
-	body.color = Color(0.28, 0.1, 0.12, 1)
+	body.modulate = Color(0.7, 0.35, 0.4, 1)
 
 
 func _drop_shard() -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://darkdungeonmain001"]
+[gd_scene load_steps=15 format=3 uid="uid://darkdungeonmain001"]
 
 [ext_resource type="PackedScene" uid="uid://darkdungeonplayer002" path="res://scenes/player.tscn" id="1_player"]
 [ext_resource type="PackedScene" uid="uid://darkdungeonenemy005" path="res://scenes/enemy.tscn" id="2_enemy"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://darkdungeonshrine011" path="res://scenes/shrine.tscn" id="5_shrine"]
 [ext_resource type="PackedScene" uid="uid://darkdungeonseal012" path="res://scenes/seal.tscn" id="6_seal"]
 [ext_resource type="PackedScene" uid="uid://darkdungeonwarden013" path="res://scenes/warden.tscn" id="7_warden"]
+[ext_resource type="Script" path="res://scripts/interior_detail.gd" id="8_interior_detail"]
 
 [sub_resource type="RectangleShape2D" id="WallHorizontal"]
 size = Vector2(864, 32)
@@ -234,6 +235,9 @@ offset_right = 1844.0
 offset_bottom = 240.0
 text = "Cleared"
 horizontal_alignment = 1
+
+[node name="InteriorDetail" type="Node2D" parent="."]
+script = ExtResource("8_interior_detail")
 
 [node name="Player" parent="." instance=ExtResource("1_player")]
 position = Vector2(640, 360)

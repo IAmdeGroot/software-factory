@@ -10,7 +10,7 @@ const X_MAX := 1920.0
 var hits := HITS
 var dir := 1.0
 
-@onready var body: ColorRect = $Body
+@onready var body: Sprite2D = $Body
 
 
 func _ready() -> void:
@@ -34,7 +34,7 @@ func take_nail_hit(amount: int = 1) -> void:
 		_drop_shard()
 		queue_free()
 		return
-	body.color = body.color.darkened(0.2)
+	body.modulate = body.modulate.darkened(0.2)
 
 
 func _show_cleared() -> void:
