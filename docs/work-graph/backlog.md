@@ -7,13 +7,13 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [DUNGEON-017](beads/DUNGEON-017.md) | Add an outdoor approach with atmospheric depth | ready |
+| _(none)_ | | |
 
 ## In Progress
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [DUNGEON-017](beads/DUNGEON-017.md) | Add an outdoor approach with atmospheric depth | in_progress |
 
 ## In Review
 

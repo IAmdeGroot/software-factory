@@ -59,6 +59,22 @@ class VisualFoundationTests(unittest.TestCase):
         self.assertIn("motes.texture = LIGHT_TEXTURE", lighting)
         self.assertIn("shadow_enabled = true", lighting)
 
+    def test_outdoor_approach_has_depth_light_and_motion(self) -> None:
+        main = (ROOT / "scenes" / "main.tscn").read_text(encoding="utf-8")
+        self.assertIn('[node name="OutdoorApproach"', main)
+        self.assertIn("OutdoorApproach/NorthWall", main)
+        self.assertIn("OutdoorApproach/WestWall", main)
+        self.assertIn("WestWallNorth", main)
+        self.assertIn("WestWallSouth", main)
+
+        outdoor = (ROOT / "scripts" / "outdoor_art.gd").read_text(encoding="utf-8")
+        self.assertIn("_draw_far_plane", outdoor)
+        self.assertIn("_draw_middle_plane", outdoor)
+        self.assertIn("_draw_near_plane", outdoor)
+        self.assertIn("PointLight2D", outdoor)
+        self.assertIn("CPUParticles2D", outdoor)
+        self.assertIn("_draw_foreground", outdoor)
+
 
 if __name__ == "__main__":
     unittest.main()
