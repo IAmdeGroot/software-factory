@@ -7,7 +7,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [DUNGEON-015](beads/DUNGEON-015.md) | Establish the original dark-fantasy visual language | ready |
 
 ## In Progress
 
@@ -25,7 +25,8 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Blocked by |
 |----|-------|------------|
-| _(none)_ | | |
+| [DUNGEON-016](beads/DUNGEON-016.md) | Add dramatic interior lighting and shadows | DUNGEON-015 |
+| [DUNGEON-017](beads/DUNGEON-017.md) | Add an outdoor approach with atmospheric depth | DUNGEON-016 |
 
 ## Done
 

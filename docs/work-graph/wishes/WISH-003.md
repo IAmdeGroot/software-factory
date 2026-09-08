@@ -1,8 +1,12 @@
 ---
 id: WISH-003
 title: Give Dark Dungeon a fresh, beautiful dark-fantasy look
-status: open
+status: planned
 source: human
+beads:
+  - DUNGEON-015
+  - DUNGEON-016
+  - DUNGEON-017
 ---
 
 # WISH-003: Give Dark Dungeon a fresh, beautiful dark-fantasy look
@@ -19,3 +23,7 @@ layering, scale, atmosphere, motion, or parallax where appropriate. Interiors
 should feel beautiful and dramatic through authored light, shadow, glow, and
 environmental effects. Visual improvements should preserve gameplay clarity
 and run in Godot 4.
+
+Converted into three passes: a cohesive original visual foundation,
+authored interior light and shadow, then a reachable outdoor area with
+atmospheric depth.
