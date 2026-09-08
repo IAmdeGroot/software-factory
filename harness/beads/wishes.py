@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 from harness.beads.validate import (
@@ -13,6 +14,7 @@ from harness.beads.validate import (
 
 WISH_STATUSES = frozenset({"open", "planned", "done"})
 REQUIRED_WISH_FIELDS = ("id", "title", "status", "source")
+BEAD_ID_RE = re.compile(r"^(FACTORY|DUNGEON)-[0-9]{3}$")
 
 
 def _wish_files(wishes_dir: Path) -> list[Path]:
@@ -102,6 +104,26 @@ def validate_wish_file(path: Path) -> list[BeadValidationError]:
                 f"invalid status {status!r}; must be one of: {', '.join(sorted(WISH_STATUSES))}",
             )
         )
+        return errors
+
+    beads = data.get("beads")
+    if status == "planned":
+        if not isinstance(beads, list) or not beads:
+            errors.append(
+                BeadValidationError(
+                    rel,
+                    "planned wish must list bead ids under beads",
+                )
+            )
+        else:
+            for bead_id in beads:
+                if not isinstance(bead_id, str) or not BEAD_ID_RE.fullmatch(bead_id):
+                    errors.append(
+                        BeadValidationError(
+                            rel,
+                            f"invalid bead id {bead_id!r}; use FACTORY-NNN or DUNGEON-NNN",
+                        )
+                    )
 
     return errors
 

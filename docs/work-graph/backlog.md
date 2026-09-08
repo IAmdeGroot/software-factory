@@ -7,7 +7,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [FACTORY-021](beads/FACTORY-021.md) | Convert open wishes into beads | ready |
+| _(none)_ | | |
 
 ## In Progress
 
@@ -65,6 +65,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 | [FACTORY-018](beads/FACTORY-018.md) | Add human land/merge recipe | done |
 | [FACTORY-019](beads/FACTORY-019.md) | Leave Gas Town for the Wish Factory | done |
 | [FACTORY-020](beads/FACTORY-020.md) | Add markdown wish drop and list command | done |
+| [FACTORY-021](beads/FACTORY-021.md) | Convert open wishes into beads | done |
 <!-- beads:tables:end -->
 
 ---
@@ -164,4 +165,5 @@ Inspiration, not a clone. Stay top-down. First verbs:
 4. Agent implements, tests, commits, pushes, opens one PR, then `python -m harness.beads complete <id>`
 5. Unattended: `Implement the next ready bead` (empty queue means stop)
 6. Review: `Review the next bead`; humans merge via `.cursor/automations/land.md`
-7. Wishes (FACTORY-020+): drop intent under `docs/work-graph/wishes/`; a planner turns them into beads. Do not invent work when the ready queue is empty.
+7. Wishes (FACTORY-020+): drop intent under `docs/work-graph/wishes/`
+8. Planner: prompt `Convert open wishes into beads` — `.cursor/skills/wish-planner/SKILL.md`. Empty wish list means stop; do not invent wishes. Converted wishes become `planned` and list their bead ids. Do not claim or start workers.

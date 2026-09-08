@@ -136,6 +136,65 @@ status: open
     def test_wish_statuses_are_documented(self) -> None:
         self.assertEqual(WISH_STATUSES, {"open", "planned", "done"})
 
+    def test_planned_wish_requires_beads(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = self.write_wish(
+                Path(tmp),
+                "WISH-001.md",
+                wish_content("WISH-001", "Needs beads", "planned"),
+            )
+            errors = validate_wish_file(path)
+            self.assertTrue(any("must list bead ids" in str(e) for e in errors))
+
+    def test_planned_wish_with_beads_is_valid(self) -> None:
+        content = (
+            "---\n"
+            "id: WISH-001\n"
+            "title: Nail feel\n"
+            "status: planned\n"
+            "source: human\n"
+            "beads:\n"
+            "  - DUNGEON-004\n"
+            "  - FACTORY-021\n"
+            "---\n\n"
+            "# WISH-001: Nail feel\n"
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            wishes_dir = Path(tmp)
+            self.write_wish(wishes_dir, "WISH-001.md", content)
+            result = validate_wishes_dir(wishes_dir)
+            self.assertTrue(result.ok, "\n".join(str(e) for e in result.errors))
+
+    def test_planned_wish_rejects_bad_bead_prefix(self) -> None:
+        content = (
+            "---\n"
+            "id: WISH-001\n"
+            "title: Bad prefix\n"
+            "status: planned\n"
+            "source: human\n"
+            "beads:\n"
+            "  - ISSUE-001\n"
+            "---\n"
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            path = self.write_wish(Path(tmp), "WISH-001.md", content)
+            errors = validate_wish_file(path)
+            self.assertTrue(any("invalid bead id" in str(e) for e in errors))
+
+
+class WishPlannerSkillTests(unittest.TestCase):
+    def test_skill_stops_on_empty_wish_list(self) -> None:
+        root = Path(__file__).resolve().parents[2]
+        path = root / ".cursor" / "skills" / "wish-planner" / "SKILL.md"
+        self.assertTrue(path.is_file(), f"missing skill: {path}")
+        text = path.read_text(encoding="utf-8")
+        lowered = text.lower()
+        self.assertIn("empty wish list", lowered)
+        self.assertIn("do not invent wishes", lowered)
+        self.assertIn("DUNGEON-", text)
+        self.assertIn("FACTORY-", text)
+        self.assertIn("planned", lowered)
+
 
 if __name__ == "__main__":
     unittest.main()

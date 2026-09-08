@@ -7,6 +7,10 @@ description: Create new beads from a vision or goal document. Use when planning 
 
 Use this skill to break a goal into structured beads.
 
+Open wishes in `docs/work-graph/wishes/` are not a vision dump — follow
+`.cursor/skills/wish-planner/SKILL.md` (`Convert open wishes into beads`).
+Empty wish list means stop; do not invent wishes.
+
 ## Input
 
 - A vision doc, feature description, or human goal statement
@@ -51,7 +55,7 @@ Optional implementation hints or constraints.
 2. Define dependencies explicitly — only mark `ready` if deps are satisfied
 3. First bead in a chain should have `dependencies: []`
 4. Include test-related criteria in every bead
-5. Use `FACTORY-` prefix for factory work, product-specific prefix for product work
+5. Use `FACTORY-` prefix for factory work, `DUNGEON-` for Dark Dungeon / game work
 6. Update `docs/work-graph/backlog.md` after creating beads
 7. Do not plan Gas Town (Mayor, polecats, reusable orchestrator, Cursor SDK fleet). Factory work after v0 is the Wish Factory and Dark Dungeon.
 

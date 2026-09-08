@@ -1,10 +1,10 @@
 ---
 id: FACTORY-021
 title: Convert open wishes into beads
-status: ready
+status: done
 dependencies:
   - FACTORY-020
-assignee: null
+assignee: agent
 ---
 
 # FACTORY-021: Convert open wishes into beads
@@ -18,12 +18,12 @@ invent work when the ready queue is empty.
 
 ## Acceptance Criteria
 
-- [ ] Planner skill (or a dedicated wish-planner skill) converts `open` wishes into beads
-- [ ] Converted wishes move to `planned` and point at the new bead ids
-- [ ] New beads use the right prefix (`DUNGEON-` for game work, `FACTORY-` for harness)
-- [ ] Recipe or skill says: empty wish list means stop; do not invent wishes
-- [ ] `docs/work-graph/backlog.md` documents the wish → bead prompt
-- [ ] Tests pass (harness tests + bead validate)
+- [x] Planner skill (or a dedicated wish-planner skill) converts `open` wishes into beads
+- [x] Converted wishes move to `planned` and point at the new bead ids
+- [x] New beads use the right prefix (`DUNGEON-` for game work, `FACTORY-` for harness)
+- [x] Recipe or skill says: empty wish list means stop; do not invent wishes
+- [x] `docs/work-graph/backlog.md` documents the wish → bead prompt
+- [x] Tests pass (harness tests + bead validate)
 
 ## Notes
 

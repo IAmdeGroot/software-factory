@@ -111,6 +111,8 @@ Recipe: `.cursor/automations/worker-loop.md` (enable in the Cursor dashboard; do
 
 CI failures: `.cursor/automations/ci-triage.md` (prompt `Triage the latest CI failure on this repository`; green CI means stop).
 
+Planner: prompt `Convert open wishes into beads` — `.cursor/skills/wish-planner/SKILL.md` (empty wish list means stop; do not invent wishes; do not claim or start workers).
+
 Review: prompt `Review the next bead` — `.cursor/skills/bead-reviewer/SKILL.md` (empty `review-queue` means stop; do not merge PRs). Recipe: `.cursor/automations/pr-review.md`.
 
 Land: humans merge using `.cursor/automations/land.md` (bead `done`, CI green, one bead). Integration branch is `main`.
