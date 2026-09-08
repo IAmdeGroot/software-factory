@@ -14,6 +14,7 @@ from harness.beads.wishes import (
     WISH_STATUSES,
     build_open_wishes,
     format_wishes_text,
+    next_wish_id,
     validate_wish_file,
     validate_wishes_dir,
     wishes_to_json,
@@ -194,6 +195,47 @@ class WishPlannerSkillTests(unittest.TestCase):
         self.assertIn("DUNGEON-", text)
         self.assertIn("FACTORY-", text)
         self.assertIn("planned", lowered)
+
+
+class NextWishIdTests(unittest.TestCase):
+    def write_wish(self, directory: Path, wish_id: str, content: str) -> None:
+        (directory / f"{wish_id}.md").write_text(content, encoding="utf-8")
+
+    def test_empty_drop_starts_at_001(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            self.assertEqual(next_wish_id(Path(tmp)), "WISH-001")
+
+    def test_increments_past_existing_ids(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            wishes_dir = Path(tmp)
+            self.write_wish(
+                wishes_dir, "WISH-001", wish_content("WISH-001", "First", "open")
+            )
+            self.write_wish(
+                wishes_dir, "WISH-003", wish_content("WISH-003", "Gap", "open")
+            )
+            self.assertEqual(next_wish_id(wishes_dir), "WISH-004")
+
+    def test_cli_json(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            with patch("sys.stdout", new_callable=StringIO) as stdout:
+                code = main(["next-wish-id", tmp, "--json"])
+            self.assertEqual(code, 0)
+            payload = json.loads(stdout.getvalue())
+            self.assertEqual(payload["id"], "WISH-001")
+
+
+class WishDropperSkillTests(unittest.TestCase):
+    def test_skill_stops_without_source(self) -> None:
+        root = Path(__file__).resolve().parents[2]
+        path = root / ".cursor" / "skills" / "wish-dropper" / "SKILL.md"
+        self.assertTrue(path.is_file(), f"missing skill: {path}")
+        text = path.read_text(encoding="utf-8")
+        lowered = text.lower()
+        self.assertIn("drop wishes from this intent", lowered)
+        self.assertIn("do not invent wishes", lowered)
+        self.assertIn("next-wish-id", text)
+        self.assertIn("status: open", lowered)
 
 
 if __name__ == "__main__":

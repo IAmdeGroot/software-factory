@@ -56,6 +56,12 @@ Every non-trivial task follows:
 - Scope changes that affect project vision
 - Repeated test/review failures on the same bead
 
+## Unattended wish dropper (intent → wishes)
+
+Prompt: **Drop wishes from this intent**
+
+When that prompt is given, follow `.cursor/skills/wish-dropper/SKILL.md`. Requires a source (human message, playtest note, or named gap). Run `python -m harness.beads next-wish-id` and write `WISH-NNN.md` as `open`. No source / nothing to drop means stop — do not invent wishes. Do not convert wishes into beads or start workers.
+
 ## Unattended planner (wishes → beads)
 
 Prompt: **Convert open wishes into beads**

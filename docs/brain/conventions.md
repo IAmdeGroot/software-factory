@@ -4,7 +4,7 @@
 
 - ID format: `FACTORY-NNN` for factory work, `DUNGEON-NNN` (or other product prefix) for product work
 - File name matches ID: `FACTORY-001.md`
-- Wishes (after FACTORY-020): `WISH-NNN` files under `docs/work-graph/wishes/`. A wish is not claimable work until a planner turns it into beads (`Convert open wishes into beads`). Planned wishes list those bead ids. Empty wish list means stop; do not invent wishes.
+- Wishes (after FACTORY-020): `WISH-NNN` files under `docs/work-graph/wishes/`. A wish is not claimable work until a planner turns it into beads (`Convert open wishes into beads`). Planned wishes list those bead ids. Empty wish list means stop; do not invent wishes. A dropper (`Drop wishes from this intent`) may write `open` wish files from a source; no source means stop.
 - Status transitions: `ready` → `in_progress` → `review` → `done`
 - Use `blocked` when waiting on human decision or external dependency
 - One bead = one PR-sized change

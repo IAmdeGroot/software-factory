@@ -67,6 +67,21 @@ def wishes_to_json(wishes: list[dict]) -> str:
     return json.dumps(payload, indent=2)
 
 
+def next_wish_id(wishes_dir: Path) -> str:
+    """Return the next unused WISH-NNN id (three digits)."""
+    numbers: list[int] = []
+    if wishes_dir.is_dir():
+        for path in _wish_files(wishes_dir):
+            _, _, suffix = path.stem.partition("-")
+            if suffix.isdigit():
+                numbers.append(int(suffix))
+    return f"WISH-{max(numbers, default=0) + 1:03d}"
+
+
+def next_wish_id_to_json(wish_id: str) -> str:
+    return json.dumps({"id": wish_id}, indent=2)
+
+
 def validate_wish_file(path: Path) -> list[BeadValidationError]:
     errors: list[BeadValidationError] = []
     rel = path.name

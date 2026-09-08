@@ -66,6 +66,7 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 | [FACTORY-019](beads/FACTORY-019.md) | Leave Gas Town for the Wish Factory | done |
 | [FACTORY-020](beads/FACTORY-020.md) | Add markdown wish drop and list command | done |
 | [FACTORY-021](beads/FACTORY-021.md) | Convert open wishes into beads | done |
+| [FACTORY-022](beads/FACTORY-022.md) | Add wish-dropper skill | done |
 <!-- beads:tables:end -->
 
 ---
@@ -129,7 +130,8 @@ Goal: leave Gas Town. Bond the harness to Dark Dungeon. Wishes feed the work gra
 |------|---------|--------|
 | FACTORY-019 | record Wish Factory direction in the brain | done |
 | FACTORY-020 | markdown wish drop + list command | done |
-| FACTORY-021 | planner converts wishes into beads | ready |
+| FACTORY-021 | planner converts wishes into beads | done |
+| FACTORY-022 | dropper writes open wishes from sourced intent | done |
 | DUNGEON-003 | bounded room (product surface for wishes) | done |
 
 ---
@@ -165,5 +167,5 @@ Inspiration, not a clone. Stay top-down. First verbs:
 4. Agent implements, tests, commits, pushes, opens one PR, then `python -m harness.beads complete <id>`
 5. Unattended: `Implement the next ready bead` (empty queue means stop)
 6. Review: `Review the next bead`; humans merge via `.cursor/automations/land.md`
-7. Wishes (FACTORY-020+): drop intent under `docs/work-graph/wishes/`
+7. Dropper: prompt `Drop wishes from this intent` — `.cursor/skills/wish-dropper/SKILL.md`. Needs a source. No source means stop; do not invent wishes. Writes `open` wish files. Do not convert to beads or start workers.
 8. Planner: prompt `Convert open wishes into beads` — `.cursor/skills/wish-planner/SKILL.md`. Empty wish list means stop; do not invent wishes. Converted wishes become `planned` and list their bead ids. Do not claim or start workers.
