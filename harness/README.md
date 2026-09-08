@@ -16,6 +16,7 @@ Factory orchestration code — scripts, validators, and automation that agents a
 | Next CLI | FACTORY-009 | Claim the first ready bead |
 | Review queue CLI | FACTORY-012 | Beads waiting for review |
 | Wish drop CLI | FACTORY-020 | List and validate markdown wishes |
+| Next wish id | FACTORY-022 | Next unused `WISH-NNN` for the dropper skill |
 | Unattended loop | FACTORY-011 | Skill + Cursor automation recipe |
 
 ## Running (FACTORY-002)
@@ -45,6 +46,10 @@ python -m harness.beads review-queue --json
 # List open wishes (markdown drop)
 python -m harness.beads wishes
 python -m harness.beads wishes --json
+
+# Next unused WISH-NNN id (for the dropper skill)
+python -m harness.beads next-wish-id
+python -m harness.beads next-wish-id --json
 
 # Claim a ready bead
 python -m harness.beads claim FACTORY-007
@@ -110,6 +115,8 @@ Prompt: `Implement the next ready bead`
 Recipe: `.cursor/automations/worker-loop.md` (enable in the Cursor dashboard; do not invent work if `next` finds an empty queue). Worker commits, pushes, and opens one PR per bead; does not merge.
 
 CI failures: `.cursor/automations/ci-triage.md` (prompt `Triage the latest CI failure on this repository`; green CI means stop).
+
+Dropper: prompt `Drop wishes from this intent` — `.cursor/skills/wish-dropper/SKILL.md` (needs a source; no source means stop; do not invent wishes).
 
 Planner: prompt `Convert open wishes into beads` — `.cursor/skills/wish-planner/SKILL.md` (empty wish list means stop; do not invent wishes; do not claim or start workers).
 

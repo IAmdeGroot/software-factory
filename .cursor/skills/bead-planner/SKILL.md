@@ -11,6 +11,10 @@ Open wishes in `docs/work-graph/wishes/` are not a vision dump — follow
 `.cursor/skills/wish-planner/SKILL.md` (`Convert open wishes into beads`).
 Empty wish list means stop; do not invent wishes.
 
+Human chat that is intent (not an existing wish file) is a drop — follow
+`.cursor/skills/wish-dropper/SKILL.md` (`Drop wishes from this intent`).
+No source means stop; do not invent wishes.
+
 ## Input
 
 - A vision doc, feature description, or human goal statement

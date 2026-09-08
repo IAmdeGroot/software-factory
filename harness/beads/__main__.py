@@ -25,6 +25,8 @@ from harness.beads.validate import validate_beads_dir
 from harness.beads.wishes import (
     build_open_wishes,
     format_wishes_text,
+    next_wish_id,
+    next_wish_id_to_json,
     validate_wishes_dir,
     wishes_to_json,
 )
@@ -159,6 +161,15 @@ def _wishes_command(wishes_dir: Path, json_output: bool) -> int:
     return 0
 
 
+def _next_wish_id_command(wishes_dir: Path, json_output: bool) -> int:
+    wish_id = next_wish_id(wishes_dir)
+    if json_output:
+        print(next_wish_id_to_json(wish_id))
+    else:
+        print(wish_id)
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     args = argv if argv is not None else sys.argv[1:]
     default_beads = str(_default_beads_dir())
@@ -209,6 +220,14 @@ def main(argv: list[str] | None = None) -> int:
     )
     wishes_parser.add_argument("--json", action="store_true", dest="json_output")
 
+    next_wish_parser = subparsers.add_parser(
+        "next-wish-id", help="print the next unused WISH-NNN id"
+    )
+    next_wish_parser.add_argument(
+        "wishes_dir", nargs="?", default=str(_default_wishes_dir())
+    )
+    next_wish_parser.add_argument("--json", action="store_true", dest="json_output")
+
     if not args:
         args = ["validate"]
 
@@ -240,6 +259,8 @@ def main(argv: list[str] | None = None) -> int:
         return _sync_backlog_command(beads_dir, backlog_path)
     if parsed.command == "wishes":
         return _wishes_command(Path(parsed.wishes_dir), parsed.json_output)
+    if parsed.command == "next-wish-id":
+        return _next_wish_id_command(Path(parsed.wishes_dir), parsed.json_output)
 
     parser.print_help()
     return 1

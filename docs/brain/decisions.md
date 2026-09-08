@@ -131,3 +131,10 @@ Record non-obvious decisions here. Format:
 **Decision:** When the warden dies (`DUNGEON-014`), a hidden Label in room 3 becomes visible with the word "Cleared". The player can still walk. No title screen or credits.
 **Rationale:** One word in the boss room is the smallest win. A full ending would stall playtest.
 **Alternatives considered:** CanvasLayer HUD — extra node for the same sentence. Freeze input or return to a menu — rejected; keep the room playable.
+
+## 2026-09-08 — Wish dropper transcribes sources; it does not invent idle wishes
+
+**Context:** After FACTORY-021 the ready queue and open-wish list were empty. The human asked for an agent that can create wishes.
+**Decision:** Add a wish-dropper skill that writes `open` `WISH-NNN.md` files from a source (human chat, playtest note, named gap). No source means stop. Do not invent wishes because the queue is empty. Do not skip the planner: dropped wishes are still not beads until `Convert open wishes into beads`.
+**Rationale:** The bottleneck was typing YAML, not a lack of product ideas. Idle invention would invert "human provides intent" and fight the empty-queue stop rule.
+**Alternatives considered:** Unattended agent that proposes Dark Dungeon features whenever workers would idle — rejected; that invents work. Discord/GitHub intake — still out of scope. Auto-plan and auto-claim after drop — rejected; FACTORY-021 already separates drop from plan from work.
