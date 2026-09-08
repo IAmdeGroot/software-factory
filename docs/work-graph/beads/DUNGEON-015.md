@@ -1,7 +1,7 @@
 ---
 id: DUNGEON-015
 title: Establish the original dark-fantasy visual language
-status: review
+status: done
 dependencies: []
 assignee: agent
 ---
