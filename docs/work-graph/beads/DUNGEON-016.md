@@ -1,7 +1,7 @@
 ---
 id: DUNGEON-016
 title: Add dramatic interior lighting and shadows
-status: in_progress
+status: review
 dependencies:
   - DUNGEON-015
 assignee: agent
