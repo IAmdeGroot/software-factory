@@ -13,13 +13,13 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [FACTORY-021](beads/FACTORY-021.md) | Convert open wishes into beads | in_progress |
+| _(none)_ | | |
 
 ## In Review
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [FACTORY-021](beads/FACTORY-021.md) | Convert open wishes into beads | review |
 
 ## Blocked (waiting on dependencies)
 
