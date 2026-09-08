@@ -16,7 +16,7 @@ var shards := 0
 var nail_damage := 1
 
 @onready var nail: Area2D = $Nail
-@onready var nail_visible: ColorRect = $Nail/Visible
+@onready var nail_visible: Sprite2D = $Nail/Visible
 @onready var hp_label: Label = $HpLabel
 @onready var shard_label: Label = $ShardLabel
 

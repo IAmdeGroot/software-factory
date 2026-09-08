@@ -38,12 +38,16 @@ python3 -m unittest discover -s examples/dark-dungeon/tests -v
 ## Technology
 
 - **Godot 4** — 2D
+- Original SVG character/prop art with an ink-and-patina dark-fantasy palette
 - Data-driven enemy/item definitions (later beads)
 - Fast iteration over content volume
 
 ## Status
 
-First playable loop is in: three rooms, hone, seal, warden, and a **Cleared** beat (`DUNGEON-001`–`DUNGEON-014`). Inspired by Hollow Knight exploration, not a Hallownest map.
+First playable loop is in: three rooms, hone, seal, warden, and a **Cleared**
+beat (`DUNGEON-001`–`DUNGEON-014`). The placeholder blocks are replaced by
+an original drowned-reliquary visual language (`DUNGEON-015`). Inspired by
+Hollow Knight exploration, not a Hallownest map.
 
 ## Why This Example
 
