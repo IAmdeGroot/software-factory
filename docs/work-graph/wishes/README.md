@@ -1,7 +1,9 @@
 # Wishes
 
-Drop intent here. A wish is not work until a planner turns it into beads
-(`FACTORY-021`).
+Drop intent here. A wish is not work until a planner turns it into beads.
+
+Prompt: **Convert open wishes into beads** (`.cursor/skills/wish-planner/SKILL.md`).
+Empty wish list means stop; do not invent wishes.
 
 ## File format
 
@@ -13,8 +15,12 @@ id: WISH-001
 title: Short description
 status: open          # open | planned | done
 source: human         # human | playtest | or any short source label
+beads:                # required when status is planned
+  - DUNGEON-004
 ---
 ```
+
+Game work uses `DUNGEON-` beads; harness work uses `FACTORY-`.
 
 ## Commands
 

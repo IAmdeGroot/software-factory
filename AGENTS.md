@@ -56,6 +56,12 @@ Every non-trivial task follows:
 - Scope changes that affect project vision
 - Repeated test/review failures on the same bead
 
+## Unattended planner (wishes → beads)
+
+Prompt: **Convert open wishes into beads**
+
+When that prompt (or no wish id) is given, follow `.cursor/skills/wish-planner/SKILL.md`. Run `python -m harness.beads wishes`. Empty wish list means stop — do not invent wishes. Converted wishes become `planned` and point at the new bead ids (`DUNGEON-` for game work, `FACTORY-` for harness). Do not claim beads or start workers.
+
 ## Unattended worker
 
 Prompt: **Implement the next ready bead**
