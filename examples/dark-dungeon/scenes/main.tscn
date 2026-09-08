@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://darkdungeonmain001"]
+[gd_scene load_steps=18 format=3 uid="uid://darkdungeonmain001"]
 
 [ext_resource type="PackedScene" uid="uid://darkdungeonplayer002" path="res://scenes/player.tscn" id="1_player"]
 [ext_resource type="PackedScene" uid="uid://darkdungeonenemy005" path="res://scenes/enemy.tscn" id="2_enemy"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://darkdungeonwarden013" path="res://scenes/warden.tscn" id="7_warden"]
 [ext_resource type="Script" path="res://scripts/interior_detail.gd" id="8_interior_detail"]
 [ext_resource type="Script" path="res://scripts/interior_lighting.gd" id="9_interior_lighting"]
+[ext_resource type="Script" path="res://scripts/outdoor_art.gd" id="10_outdoor_art"]
 
 [sub_resource type="RectangleShape2D" id="WallHorizontal"]
 size = Vector2(864, 32)
@@ -19,6 +20,9 @@ size = Vector2(32, 544)
 [sub_resource type="RectangleShape2D" id="EastStub"]
 size = Vector2(32, 232)
 
+[sub_resource type="RectangleShape2D" id="WestStub"]
+size = Vector2(32, 208)
+
 [sub_resource type="RectangleShape2D" id="Room2Horizontal"]
 size = Vector2(504, 32)
 
@@ -26,6 +30,30 @@ size = Vector2(504, 32)
 size = Vector2(32, 544)
 
 [node name="Main" type="Node2D"]
+
+[node name="OutdoorApproach" type="Node2D" parent="."]
+
+[node name="OutdoorArt" type="Node2D" parent="OutdoorApproach"]
+z_index = -20
+script = ExtResource("10_outdoor_art")
+
+[node name="NorthWall" type="StaticBody2D" parent="OutdoorApproach"]
+position = Vector2(-208, 104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OutdoorApproach/NorthWall"]
+shape = SubResource("WallHorizontal")
+
+[node name="SouthWall" type="StaticBody2D" parent="OutdoorApproach"]
+position = Vector2(-208, 616)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OutdoorApproach/SouthWall"]
+shape = SubResource("WallHorizontal")
+
+[node name="WestWall" type="StaticBody2D" parent="OutdoorApproach"]
+position = Vector2(-656, 360)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OutdoorApproach/WestWall"]
+shape = SubResource("WallVertical")
 
 [node name="Room" type="Node2D" parent="."]
 
@@ -62,18 +90,33 @@ color = Color(0.38, 0.28, 0.22, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room/SouthWall"]
 shape = SubResource("WallHorizontal")
 
-[node name="WestWall" type="StaticBody2D" parent="Room"]
-position = Vector2(224, 360)
+[node name="WestWall" type="Node2D" parent="Room"]
 
-[node name="Visible" type="ColorRect" parent="Room/WestWall"]
+[node name="WestWallNorth" type="StaticBody2D" parent="Room/WestWall"]
+position = Vector2(224, 192)
+
+[node name="Visible" type="ColorRect" parent="Room/WestWall/WestWallNorth"]
 offset_left = -16.0
-offset_top = -272.0
+offset_top = -104.0
 offset_right = 16.0
-offset_bottom = 272.0
+offset_bottom = 104.0
 color = Color(0.38, 0.28, 0.22, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/WestWall"]
-shape = SubResource("WallVertical")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/WestWall/WestWallNorth"]
+shape = SubResource("WestStub")
+
+[node name="WestWallSouth" type="StaticBody2D" parent="Room/WestWall"]
+position = Vector2(224, 528)
+
+[node name="Visible" type="ColorRect" parent="Room/WestWall/WestWallSouth"]
+offset_left = -16.0
+offset_top = -104.0
+offset_right = 16.0
+offset_bottom = 104.0
+color = Color(0.38, 0.28, 0.22, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/WestWall/WestWallSouth"]
+shape = SubResource("WestStub")
 
 [node name="EastWall" type="Node2D" parent="Room"]
 
@@ -263,3 +306,8 @@ position = Vector2(1528, 360)
 
 [node name="Warden" parent="Room3" instance=ExtResource("7_warden")]
 position = Vector2(1764, 360)
+
+[node name="OutdoorForeground" type="Node2D" parent="."]
+z_index = 20
+script = ExtResource("10_outdoor_art")
+foreground_only = true
