@@ -13,13 +13,13 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [DUNGEON-015](beads/DUNGEON-015.md) | Establish the original dark-fantasy visual language | in_progress |
+| _(none)_ | | |
 
 ## In Review
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [DUNGEON-015](beads/DUNGEON-015.md) | Establish the original dark-fantasy visual language | review |
 
 ## Blocked (waiting on dependencies)
 
