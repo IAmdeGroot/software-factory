@@ -1,7 +1,7 @@
 ---
 id: FACTORY-022
 title: Add wish-dropper skill
-status: review
+status: done
 dependencies:
   - FACTORY-021
 assignee: agent

@@ -60,7 +60,7 @@ Leave Gas Town. Bond the harness to Dark Dungeon. Wishes feed the graph:
 
 - [x] Markdown wish drop + list command (FACTORY-020)
 - [x] Planner converts open wishes into beads (FACTORY-021)
-- [ ] Wish dropper writes open wishes from sourced intent (FACTORY-022)
+- [x] Wish dropper writes open wishes from sourced intent (FACTORY-022)
 - [x] Dark Dungeon has a bounded room that can generate more wishes (DUNGEON-003)
 
 Unattended workers still stop when the ready queue is empty. A wish is not work until a planner turns it into beads.
