@@ -13,13 +13,13 @@ Beads are ordered by dependency. **Ready** beads have all dependencies satisfied
 
 | ID | Title | Status |
 |----|-------|--------|
-| [FACTORY-022](beads/FACTORY-022.md) | Add wish-dropper skill | in_progress |
+| _(none)_ | | |
 
 ## In Review
 
 | ID | Title | Status |
 |----|-------|--------|
-| _(none)_ | | |
+| [FACTORY-022](beads/FACTORY-022.md) | Add wish-dropper skill | review |
 
 ## Blocked (waiting on dependencies)
 
